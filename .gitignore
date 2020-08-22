@@ -1,0 +1,15 @@
+.DS_Store
+node_modules/
+lerna-debug.log
+npm-debug.log
+packages/*/lib
+storybook-static
+packages/*/coverage
+packages/*/dist
+packages/*/node_modules
+npm-debug.log*
+packages/*/.env
+*.log
+yarn.lock
+yarn-error.log
+coverage/
