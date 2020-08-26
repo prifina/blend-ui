@@ -15,5 +15,5 @@ module.exports = {
       statements: 90,
     },
   },
-  testMatch: ["<rootDir>/__tests__/**/*.js"],
+  testMatch: ["<rootDir>/packages/**/__tests__/*.js"],
 };
