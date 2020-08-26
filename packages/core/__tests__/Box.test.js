@@ -8,7 +8,6 @@ test("Box renders correctly", () => {
   const tree = renderer
     .create(
       <ThemeProvider>
-        {" "}
         <Box
           width={[1 / 2]}
           height={"100px"}
@@ -39,7 +38,7 @@ test("Box renders sth with Ref correctly", () => {
           foo={"bar"}
         >
           Something with Ref
-        </Box>{" "}
+        </Box>
       </ThemeProvider>,
     )
     .toJSON();
