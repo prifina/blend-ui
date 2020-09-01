@@ -1,6 +1,6 @@
 {
   "name": "@blend-ui/icons",
-  "version": "0.1.2-alpha.1",
+  "version": "0.1.3-alpha.0",
   "description": "Core Icons compoment",
   "author": "Tero <tero@prifina.com>",
   "license": "MIT",
@@ -43,6 +43,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-react-app": "^5.2.1",
