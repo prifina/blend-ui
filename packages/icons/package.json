@@ -28,6 +28,7 @@
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
+    "@babel/cli": "^7.11.5",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
