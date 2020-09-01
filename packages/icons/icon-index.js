@@ -12,19 +12,20 @@ const template = icons => {
     //name => `export { default as ${name} } from './components/${name}'`
     name => `export { default as ${name} } from './${name}'`,
   );
-  //iconsToExport.push(`export { default as BlendIcon } from './Icon'\n`)
-  iconsToExport.push(`export * from './icons-fe/iconSet'\n`);
-  iconsToExport.push(`export * from './icons-bx/iconSet'\n`);
-  iconsToExport.push(`export * from './icons-mdi/iconSet'\n`);
-  iconsToExport.push(`\nexport { Icon,InlineIcon } from '@iconify/react'\n`);
-  iconsToExport.unshift("\n");
+
+  //iconsToExport.push(`export * from './icons-fe/iconSet'\n`);
+  //iconsToExport.push(`export * from './icons-bx/iconSet'\n`);
+  //iconsToExport.push(`export * from './icons-mdi/iconSet'\n`);
+  iconsToExport.push(`\nexport { Icon, InlineIcon } from '@iconify/react'\n`);
+  iconsToExport.push(`export { default as BlendIcon } from './BlendIcon'\n`);
+  //iconsToExport.unshift("\n");
   return iconsToExport.join("\n");
 };
 
 const content = template(icons);
 const filename = path.join(__dirname, "./src/index.js");
-
-fs.writeFileSync(filename, content, { flag: "a+" });
+fs.writeFileSync(filename, content);
+//fs.writeFileSync(filename, content, { flag: "a+" });
 
 /*
 

@@ -12,6 +12,7 @@
     "dist"
   ],
   "scripts": {
+    "build": "yarn build:copy && yarn build:cjs && yarn build:es && yarn build:esm",
     "build:copy": "cp src/BlendIcon.js src/IconBase.js src/index.js ./components; cp -R src/icons-fe ./components; cp -R src/icons-bx ./components; cp -R src/icons-mdi ./components",
     "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel ./components --out-dir ./dist/esm",
     "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel ./components --out-dir ./dist/cjs",
