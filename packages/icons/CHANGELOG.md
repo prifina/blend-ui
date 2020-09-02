@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.14-alpha.0](https://github.com/prifina/blend-ui/compare/@blend-ui/icons@0.1.13-alpha.0...@blend-ui/icons@0.1.14-alpha.0) (2020-09-02)
+
+**Note:** Version bump only for package @blend-ui/icons
+
+
+
+
+
 ## [0.1.13-alpha.0](https://github.com/prifina/blend-ui/compare/@blend-ui/icons@0.1.12-alpha.0...@blend-ui/icons@0.1.13-alpha.0) (2020-09-02)
 
 **Note:** Version bump only for package @blend-ui/icons
