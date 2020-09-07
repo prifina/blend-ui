@@ -5,7 +5,7 @@ import createTextStyles from "./createTextStyles";
 import createColorStyles from "./createColorStyles";
 import createComponentStyles from "./createComponentStyles";
 
-import { borderWidth } from "styled-system";
+//import { borderWidth } from "styled-system";
 //console.log("SIZES ", Object.keys(sizes));
 const createMediaQuery = n => `@media screen and (min-width:${n})`;
 
@@ -28,6 +28,8 @@ const aliases = ["sm", "md", "lg", "xl", "xxl"];
 addAliases(mediaQueries, aliases);
 
 export const space = baseSizes;
+
+//export const space = [0, 4, 8, 16, 32, 64, 128];
 
 //export const font = `'Helvetica Neue',Helvetica,Arial,sans-serif,'Montserrat'`;
 export const fonts = typography.fonts;
@@ -147,7 +149,7 @@ const theme = {
   breakpoints,
   mediaQueries,
   zIndices,
-  sizes,
+  //sizes,
   space,
   fontSizes,
   fonts,
