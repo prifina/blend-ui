@@ -14,7 +14,7 @@ const customProps = props => {
     if (Object.keys(customPropsList).indexOf(p) > -1) {
       let cssProp = {};
       if (p === "bold") {
-        cssProp[customPropsList[p]] = props.theme.fontWeights["bold"];
+        cssProp[customPropsList[p]] = props.theme.fontWeights["semiBold"];
       } else {
         cssProp[customPropsList[p]] = p;
       }
@@ -49,7 +49,7 @@ const TextElement = styled("div").withConfig({
 `;
 */
 const color = props => {
-  console.log("color PROPS ", props);
+  //console.log("color PROPS ", props);
 
   return {
     color: props.color ? props.color : props.theme.colors["textPrimary"],
@@ -67,13 +67,13 @@ const TextElement = styled.div(
   typography,
   space,
   color,
-  customProps,
   textStyles,
   colorStyles,
+  customProps,
 );
 
 const Text = ({ as, ...props }) => {
-  console.log("PROPS ", props);
+  //console.log("PROPS ", props);
   //const {colors} = useTheme();
   //console.log(colors);
   /* color: themeGet("palette.primary.main")(props), */

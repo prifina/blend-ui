@@ -1,19 +1,36 @@
 /*   */
+
+const basePrimary = "#1E1D1D";
+const baseSecondary = "#00847A";
+const baseTertiary = "rgba(0, 132, 122, 0.1)";
+
+const baseMuted = "#C3C2C2";
+const baseWhite = "#F5F8F7";
+const baseError = "#F40431";
+const baseLink = "#007AFF";
+const baseSuccess = "#84BC4F";
+const baseHover = "#1CAA9F";
+
 const brandPrimary = "#F6F6F6";
 const brandSecondary = "#1E1D1D";
 const brandAccent = "#00847A";
-const textPrimary = "#1E1D1D";
-const textMuted = "#9E9E9E";
+
+const textPrimary = basePrimary;
+//const textMuted = "#9E9E9E";
+const textMuted = baseMuted;
 const textLight = "#FFFFFF";
-const textError = "#880000";
-const textLink = "#2B4ECA";
+const textError = baseError;
+const textLink = baseLink;
 const textAccent = "#00847A";
 
-const componentPrimary = "#F6F6F6";
+const componentPrimary = "#00847A";
+//const componentPrimary = "#2F80ED";
+//const componentPrimary = "#F6F6F6";
 const componentSecondary = "#1E1D1D";
 const componentAccent = "#00847A";
 const componentLightText = "#FFFFFF";
-const componentDarkText = "#1E1D1D";
+const componentDarkText = "#D1D1D1";
+//const componentDarkText = "#1E1D1D";
 const componentBorder = "#D1D6DB";
 
 const backgroundPrimary = "#F6F6F6";
@@ -59,9 +76,6 @@ const colors = {
     notification: backgroundNotification,
     light: backgroundLight,
   },
-  borders: {
-    input: componentDarkText,
-  },
 
   brandPrimary,
   brandSecondary,
@@ -87,6 +101,15 @@ const colors = {
   backgroundError,
   backgroundNotification,
   backgroundLight,
+  basePrimary,
+  baseSecondary,
+  baseTertiary,
+  baseMuted,
+  baseWhite,
+  baseError,
+  baseLink,
+  baseSuccess,
+  baseHover,
 };
 
 export const palette = {

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <label
+    className="Label__LabelElement-sc-1r8ik4v-0 kXlIAr"
+  >
+    Something very long text next line here
+     
+  </label>
+</div>
+`;

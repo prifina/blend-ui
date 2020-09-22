@@ -43,27 +43,36 @@ export const baseSizes = {
   "14": "0.875rem",
   "15": "0.9375rem",
   "16": "1rem",
+  "17": "1.0625rem",
   "18": "1.125rem",
   "20": "1.25rem",
   "22": "1.375rem",
   "24": "1.5rem",
   "26": "1.625rem",
   "28": "1.75rem",
+  "29": "1.8125rem",
   "30": "1.875rem",
+  "31": "1.9375rem",
   "32": "2rem",
+  "33": "2.0625rem",
   "34": "2.125rem",
   "36": "2.25rem",
   "38": "2.375rem",
   "40": "2.5rem",
+  "42": "2.625rem",
   "48": "3rem",
   "50": "3.125rem",
   "60": "3.75rem",
   "64": "4rem",
   "70": "4.375rem",
+  "72": "4.5rem",
+
   "80": "5rem",
   "90": "5.625rem",
   "100": "6.25rem",
   "128": "8rem",
+  "129": "8.0625rem",
+  "131": "8.1875rem",
 };
 
 const largeSizes = {
@@ -101,19 +110,39 @@ const borderWidths = {
 
 const buttonSizes = {
   xs: {
-    fontSize: baseSizes[12],
+    fontSize: baseSizes[10],
   },
   sm: {
-    fontSize: baseSizes[14],
+    fontSize: baseSizes[12],
   },
   md: {
-    fontSize: baseSizes[16],
+    fontSize: baseSizes[14],
   },
   lg: {
-    fontSize: baseSizes[18],
+    fontSize: baseSizes[16],
   },
   xl: {
     fontSize: baseSizes[18],
+  },
+};
+const componentSizes = {
+  xs: {
+    height: baseSizes[12],
+  },
+  sm: {
+    height: baseSizes[14],
+  },
+  md: {
+    height: baseSizes[16],
+  },
+  lg: {
+    height: baseSizes[18],
+  },
+  xl: {
+    height: baseSizes[18],
+  },
+  base: {
+    height: baseSizes[33],
   },
 };
 
@@ -123,6 +152,7 @@ const sizes = {
   containers,
   borderWidths,
   buttonSizes,
+  componentSizes,
 };
 
 export default sizes;

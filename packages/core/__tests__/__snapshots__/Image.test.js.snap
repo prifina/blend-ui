@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Circle Image renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <img
+    alt="Image"
+    className="Image__ImageElement-llmt0i-0 jdronN"
+    height="auto"
+    src="https://picsum.photos/200/200"
+  />
+</div>
+`;
+
+exports[`Image renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <img
+    alt="image"
+    className="Image__ImageElement-llmt0i-0 bstOit"
+    height="auto"
+    src="https://picsum.photos/200/200"
+  />
+</div>
+`;
+
+exports[`Rounded Image renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <img
+    alt="Image"
+    className="Image__ImageElement-llmt0i-0 biQCzg"
+    height="auto"
+    src="https://picsum.photos/200/200"
+  />
+</div>
+`;
+
+exports[`Square Image renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <img
+    alt="Image"
+    className="Image__ImageElement-llmt0i-0 kLlHoc"
+    height="auto"
+    src="https://picsum.photos/200/200"
+    width={300}
+  />
+</div>
+`;

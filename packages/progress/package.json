@@ -1,0 +1,38 @@
+{
+  "name": "@blend-ui/progress",
+  "version": "1.0.0",
+  "description": "Progress Components",
+  "author": "Tero <tero@prifina.com>",
+  "license": "MIT",
+  "main": "dist/esm/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn build:cjs && yarn build:es && yarn build:esm",
+    "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel ./src --out-dir ./dist/esm",
+    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel ./src --out-dir ./dist/cjs",
+    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel ./src --out-dir ./dist/es",
+    "storybook": "start-storybook"
+  },
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@storybook/addon-actions": "^6.0.16",
+    "@storybook/addon-storyshots": "^6.0.16",
+    "@storybook/react": "^6.0.16",
+    "babel-loader": "^8.1.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
+  }
+}

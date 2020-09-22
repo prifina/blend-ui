@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <label
+    className="Label__LabelElement-sc-1r8ik4v-0 eywAIY"
+    htmlFor="cabinClass"
+  >
+    Cabin Class
+  </label>
+  <div
+    className="Box__BoxElement-sc-12sd5m8-0 dVEzYQ Select__StyledBox-hvu8mh-1 itKGC"
+  >
+    <select
+      className="Select__SelectElement-hvu8mh-0 bUFvPY"
+      defaultValue="Premium Economy"
+      id="cabinClass"
+      name="cabinClass"
+    >
+      <option>
+        Economy
+      </option>
+      <option>
+        Premium Economy
+      </option>
+      <option>
+        Business
+      </option>
+      <option>
+        First Class
+      </option>
+      <option>
+        With a super long label that doesn't get clobbered by the chevron
+      </option>
+    </select>
+    <svg
+      className="BlendIcon-sc-1i0m6ln-0 Select__ClickableIcon-hvu8mh-2 krDdLV"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<path d=\\"M5 8l7 8l7-8z\\" fill=\\"#000\\" fill-rule=\\"evenodd\\"/>",
+        }
+      }
+      focusable={false}
+      height="24"
+      preserveAspectRatio="xMidYMid meet"
+      style={
+        Object {
+          "transform": "rotate(360deg)",
+          "verticalAlign": "-0.125em",
+        }
+      }
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+</div>
+`;

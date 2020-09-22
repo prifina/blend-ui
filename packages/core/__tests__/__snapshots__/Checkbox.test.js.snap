@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <label
+    className="Label__LabelElement-sc-1r8ik4v-0 eywAIY Checkboxtest__StyledLabel-w4ffkd-0 eCobvd"
+    htmlFor="unchecked_box"
+  >
+    <div
+      className="Box__BoxElement-sc-12sd5m8-0 jDRAwz Checkbox__CheckBoxWrapper-w0kchr-1 jXeDaM"
+    >
+      <input
+        className="Checkbox__StyledInput-w0kchr-0 lcOgdW"
+        id="unchecked_box"
+        onChange={[Function]}
+        role="checkbox"
+        type="checkbox"
+      />
+      <svg
+        className="BlendIcon-sc-1i0m6ln-0 gGmBNS"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M10.933 13.519l-2.226-2.226l-1.414 1.414l3.774 3.774l5.702-6.84l-1.538-1.282z\\" fill=\\"currentColor\\"/><path d=\\"M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM5 19V5h14l.002 14H5z\\" fill=\\"currentColor\\"/>",
+          }
+        }
+        data-name="checked"
+        focusable={false}
+        height="1.5rem"
+        preserveAspectRatio="xMidYMid meet"
+        style={
+          Object {
+            "transform": "rotate(360deg)",
+            "verticalAlign": "-0.125em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+      <svg
+        className="BlendIcon-sc-1i0m6ln-0 gGmBNS"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<path d=\\"M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 16H5V5h14v14z\\" fill=\\"currentColor\\"/>",
+          }
+        }
+        data-name="empty"
+        focusable={false}
+        height="1.5rem"
+        preserveAspectRatio="xMidYMid meet"
+        style={
+          Object {
+            "transform": "rotate(360deg)",
+            "verticalAlign": "-0.125em",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1.5rem"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+    Unchecked by default
+  </label>
+</div>
+`;

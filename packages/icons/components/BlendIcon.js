@@ -19,7 +19,8 @@ const getPaletteColor = (...args) => props => {
     color = colorShade[0];
     shade = colorShade[1];
   }
-
+  //console.log("GET ", color, shade);
+  //console.log("GET THEME", themeGet(`colors.${color}`)(props));
   return (
     themeGet(`palette.${color}.${shade}`)(props) ||
     themeGet(`palette.${color}`)(props) ||
@@ -36,9 +37,20 @@ function uc(s) {
 */
 
 const BaseIcon = props => {
-  //console.log('ICON ',props);
-  const { name, title, size, stroke, iconify, color, width, ...rest } = props;
+  //console.log("ICON ", props);
+  const {
+    name,
+    title,
+    size,
+    stroke,
+    iconify,
+    color,
+    width,
+    theme,
+    ...rest
+  } = props;
   let _color = color;
+  //console.log("PALETTE ", _paletteColor2);
   if (typeof props.theme !== "undefined") {
     //console.log('PALETTE ',getPaletteColor(color)(props));
     const _paletteColor = getPaletteColor(color)(props);

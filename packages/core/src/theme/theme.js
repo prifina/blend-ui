@@ -1,4 +1,5 @@
-import sizes, { baseSizes } from "./sizes";
+//import sizes, { baseSizes } from "./sizes";
+import { default as sizeOptions, baseSizes } from "./sizes";
 import typography from "./typography";
 import colors from "./colors";
 import createTextStyles from "./createTextStyles";
@@ -71,7 +72,8 @@ export const radii = {
   lg: "0.5rem",
   full: "9999px",
   avatar: "4%",
-  input: "0.25rem",
+  //input: "0.25rem",
+  input: "0.3125rem",
 };
 
 export const opacity = {
@@ -86,23 +88,34 @@ export const opacity = {
 export const radius = radii["md"];
 
 // borders
-export const borderWidths = { ...sizes.borderWidths };
+export const borderWidths = { ...sizeOptions.borderWidths };
 export const borders = {
   input: {
-    base: `${borderWidths["2xs"]} solid ${colors.borders.input}`,
+    base: `${borderWidths["2xs"]} solid ${colors.baseMuted}`,
+    disabled: `${borderWidths["2xs"]} solid ${colors.baseWhite}`,
+    error: `${borderWidths["2xs"]} solid ${colors.baseError}`,
+    hover: `${borderWidths["2xs"]} solid ${colors.baseSecondary}`,
+    active: `${borderWidths["2xs"]} solid ${colors.baseSecondary}`,
     borderRadius: radii["input"],
   },
   select: {
-    base: `${borderWidths["2xs"]} solid ${colors.borders.input}`,
+    base: `${borderWidths["2xs"]} solid ${colors.baseMuted}`,
+    borderRadius: radii["input"],
+  },
+  button: {
+    base: `${borderWidths["2xs"]} solid ${colors.baseSecondary}`,
+    disabled: `${borderWidths["2xs"]} solid ${colors.baseMuted}`,
+    hover: `${borderWidths["2xs"]} solid ${colors.baseHover}`,
     borderRadius: radii["input"],
   },
 };
 
 export const componentStyles = createComponentStyles({
   fontSizes,
-  sizes,
+  sizeOptions,
   borders,
   colors,
+  fontWeights: { ...typography.fontWeights },
 });
 
 // boxShadows
@@ -111,6 +124,8 @@ export const boxShadows = [
   `0 0 2px 0 rgba(0,0,0,.08),0 2px 8px 0 rgba(0,0,0,.16)`,
   `0 0 2px 0 rgba(0,0,0,.08),0 4px 16px 0 rgba(0,0,0,.16)`,
   `0 0 2px 0 rgba(0,0,0,.08),0 8px 32px 0 rgba(0,0,0,.16)`,
+  `0 4px 8px rgba(91, 92, 91, 0.35)` /* 100% */,
+  `0 4px 8px rgba(91, 92, 91, 0.2)` /* 75% */,
 ];
 
 export const textShadows = {
@@ -149,7 +164,7 @@ const theme = {
   breakpoints,
   mediaQueries,
   zIndices,
-  //sizes,
+  sizeOptions,
   space,
   fontSizes,
   fonts,

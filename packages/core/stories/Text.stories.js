@@ -75,3 +75,8 @@ export const text4 = () => (
 text4.story = {
   name: "Text + error",
 };
+
+export const text5 = () => <Text textStyle={"h6"}>TextStyle h6</Text>;
+text5.story = {
+  name: "Text + h6",
+};

@@ -1,6 +1,6 @@
 {
   "name": "@blend-ui/core",
-  "version": "0.1.17-alpha.0",
+  "version": "1.1.1",
   "description": "Blend core cmponents",
   "author": "Tero <tero@prifina.com>",
   "license": "MIT",
@@ -19,7 +19,8 @@
     "storybook": "start-storybook"
   },
   "dependencies": {
-    "@blend-ui/icons": "^0.1.17-alpha.0",
+    "@blend-ui/icons": "^1.1.1",
+    "@reach/auto-id": "^0.11.2",
     "@styled-system/theme-get": "^5.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

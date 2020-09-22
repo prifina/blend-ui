@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Disabled renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <input
+    disabled={true}
+    type="text"
+  />
+</div>
+`;
+
+exports[`Icon Input renders correctly 1`] = `null`;
+
+exports[`Input Styled no border renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <input
+    className="Input__InputElement-sc-1cjfi0-0 fGpWUR"
+    placeholder="Enter value here"
+    type="text"
+    width="100%"
+  />
+</div>
+`;
+
+exports[`Input renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <input
+    type="text"
+  />
+</div>
+`;
+
+exports[`Input with placeholder renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <input
+    className="Input__InputElement-sc-1cjfi0-0 fCHglG"
+    placeholder="Enter value here"
+    type="text"
+    width="100%"
+  />
+</div>
+`;

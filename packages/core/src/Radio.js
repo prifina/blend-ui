@@ -8,6 +8,8 @@ import { default as RadioChecked } from "@iconify/icons-bx/bx-radio-circle-marke
 import { default as RadioEmpty } from "@iconify/icons-bx/bx-radio-circle";
 
 import Label from "./Label";
+import { useTheme } from "./theme/ThemeProvider";
+import { useId } from "@reach/auto-id";
 /*
 import {
   radioboxMarkedIcon as RadioChecked,
@@ -53,6 +55,7 @@ const RadioInput = styled.input`
 `;
 
 const LabelText = styled.span`
+  cursor: pointer;
   vertical-align: middle;
 `;
 
@@ -65,17 +68,25 @@ const RadioIcon = ({ checked, ...props }) => {
 };
 
 const Radio = forwardRef((props, ref) => {
-  const { checked, disabled, onChange, children, ...rest } = props;
+  const { checked, disabled, onChange, children, color, id, ...rest } = props;
 
   //const borderAdjustedSize = parseInt(size) + 4;
   //const borderAdjustedSize = "1.5rem";
   const borderAdjustedSize = "2.0rem";
+  const theme = useTheme();
+  const _id = useId(id);
+  const inputID = `blend-radio-${_id}`;
 
   return (
     <Label onChange={onChange}>
       <RadioWrap checked={checked} disabled={disabled}>
-        <RadioInput type="radio" {...rest} ref={ref} />
-        <RadioIcon checked={checked} size={borderAdjustedSize} />
+        <RadioInput type="radio" {...rest} ref={ref} id={inputID} />
+        <RadioIcon
+          checked={checked}
+          size={borderAdjustedSize}
+          color={color}
+          theme={theme}
+        />
       </RadioWrap>
       <LabelText>{children}</LabelText>
     </Label>
@@ -109,7 +120,13 @@ Radio.propTypes = {
   size: PropTypes.string,
 };
 */
-
+Radio.defaultProps = {
+  color: "componentPrimary",
+};
+Radio.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  color: PropTypes.string,
+};
 Radio.displayName = "Radio";
 
 export default Radio;

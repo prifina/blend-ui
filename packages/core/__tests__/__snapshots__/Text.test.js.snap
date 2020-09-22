@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <div
+    className="Text__TextElement-z9dcxz-0 cLaQsF"
+  >
+     Something
+     
+     
+  </div>
+</div>
+`;
+
+exports[`Text renders fontStyle correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <div
+    className="Text__TextElement-z9dcxz-0 dsjxJP"
+  >
+     Something 
+  </div>
+</div>
+`;

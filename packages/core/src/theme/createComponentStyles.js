@@ -1,85 +1,103 @@
 export default (theme = {}) => {
-  const { fontSizes, sizes, borders, colors } = theme;
+  const { fontSizes, sizeOptions, borders, colors, fontWeights } = theme;
 
   const baseProps = {
-    fontSize: fontSizes["sm"],
-    lineHeight: sizes[20],
+    fontSize: fontSizes["xs"],
+    /*lineHeight: sizeOptions[29], */
+    lineHeight: sizeOptions[17],
     border: borders.input.base,
     borderRadius: borders.input.borderRadius,
-    paddingLeft: sizes[7],
-    paddingRight: sizes[7],
-    paddingTop: sizes[13],
-    paddingBottom: sizes[13],
+    paddingLeft: sizeOptions[10],
+    paddingRight: sizeOptions[10],
+    paddingTop: sizeOptions[7],
+    paddingBottom: sizeOptions[7],
+    backgroundColor: colors.baseWhite,
+    color: colors.text.primary,
   };
-
+  /*
+  font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 18px;
+*/
   return {
     input: {
-      base: baseProps,
+      base: { ...baseProps, height: sizeOptions.componentSizes["base"].height },
     },
     textarea: {
       base: baseProps,
     },
     select: {
       fontSize: fontSizes["sm"],
-      lineHeight: sizes[20],
+      lineHeight: sizeOptions[20],
       color: colors.textAccent,
       backgroundColor: "transparent",
       border: borders.select.base,
       borderRadius: borders.select.borderRadius,
 
-      paddingLeft: sizes[12],
-      paddingRight: sizes[32],
-      paddingTop: sizes[13],
-      paddingBottom: sizes[13],
+      paddingLeft: sizeOptions[12],
+      paddingRight: sizeOptions[32],
+      paddingTop: sizeOptions[13],
+      paddingBottom: sizeOptions[13],
     },
     button: {
       xs: {
-        fontSize: sizes.buttonSizes.xs.fontSize,
-        paddingLeft: sizes[12],
-        paddingRight: sizes[12],
-        lineHeight: sizes[32],
-        minWidth: sizes[100],
+        fontSize: sizeOptions.buttonSizes.xs.fontSize,
+        paddingLeft: sizeOptions[12],
+        paddingRight: sizeOptions[12],
+        lineHeight: sizeOptions[32],
+        minWidth: sizeOptions[100],
+        fontWeight: fontWeights["normal"],
       },
       sm: {
-        fontSize: sizes.buttonSizes.sm.fontSize,
-        paddingLeft: sizes[18],
-        paddingRight: sizes[18],
-        lineHeight: sizes[48],
-        minWidth: sizes[100],
+        fontSize: sizeOptions.buttonSizes.sm.fontSize,
+        paddingLeft: sizeOptions[22],
+        paddingRight: sizeOptions[22],
+        lineHeight: sizeOptions[30],
+        minWidth: sizeOptions[131],
+        fontWeight: fontWeights["bold"],
       },
       md: {
-        fontSize: sizes.buttonSizes.md.fontSize,
-        paddingLeft: sizes[18],
-        paddingRight: sizes[18],
-        lineHeight: sizes[48],
-        minWidth: sizes[100],
+        fontSize: sizeOptions.buttonSizes.md.fontSize,
+        paddingLeft: sizeOptions[18],
+        paddingRight: sizeOptions[18],
+        lineHeight: sizeOptions[48],
+        minWidth: sizeOptions[131],
+        fontWeight: fontWeights["bold"],
       },
       lg: {
-        fontSize: sizes.buttonSizes.lg.fontSize,
-        paddingLeft: sizes["8.5"],
-        paddingRight: sizes["8.5"],
-        lineHeight: sizes[48],
-        minWidth: sizes[100],
+        fontSize: sizeOptions.buttonSizes.lg.fontSize,
+        paddingLeft: sizeOptions["8.5"],
+        paddingRight: sizeOptions["8.5"],
+        lineHeight: sizeOptions[48],
+        minWidth: sizeOptions[131],
+        fontWeight: fontWeights["bold"],
       },
       xl: {
-        fontSize: sizes.buttonSizes.xl.fontSize,
-        paddingLeft: sizes[34],
-        paddingRight: sizes[34],
-        lineHeight: sizes[48],
-        minWidth: sizes[100],
+        fontSize: sizeOptions.buttonSizes.xl.fontSize,
+        paddingLeft: sizeOptions[34],
+        paddingRight: sizeOptions[34],
+        lineHeight: sizeOptions[48],
+        minWidth: sizeOptions[131],
+        fontWeight: fontWeights["bold"],
       },
       fill: {
-        backgroundColor: colors.backgroundAccent,
-        color: colors.brandPrimary,
+        backgroundColor: colors.baseSecondary,
+        color: colors.baseWhite,
+        border: borders.button.base,
       },
       outline: {
-        backgroundColor: "transparent",
-        color: colors.brandAccent,
-        boxShadow: "inset 0 0 0 2px " + colors.brandAccent,
+        backgroundColor: colors.baseWhite,
+        color: colors.baseSecondary,
+        border: borders.button.base,
+        //boxShadow: "inset 0 0 0 2px " + colors.brandAccent,
       },
       link: {
         backgroundColor: "transparent",
-        color: colors.textLink,
+        color: colors.baseLink,
+        border: 0,
+        minWidth: 0,
       },
       file: {
         backgroundColor: "none",

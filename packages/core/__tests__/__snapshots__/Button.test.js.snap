@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+>
+  <button
+    className="Button__ButtonElement-u7scuu-2 jWHRhU"
+    size="md"
+  >
+    Something
+  </button>
+</div>
+`;
