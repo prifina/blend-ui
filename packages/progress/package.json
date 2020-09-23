@@ -1,6 +1,6 @@
 {
   "name": "@blend-ui/progress",
-  "version": "1.0.1-alpha.0",
+  "version": "1.0.2-alpha.0",
   "description": "Progress Components",
   "author": "Tero <tero@prifina.com>",
   "license": "MIT",
@@ -32,8 +32,8 @@
     "@storybook/react": "^6.0.16",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
-    "cross-env": "^7.0.2",
-    "babel-loader": "^8.1.0"
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
