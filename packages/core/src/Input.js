@@ -9,6 +9,11 @@ import {
   color,
   compose,
 } from "styled-system";
+import Text from "./Text";
+import Box from "./Box";
+
+import { useTheme } from "./theme/ThemeProvider";
+
 //import PropTypes from "prop-types";
 
 const systemProps = compose(layout, color, space, border, typography);
@@ -151,9 +156,37 @@ const InputElement = styled.input`
   ${errorStyles}
 `;
 
-const Input = forwardRef((props, ref) => {
+const Input = forwardRef(({ errorMsg, promptMsg, ...props }, ref) => {
   //console.log("INPUT  ", props, ref);
-  return <InputElement {...props} ref={ref} />;
+  const { colors } = useTheme();
+  //console.log("IS ICON ", props.isIcon);
+  //const InputRef = ref || React.createRef();
+  if (errorMsg && errorMsg.length > 0) {
+    return (
+      <React.Fragment>
+        <InputElement {...props} ref={ref} />
+        <Text mt={5} textStyle={"caption2"} color={colors.baseError}>
+          {errorMsg}
+        </Text>
+      </React.Fragment>
+    );
+  } else if (promptMsg && promptMsg.length > 0) {
+    return (
+      <Box>
+        <InputElement {...props} ref={ref} />
+        <Text
+          mt={5}
+          mb={10}
+          textStyle={"caption2"}
+          color={colors.baseSecondary}
+        >
+          {promptMsg}
+        </Text>
+      </Box>
+    );
+  } else {
+    return <InputElement {...props} ref={ref} />;
+  }
 });
 Input.defaultProps = {
   as: "input",

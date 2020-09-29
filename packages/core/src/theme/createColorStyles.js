@@ -5,6 +5,7 @@ export default (theme = {}) => {
       color: colors["textError"],
       backgroundColor: colors["backgroundError"],
     },
+
     avatar: [
       {
         color: colors.text.light,

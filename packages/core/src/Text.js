@@ -66,10 +66,11 @@ const colorStyles = props => {
 const TextElement = styled.div(
   typography,
   space,
-  color,
+
   textStyles,
   colorStyles,
   customProps,
+  color,
 );
 
 const Text = ({ as, ...props }) => {

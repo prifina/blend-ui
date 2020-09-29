@@ -21,7 +21,7 @@ const buttonVariation = props => {
     hoverVariations = css`
       &:hover {
         text-decoration: underline;
-        color: ${props => props.theme.colors.baseHover}!important;
+        color: ${props => props.theme.colors.baseLinkHover}!important;
         background-color: transparent !important;
         border: 0 !important;
       }

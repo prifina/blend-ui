@@ -96,6 +96,7 @@ line-height: 18px;
       link: {
         backgroundColor: "transparent",
         color: colors.baseLink,
+        textDecoration: "underline",
         border: 0,
         minWidth: 0,
       },
