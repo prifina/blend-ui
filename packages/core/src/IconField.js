@@ -164,7 +164,11 @@ const LeftIcon = styled(props => {
     <BlendIcon
       {...props}
       fill={disabled ? theme.colors.baseMuted : "transparent"}
-      color={inputError ? theme.colors.baseError : theme.colors.baseSecondary}
+      color={
+        inputError
+          ? theme.colors.baseError
+          : props.color || theme.colors.baseSecondary
+      }
       theme={theme}
       style={{ marginLeft: theme.sizeOptions[10] }}
     />
@@ -184,7 +188,11 @@ const RightIcon = styled(props => {
     <BlendIcon
       {...props}
       fill={disabled ? theme.colors.baseMuted : "transparent"}
-      color={inputError ? theme.colors.baseError : theme.colors.baseSecondary}
+      color={
+        inputError
+          ? theme.colors.baseError
+          : props.color || theme.colors.baseSecondary
+      }
       theme={theme}
       style={{ marginRight: theme.sizeOptions[10] }}
     />

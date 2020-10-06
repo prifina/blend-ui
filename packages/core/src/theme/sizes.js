@@ -48,6 +48,7 @@ export const baseSizes = {
   "20": "1.25rem",
   "22": "1.375rem",
   "24": "1.5rem",
+  "25": "1.5625rem",
   "26": "1.625rem",
   "28": "1.75rem",
   "29": "1.8125rem",
@@ -146,6 +147,22 @@ const componentSizes = {
   },
 };
 
+const modalSizes = {
+  full: "100%",
+  "3xs": "14rem",
+  "2xs": "16rem",
+  xs: "20rem",
+  sm: "24rem",
+  md: "28rem",
+  lg: "32rem",
+  xl: "36rem",
+  "2xl": "42rem",
+  "3xl": "48rem",
+  "4xl": "56rem",
+  "5xl": "64rem",
+  "6xl": "72rem",
+};
+
 const sizes = {
   ...baseSizes,
   ...largeSizes,
@@ -153,6 +170,7 @@ const sizes = {
   borderWidths,
   buttonSizes,
   componentSizes,
+  modalSizes,
 };
 
 export default sizes;

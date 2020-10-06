@@ -13,6 +13,9 @@ export const Base = styled.div`
   * {
     box-sizing: border-box;
   }
+  p: {
+    margin: 0;
+  }
 `;
 
 const ThemeProvider = ({ theme = {}, ...props }) => {

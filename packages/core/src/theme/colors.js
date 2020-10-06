@@ -11,6 +11,8 @@ const baseLink = "#007AFF";
 const baseSuccess = "#84BC4F";
 const baseHover = "#1CAA9F";
 const baseLinkHover = "#539EF0";
+const baseInputDisabled = "#E5E4E4";
+const baseModalBackground = "rgba(30, 29, 29, 0.75)";
 
 const brandPrimary = "#F6F6F6";
 const brandSecondary = "#1E1D1D";
@@ -18,7 +20,7 @@ const brandAccent = "#00847A";
 
 const textPrimary = basePrimary;
 //const textMuted = "#9E9E9E";
-const textMuted = baseMuted;
+const textMuted = baseInputDisabled;
 const textLight = "#FFFFFF";
 const textError = baseError;
 const textLink = baseLink;
@@ -112,6 +114,8 @@ const colors = {
   baseSuccess,
   baseHover,
   baseLinkHover,
+  baseInputDisabled,
+  baseModalBackground,
 };
 
 export const palette = {

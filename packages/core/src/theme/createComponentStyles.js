@@ -29,17 +29,26 @@ line-height: 18px;
       base: baseProps,
     },
     select: {
-      fontSize: fontSizes["sm"],
-      lineHeight: sizeOptions[20],
-      color: colors.textAccent,
-      backgroundColor: "transparent",
-      border: borders.select.base,
-      borderRadius: borders.select.borderRadius,
+      md: {
+        fontSize: fontSizes["sm"],
+        lineHeight: sizeOptions[20],
+        color: colors.textAccent,
+        backgroundColor: "transparent",
+        border: borders.select.base,
+        borderRadius: borders.select.borderRadius,
 
-      paddingLeft: sizeOptions[12],
-      paddingRight: sizeOptions[32],
-      paddingTop: sizeOptions[13],
-      paddingBottom: sizeOptions[13],
+        paddingLeft: sizeOptions[12],
+        paddingRight: sizeOptions[32],
+        paddingTop: sizeOptions[13],
+        paddingBottom: sizeOptions[13],
+      },
+      sm: {
+        fontSize: fontSizes["sm"],
+        lineHeight: sizeOptions[18],
+        borderRadius: borders.select.borderRadius,
+        height: sizeOptions[25],
+        paddingLeft: sizeOptions[4],
+      },
     },
     button: {
       xs: {
