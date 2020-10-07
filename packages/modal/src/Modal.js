@@ -128,16 +128,11 @@ function useAriaHider({
 ////////////////////////////////////////////////////////////////////////
 
 const Base = styled.div`
-  font-family: ${props => props.theme.fonts.body || null};
-  font-weight: ${props => props.theme.fontWeights.medium || null};
-  line-height: ${props => props.theme.lineHeights.standard || null};
-
-  * {
-    box-sizing: border-box;
-  }
-  p: {
-    margin: 0;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  ${props => props.theme.baseStyles}
 `;
 
 /**

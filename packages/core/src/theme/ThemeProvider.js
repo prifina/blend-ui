@@ -3,8 +3,12 @@ import styled, {
   ThemeProvider as StyledThemeProvider,
   ThemeContext,
 } from "styled-components";
-import { default as defaultTheme } from "./theme";
+import { default as defaultTheme, baseStyles } from "./theme";
 
+export const Base = styled.div`
+  ${baseStyles}
+`;
+/*
 export const Base = styled.div`
   font-family: ${props => props.theme.fonts.body || null};
   font-weight: ${props => props.theme.fontWeights.medium || null};
@@ -17,6 +21,7 @@ export const Base = styled.div`
     margin: 0;
   }
 `;
+*/
 
 const ThemeProvider = ({ theme = {}, ...props }) => {
   //console.log("THEME PROVIDER ", theme, defaultTheme);
