@@ -90,3 +90,12 @@ export const button7 = () => (
 button7.story = {
   name: "Icon Button",
 };
+
+export const button8 = () => (
+  <Button variation={"outline"} colorStyle={"error"}>
+    Outline
+  </Button>
+);
+button8.story = {
+  name: "Button outline colorStyle",
+};

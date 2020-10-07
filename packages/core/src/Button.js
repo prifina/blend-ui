@@ -29,6 +29,19 @@ const buttonVariation = props => {
   //console.log(hoverVariations);
   return [buttonProps, hoverVariations];
 };
+
+const themeColorStyles = props => {
+  //return props.colorStyle ? props.theme.colorStyles[props.colorStyle] : null;
+  let buttonProps = null;
+  let hoverVariations = null;
+  if (props.colorStyle) {
+    if (props.variation === "outline") {
+      buttonProps = props.theme.colorStyles.button.outline[props.colorStyle];
+    }
+  }
+  return [buttonProps, hoverVariations];
+};
+
 const buttonTheme = css`
   display: inline-block;
   vertical-align: middle;
@@ -133,6 +146,7 @@ const ButtonElement = styled.button`
     ${buttonVariation}
     ${space}
     ${typography}
+    ${themeColorStyles}
     `;
 
 const Button = forwardRef((props, ref) => {
@@ -183,6 +197,7 @@ Button.propTypes = {
   //input: PropTypes.string,
   /** Input file selected event */
   onChange: PropTypes.func,
+  colorStyle: PropTypes.string,
 };
 
 Button.defaultProps = {

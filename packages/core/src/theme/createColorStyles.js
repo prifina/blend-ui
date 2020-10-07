@@ -1,6 +1,14 @@
 export default (theme = {}) => {
   const { colors } = theme;
   return {
+    button: {
+      outline: {
+        error: {
+          color: colors.baseError,
+          borderColor: colors.baseError,
+        },
+      },
+    },
     error: {
       color: colors["textError"],
       backgroundColor: colors["backgroundError"],

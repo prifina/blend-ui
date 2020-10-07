@@ -127,6 +127,19 @@ function useAriaHider({
 
 ////////////////////////////////////////////////////////////////////////
 
+const Base = styled.div`
+  font-family: ${props => props.theme.fonts.body || null};
+  font-weight: ${props => props.theme.fontWeights.medium || null};
+  line-height: ${props => props.theme.lineHeights.standard || null};
+
+  * {
+    box-sizing: border-box;
+  }
+  p: {
+    margin: 0;
+  }
+`;
+
 /**
  - Modal Component
 **/
@@ -250,8 +263,10 @@ const Modal = props => {
     <ModalContext.Provider value={context}>
       <Portal container={mountRef.current}>
         <ThemeProvider theme={theme}>
-          {overLay && <ModalOverlay />}
-          {children}
+          <Base>
+            {overLay && <ModalOverlay />}
+            {children}
+          </Base>
         </ThemeProvider>
       </Portal>
     </ModalContext.Provider>
