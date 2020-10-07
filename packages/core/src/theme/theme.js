@@ -161,7 +161,7 @@ const transitionDelays = {
   xLarge: `360ms`,
 };
 
-const baseStyles = css`
+export const baseStyles = css`
   font-family: ${fonts.body || null};
   font-weight: ${typography.fontWeights.medium || null};
   line-height: ${typography.lineHeights.standard || null};

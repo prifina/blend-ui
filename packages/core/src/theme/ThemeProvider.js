@@ -25,6 +25,7 @@ export const Base = styled.div`
 
 const ThemeProvider = ({ theme = {}, ...props }) => {
   //console.log("THEME PROVIDER ", theme, defaultTheme);
+  //console.log(baseStyles);
   const mergedTheme = { ...defaultTheme, ...theme };
   return (
     <StyledThemeProvider theme={mergedTheme}>
