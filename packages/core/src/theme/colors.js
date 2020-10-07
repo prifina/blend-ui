@@ -7,6 +7,7 @@ const baseTertiary = "rgba(0, 132, 122, 0.1)";
 const baseMuted = "#C3C2C2";
 const baseWhite = "#F5F8F7";
 const baseError = "#F40431";
+const baseErrorHover = "#DF5C75";
 const baseLink = "#007AFF";
 const baseSuccess = "#84BC4F";
 const baseHover = "#1CAA9F";
@@ -116,6 +117,7 @@ const colors = {
   baseLinkHover,
   baseInputDisabled,
   baseModalBackground,
+  baseErrorHover,
 };
 
 export const palette = {

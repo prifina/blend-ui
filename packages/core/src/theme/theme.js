@@ -45,6 +45,7 @@ const zIndices = {
   dropdown: 1000,
   sticky: 1100,
   banner: 1200,
+  modalBase: 1290,
   overlay: 1300,
   modal: 1400,
   popover: 1500,

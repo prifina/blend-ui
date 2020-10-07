@@ -132,7 +132,8 @@ const Base = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  ${props => props.theme.baseStyles}
+  z-index: ${props => props.theme.zIndices["modalBase"]}
+    ${props => props.theme.baseStyles};
 `;
 
 /**
