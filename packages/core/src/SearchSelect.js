@@ -141,7 +141,17 @@ const mergeRefs = (...refs) => {
   };
 };
 const SearchSelect = forwardRef(
-  ({ size, options, defaultValue, showList = false, ...props }, ref) => {
+  (
+    {
+      size,
+      options,
+      defaultValue,
+      searchLength = 3,
+      showList = false,
+      ...props
+    },
+    ref,
+  ) => {
     const theme = useTheme();
 
     let iconUp;
@@ -233,6 +243,7 @@ const SearchSelect = forwardRef(
               onSelect={onSelect}
               showList={showList}
               activeItem={activeItem}
+              searchLength={searchLength}
             />
           </PopperContainer>
         )}
