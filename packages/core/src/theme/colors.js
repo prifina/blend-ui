@@ -21,7 +21,7 @@ const brandAccent = "#00847A";
 
 const textPrimary = basePrimary;
 //const textMuted = "#9E9E9E";
-const textMuted = baseInputDisabled;
+const textMuted = baseMuted;
 const textLight = "#FFFFFF";
 const textError = baseError;
 const textLink = baseLink;
