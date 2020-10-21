@@ -85,7 +85,7 @@ const PopperContainer = styled.div`
     &:after {
       content: " ";
       position: absolute;
-      top: -19px; // we account for the PopperContainer padding
+      top: -17px; // we account for the PopperContainer padding
       left: 0;
       transform: rotate(45deg);
       width: 20px;
