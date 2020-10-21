@@ -1,14 +1,15 @@
 import React from "react";
-import Select from "../src/Select";
+import SearchSelect from "../src/SearchSelect";
 import Label from "../src/Label";
 import Box from "../src/Box";
+import Text from "../src/Text";
 
 //import { Icon } from "@blend-ui/icons";
 //import { Graphql } from "@blend-ui/icons";
 //import { Icon, InlineIcon } from "@iconify/react";
 //import { default as ChevronDown } from "@iconify/icons-fe/drop-down";
 
-export default { title: "Select" };
+export default { title: "Search Select" };
 /*
 export default {
   title: "Icons",
@@ -21,21 +22,59 @@ addCircle.story = {
   name: "ADD",
 };
 */
-
+/*
+const selectOptions = [
+  { value: 0, option: "Economy" },
+  { value: 1, option: "Premium Economy" },
+  { value: 2, option: "Something" },
+];
+*/
+const selectOptions = [
+  {
+    key: "0",
+    value: "This is component",
+    component: (
+      <React.Fragment>
+        <Text as="span">This is component</Text>
+        <Text as="span">(+358)</Text>
+      </React.Fragment>
+    ),
+  },
+  { key: "1", value: "Premium Economy" },
+  { key: "2", value: "Something" },
+];
 export const select = () => (
   <Box>
     <Label htmlFor="cabinClass">Cabin Class</Label>
-    <Select id="cabinClass" name="cabinClass" defaultValue="Premium Economy">
-      <option>Economy</option>
-      <option>Premium Economy</option>
-      <option>Business</option>
-      <option>First Class</option>
-      <option>
-        With a super long label that doesn't get clobbered by the chevron
-      </option>
-    </Select>
+    <SearchSelect
+      id="cabinClass"
+      name="cabinClass"
+      defaultValue="1"
+      options={selectOptions}
+      onChange={e => {
+        console.log("Change ", e.target.value);
+      }}
+    />
   </Box>
 );
 select.story = {
-  name: "Select",
+  name: "Search Select",
+};
+export const select2 = () => (
+  <Box>
+    <Label htmlFor="cabinClass">Cabin Class</Label>
+    <SearchSelect
+      id="cabinClass"
+      name="cabinClass"
+      defaultValue="1"
+      options={selectOptions}
+      onChange={e => {
+        console.log("Change ", e.target.value);
+      }}
+      showList={true}
+    />
+  </Box>
+);
+select2.story = {
+  name: "Search Select with full list visible",
 };

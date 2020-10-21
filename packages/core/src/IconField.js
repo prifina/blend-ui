@@ -237,6 +237,7 @@ const IconField = props => {
   });
   //console.log("ICONS ", icons);
   let inputError = null;
+  
   const styledChildren = children.map((child, i) => {
     if (isIcon(child)) {
       console.log("ICON FIELD ", props);

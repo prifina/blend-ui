@@ -5,7 +5,6 @@ import Text from "./Text";
 import IconField from "./IconField";
 import Box from "./Box";
 
-import { space } from "styled-system";
 import PropTypes from "prop-types";
 import bxSearchAlt2 from "@iconify/icons-bx/bx-search-alt-2";
 
@@ -59,30 +58,52 @@ const LinkElement = styled.a.attrs(props => ({
 `;
 */
 
-const SuggestionsList = ({ filteredList, activeItem, onClick }) => {
+const ListContainer = styled(Box)`
+  max-height: ${props => props.maxHeight};
+  padding-right: 5px;
+  ${props => props.theme.componentStyles.scrollBar}
+`;
+
+const SuggestionsList = ({ filteredList, activeItem, maxHeight, onClick }) => {
   console.log(filteredList, activeItem);
   return (
-    <UnorderedList>
-      {filteredList.map((item, index) => (
-        <ListItem
-          key={"suggest-" + index}
-          active={index === activeItem}
-          onClick={onClick}
-          data-index={index}
-        >
-          <Text as={"span"} textStyle={"caption"}>
-            {item}
-          </Text>
-        </ListItem>
-      ))}
-    </UnorderedList>
+    <ListContainer maxHeight={maxHeight}>
+      <UnorderedList>
+        {filteredList.map((item, index) => (
+          <ListItem
+            key={"suggest-" + index}
+            active={index === activeItem}
+            onClick={onClick}
+            data-key={item.key}
+          >
+            {typeof item.component === "object" && item.component}
+            {typeof item.component === "undefined" && (
+              <Text as={"span"} textStyle={"caption"}>
+                {item.value}
+              </Text>
+            )}
+          </ListItem>
+        ))}
+      </UnorderedList>
+    </ListContainer>
   );
 };
 
 const AutoComplete = forwardRef(
-  ({ suggestions, searchLength = 1, ...props }, ref) => {
+  (
+    {
+      suggestions,
+      searchLength = 1,
+      maxHeight = "100px",
+      onSelect,
+      showList = false,
+      activeItem = -1,
+      ...props
+    },
+    ref,
+  ) => {
     //return <div {...props} ref={ref} />;
-    console.log(suggestions, props);
+    //console.log(suggestions, props);
     const theme = useTheme();
     //const [activeItem, setActiveItem] = useState(-1);
 
@@ -90,9 +111,9 @@ const AutoComplete = forwardRef(
       (state, newState) => ({ ...state, ...newState }),
       {
         filteredList: suggestions,
-        activeItem: -1,
+        activeItem: activeItem,
         userInput: "",
-        show: false,
+        show: showList,
       },
     );
 
@@ -107,9 +128,12 @@ const AutoComplete = forwardRef(
           setState({
             filteredList: [],
             activeItem: -1,
-            userInput: state.filteredList[activeItem],
+            userInput: state.filteredList[activeItem].value,
             show: false,
           });
+          if (onSelect) {
+            onSelect(state.filteredList[activeItem].key);
+          }
         }
         if (
           e.key === "ArrowDown" &&
@@ -136,7 +160,8 @@ const AutoComplete = forwardRef(
         showState = true;
         filteredSuggestions = suggestions.filter(
           suggestion =>
-            suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1,
+            suggestion.value.toLowerCase().indexOf(userInput.toLowerCase()) >
+            -1,
         );
       }
       setState({
@@ -147,10 +172,10 @@ const AutoComplete = forwardRef(
       });
     };
     const selectItem = e => {
-      //console.log(e.currentTarget.dataset.index);
+      console.log(e.currentTarget.dataset);
       if (
         typeof e.currentTarget.dataset !== "undefined" &&
-        e.currentTarget.dataset.index !== "undefined"
+        e.currentTarget.dataset.key !== "undefined"
       ) {
         /*
         console.log(
@@ -159,13 +184,20 @@ const AutoComplete = forwardRef(
           state,
         );
         */
-
+        const selectedValue = state.filteredList.filter(
+          item => item.key === e.currentTarget.dataset.key,
+        );
+        console.log(selectedValue);
         setState({
           filteredList: [],
           activeItem: -1,
-          userInput: state.filteredList[e.currentTarget.dataset.index],
+          //userInput: state.filteredList[e.currentTarget.dataset.index],
+          userInput: selectedValue[0].value,
           show: false,
         });
+        if (onSelect) {
+          onSelect(selectedValue[0].key);
+        }
       }
 
       e.preventDefault();
@@ -189,15 +221,16 @@ const AutoComplete = forwardRef(
           />
         </IconField>
 
-        <Box bg={theme.colors.baseWhite} pt={10}>
-          {state.show && (
+        {state.show && (
+          <Box bg={theme.colors.baseWhite} pt={10}>
             <SuggestionsList
               filteredList={state.filteredList}
               activeItem={state.activeItem}
+              maxHeight={maxHeight}
               onClick={selectItem}
             />
-          )}
-        </Box>
+          </Box>
+        )}
       </React.Fragment>
     );
   },
@@ -213,6 +246,54 @@ AutoComplete.propTypes = {
 export default AutoComplete;
 
 /*
+
+
+const searchInput = e => {
+      const userInput = e.currentTarget.value;
+      let filteredSuggestions = [];
+      let showState = false;
+      if (userInput.length >= searchLength) {
+        showState = true;
+        filteredSuggestions = suggestions.filter(suggestion => {
+          //console.log(suggestion);
+          if (typeof suggestion.value !== "string") {
+            let componentText = "";
+            if (typeof suggestion.value.props !== "undefined") {
+              if (typeof suggestion.value.props.children === "string") {
+                componentText = suggestion.value.props.children;
+              } else if (
+                typeof suggestion.value.props.children === "object" &&
+                suggestion.value.props.children.length > 0
+              ) {
+                suggestion.value.props.children.forEach(child => {
+                  if (typeof child.props.children === "string") {
+                    componentText += " " + child.props.children;
+                  }
+                });
+              }
+            }
+            //console.log(componentText);
+            if (componentText.length > 0) {
+              return (
+                componentText.toLowerCase().indexOf(userInput.toLowerCase()) >
+                -1
+              );
+            }
+          } else {
+            return (
+              suggestion.value.toLowerCase().indexOf(userInput.toLowerCase()) >
+              -1
+            );
+          }
+        });
+      }
+      setState({
+        filteredList: filteredSuggestions,
+        activeItem: -1,
+        userInput: userInput,
+        show: showState,
+      });
+    };
 
 
 import React, { Component, Fragment } from "react";

@@ -20,10 +20,12 @@
   },
   "dependencies": {
     "@blend-ui/icons": "^1.1.4-alpha.0",
+    "@popperjs/core": "^2.5.3",
     "@reach/auto-id": "^0.11.2",
     "@styled-system/theme-get": "^5.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-popper": "^2.2.3",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

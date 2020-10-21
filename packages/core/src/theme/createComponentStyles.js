@@ -1,5 +1,36 @@
+import { css } from "styled-components";
+
 export default (theme = {}) => {
   const { fontSizes, sizeOptions, borders, colors, fontWeights } = theme;
+
+  const scrollBar = css`
+    scrollbar-width: 4px;
+    scrollbar-color: ${colors.baseSecondary || "#00847A"}
+      ${colors.baseTertiary || "rgba(0, 132, 122, 0.1)"};
+    overflow-y: auto; // or scroll
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    ::-webkit-scrollbar:vertical {
+      width: 4px;
+      height: 77px;
+    }
+
+    ::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: ${colors.baseTertiary || "rgba(0, 132, 122, 0.1)"};
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      height: 77px;
+      background-color: ${colors.baseSecondary || "#00847A"};
+    }
+    ::-webkit-scrollbar-thumb:vertical {
+      height: 77px;
+    }
+  `;
 
   const baseProps = {
     fontSize: fontSizes["xs"],
@@ -22,6 +53,7 @@ font-size: 12px;
 line-height: 18px;
 */
   return {
+    scrollBar: scrollBar,
     input: {
       base: { ...baseProps, height: sizeOptions.componentSizes["base"].height },
     },
