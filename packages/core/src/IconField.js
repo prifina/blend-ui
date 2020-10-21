@@ -70,7 +70,7 @@ const IconField = ({ children, disabled, ...props }) => {
   let inputError = false;
   let errorMsg = "";
   let promptMsg = "";
-  React.Children.toArray(children).map((child, i) => {
+  React.Children.toArray(children).forEach((child, i) => {
     //icons += isIcon(child) ? 1 : 0;
     if (isIcon(child) && i === 0) {
       leftIconExists = true;

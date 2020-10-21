@@ -117,7 +117,10 @@ const ClickableIcon = styled(BlendIcon)`
       ? props.theme.colors.baseWhite
       : props.theme.colors.basePrimary};
   pointer-events: none;
-  margin-left: ${props => (props.sizevariation === "sm" ? "-22px" : "-32px")};
+  margin-left: ${props =>
+    props.sizevariation === "xs" || props.sizevariation === "sm"
+      ? "-22px"
+      : "-32px"};
 `;
 const generateKey = pre => {
   return `${pre}_${new Date().getTime()}`;
@@ -143,7 +146,7 @@ const SearchSelect = forwardRef(
 
     let iconUp;
     let iconDown;
-    if (size === "sm") {
+    if (size === "xs" || size === "sm") {
       iconDown = bxChevronDown;
       iconUp = bxChevronUp;
     }
@@ -264,7 +267,7 @@ SearchSelect.propTypes = {
   ...styledProps.space,
   ...styledProps.typography,
   /** Fixed width&height */
-  size: PropTypes.oneOf(["sm", "md", "lg"]),
+  size: PropTypes.oneOf(["xs", "sm", "md", "lg"]),
 
   /** Variations */
   variation: PropTypes.oneOf(selectVariations),

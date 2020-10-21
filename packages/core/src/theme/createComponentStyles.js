@@ -81,6 +81,13 @@ line-height: 18px;
         height: sizeOptions[25],
         paddingLeft: sizeOptions[4],
       },
+      xs: {
+        fontSize: fontSizes["sm"],
+        lineHeight: sizeOptions[18],
+        borderRadius: borders.select.borderRadius,
+        height: sizeOptions[18],
+        paddingLeft: sizeOptions[4],
+      },
     },
     button: {
       xs: {

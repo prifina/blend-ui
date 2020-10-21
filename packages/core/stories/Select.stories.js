@@ -66,6 +66,7 @@ export const select2 = () => (
     <SearchSelect
       id="cabinClass"
       name="cabinClass"
+      size={"xs"}
       defaultValue="1"
       options={selectOptions}
       onChange={e => {
