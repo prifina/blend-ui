@@ -8,6 +8,9 @@ export { default as IconField } from "./IconField";
 
 export { default as Button } from "./Button";
 
+export { default as AutoComplete } from "./AutoComplete";
+export { default as SearchSelect } from "./SearchSelect";
+
 export { default as theme } from "./theme/theme";
 export { default as ThemeProvider } from "./theme/ThemeProvider";
 export * from "./theme/ThemeProvider";
