@@ -7,6 +7,7 @@ export { default as Input } from "./Input";
 export { default as IconField } from "./IconField";
 
 export { default as Button } from "./Button";
+export { default as Label } from "./Label";
 
 export { default as AutoComplete } from "./AutoComplete";
 export { default as SearchSelect } from "./SearchSelect";
