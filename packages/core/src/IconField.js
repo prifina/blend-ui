@@ -102,14 +102,14 @@ const IconField = ({ children, disabled, ...props }) => {
         {children}
       </StyledBox>
       {errorMsg !== "" && inputError && (
-        <Box mt={5} mb={10}>
+        <Box mt={0} mb={10}>
           <Text textStyle={"caption2"} color={colors.baseError}>
             {errorMsg}
           </Text>
         </Box>
       )}
       {promptMsg !== "" && !inputError && (
-        <Box mt={5} mb={10}>
+        <Box mt={0} mb={10}>
           <Text textStyle={"caption2"} color={colors.baseSecondary}>
             {promptMsg}
           </Text>
