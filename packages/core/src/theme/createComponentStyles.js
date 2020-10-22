@@ -149,6 +149,7 @@ line-height: 18px;
         minWidth: 0,
         padding: 0,
         margin: 0,
+        lineHeight: "normal",
       },
       file: {
         backgroundColor: "none",

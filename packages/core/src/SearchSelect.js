@@ -153,6 +153,7 @@ const SearchSelect = forwardRef(
       selectOption = "value",
       containerRef,
       containerOffset,
+      onChange,
       ...props
     },
     ref,
@@ -247,6 +248,7 @@ const SearchSelect = forwardRef(
         openSelect: !state.openSelect,
         selectValue: selectedKey,
       });
+      onChange(selectedKey);
     };
     console.log(state);
     return (

@@ -72,8 +72,8 @@ export const select2 = () => {
         size={"xs"}
         defaultValue="00"
         options={selectOptions}
-        onChange={e => {
-          console.log("Change ", e.target.value);
+        onChange={code => {
+          console.log("Change ", code);
         }}
         showList={true}
         selectOption={"key"}
