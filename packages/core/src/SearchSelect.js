@@ -248,7 +248,7 @@ const SearchSelect = forwardRef(
             />
           </PopperContainer>
         )}
-        <StyledBox width={"100%"}>
+        <StyledBox>
           <SelectElement
             {...props}
             ref={mergeRefs(setReferenceElement, selectRef)}
