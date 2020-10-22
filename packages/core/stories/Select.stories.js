@@ -79,6 +79,7 @@ export const select2 = () => {
         selectOption={"key"}
         width={"50px"}
         containerRef={boxRef}
+        containerOffset={"20px"}
       />
     </Box>
   );

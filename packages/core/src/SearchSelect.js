@@ -74,6 +74,7 @@ const PopperContainer = styled.div`
     props.theme.colors.baseWhite}; // #f5f8f7;  from theme
 
    width:${props => props.width}; 
+   left: ${props => props.containerOffset + " !important" || 0};
   .arrow {
     position: absolute;
     width: 20px;
@@ -86,7 +87,7 @@ const PopperContainer = styled.div`
       content: " ";
       position: absolute;
       top: -17px; // we account for the PopperContainer padding
-      left: 0;
+      left: ${props => props.containerOffset || 0};
       transform: rotate(45deg);
       width: 20px;
       height: 20px;
@@ -150,6 +151,7 @@ const SearchSelect = forwardRef(
       showList = false,
       selectOption = "value",
       containerRef,
+      containerOffset,
       ...props
     },
     ref,
@@ -223,10 +225,16 @@ const SearchSelect = forwardRef(
       */
       const selectElement = containerRef.current.getBoundingClientRect();
       const currentState = state.openSelect;
-
+      /*
+      let { popperStyles } = state;
+      if (containerOffset) {
+        popperStyles.left = containerOffset;
+      }
+      */
       setState({
         openSelect: !currentState,
         containerWidth: selectElement.width + "px",
+        /*popperStyles: popperStyles, */
       });
     };
     const onSelect = selectedKey => {
@@ -244,7 +252,9 @@ const SearchSelect = forwardRef(
             theme={theme}
             ref={setPopperElement}
             style={styles.popper}
+            /* style={state.popperStyles} */
             width={state.containerWidth}
+            containerOffset={containerOffset}
             {...attributes.popper}
           >
             <div ref={setArrowElement} style={styles.arrow} className="arrow" />
