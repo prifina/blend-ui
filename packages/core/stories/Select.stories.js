@@ -73,6 +73,8 @@ export const select2 = () => (
         console.log("Change ", e.target.value);
       }}
       showList={true}
+      selectOption={"key"}
+      width={"50px"}
     />
   </Box>
 );

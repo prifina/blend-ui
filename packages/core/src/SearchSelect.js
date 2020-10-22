@@ -37,7 +37,7 @@ const componentStyle = props => {
 const SelectElement = styled.select`
   appearance: none;
   display: block;
-  width: 100%;
+  width: ${props => props.width || "100%"};
   font-family: ${props => props.theme.fonts.body};
   margin:0;
   ${componentStyle}
@@ -148,6 +148,7 @@ const SearchSelect = forwardRef(
       defaultValue,
       searchLength = 3,
       showList = false,
+      selectOption = "value",
       ...props
     },
     ref,
@@ -172,7 +173,7 @@ const SearchSelect = forwardRef(
       }
       return (
         <option key={generateKey("opt-") + "-" + i} value={opt.key}>
-          {opt.value}
+          {opt[selectOption]}
         </option>
       );
     });
@@ -279,6 +280,7 @@ SearchSelect.propTypes = {
   ...styledProps.typography,
   /** Fixed width&height */
   size: PropTypes.oneOf(["xs", "sm", "md", "lg"]),
+  selectOption: PropTypes.oneOf(["key", "value"]),
 
   /** Variations */
   variation: PropTypes.oneOf(selectVariations),
