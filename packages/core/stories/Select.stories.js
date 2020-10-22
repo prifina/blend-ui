@@ -70,7 +70,7 @@ export const select2 = () => {
         id="cabinClass"
         name="cabinClass"
         size={"xs"}
-        defaultValue="1"
+        defaultValue="00"
         options={selectOptions}
         onChange={e => {
           console.log("Change ", e.target.value);

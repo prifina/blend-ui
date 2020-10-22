@@ -171,16 +171,18 @@ const SearchSelect = forwardRef(
   });
 */
     let activeItem = -1;
-    const styledChildren = options.map((opt, i) => {
+    let styledChildren = options.map((opt, i) => {
       if (defaultValue && opt.key === defaultValue) {
         activeItem = i;
       }
+      //selected={activeItem > -1 ? opt.key === defaultValue : false}
       return (
         <option key={generateKey("opt-") + "-" + i} value={opt.key}>
           {opt[selectOption]}
         </option>
       );
     });
+    styledChildren.unshift(<option key="empty-option" value=""></option>);
 
     const componentRef = useRef();
     const selectRef = ref || componentRef;
@@ -246,6 +248,7 @@ const SearchSelect = forwardRef(
         selectValue: selectedKey,
       });
     };
+    console.log(state);
     return (
       <React.Fragment>
         {state.openSelect && (
