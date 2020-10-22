@@ -21,7 +21,7 @@ import Box from "./Box";
 const selectVariations = ["fill", "outline"];
 
 const componentStyle = props => {
-  console.log("VARIATION ", props);
+  //console.log("VARIATION ", props);
   let selectProps = props.theme.componentStyles.select[props.sizevariation];
   let variationProps = null;
   if (props.variation === "fill") {
@@ -149,6 +149,7 @@ const SearchSelect = forwardRef(
       searchLength = 3,
       showList = false,
       selectOption = "value",
+      containerRef,
       ...props
     },
     ref,
@@ -212,7 +213,15 @@ const SearchSelect = forwardRef(
       //setOpenSelect(true);
       //setState({openSelect:true})
       //console.log(selectRef.current.parentElement.getBoundingClientRect());
-      const selectElement = selectRef.current.parentElement.getBoundingClientRect();
+      //const selectElement = selectRef.current.parentElement.getBoundingClientRect();
+      /*
+      console.log(
+        containerRef,
+        containerRef.current,
+        containerRef.current.getBoundingClientRect(),
+      );
+      */
+      const selectElement = containerRef.current.getBoundingClientRect();
       const currentState = state.openSelect;
 
       setState({
@@ -235,7 +244,8 @@ const SearchSelect = forwardRef(
             theme={theme}
             ref={setPopperElement}
             style={styles.popper}
-            width={state.containerWidth}
+            /* width={state.containerWidth} */
+            width={"100%"}
             {...attributes.popper}
           >
             <div ref={setArrowElement} style={styles.arrow} className="arrow" />

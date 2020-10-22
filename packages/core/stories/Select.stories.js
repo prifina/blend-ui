@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef } from "react";
 import SearchSelect from "../src/SearchSelect";
 import Label from "../src/Label";
 import Box from "../src/Box";
@@ -60,24 +60,29 @@ export const select = () => (
 select.story = {
   name: "Search Select",
 };
-export const select2 = () => (
-  <Box>
-    <Label htmlFor="cabinClass">Cabin Class</Label>
-    <SearchSelect
-      id="cabinClass"
-      name="cabinClass"
-      size={"xs"}
-      defaultValue="1"
-      options={selectOptions}
-      onChange={e => {
-        console.log("Change ", e.target.value);
-      }}
-      showList={true}
-      selectOption={"key"}
-      width={"50px"}
-    />
-  </Box>
-);
+export const select2 = () => {
+  const boxRef = createRef();
+
+  return (
+    <Box width={"200px"} ref={boxRef}>
+      <Label htmlFor="cabinClass">Cabin Class</Label>
+      <SearchSelect
+        id="cabinClass"
+        name="cabinClass"
+        size={"xs"}
+        defaultValue="1"
+        options={selectOptions}
+        onChange={e => {
+          console.log("Change ", e.target.value);
+        }}
+        showList={true}
+        selectOption={"key"}
+        width={"50px"}
+        containerRef={boxRef}
+      />
+    </Box>
+  );
+};
 select2.story = {
   name: "Search Select with full list visible",
 };
