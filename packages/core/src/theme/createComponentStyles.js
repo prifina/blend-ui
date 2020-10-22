@@ -147,6 +147,8 @@ line-height: 18px;
         textDecoration: "underline",
         border: 0,
         minWidth: 0,
+        padding: 0,
+        margin: 0,
       },
       file: {
         backgroundColor: "none",
