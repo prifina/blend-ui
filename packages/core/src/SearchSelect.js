@@ -65,6 +65,7 @@ const StyledBox = styled(Box)`
 `;
 const PopperContainer = styled.div`
   /* */
+  z-index: ${props => props.theme.zIndices["select"]}; 
   padding: 15px;
   padding-bottom:24px;
   box-shadow: ${props =>

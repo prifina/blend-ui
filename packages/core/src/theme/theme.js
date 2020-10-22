@@ -42,6 +42,7 @@ const zIndices = {
   auto: "auto",
   base: 0,
   docked: 10,
+  select: 100,
   dropdown: 1000,
   sticky: 1100,
   banner: 1200,
