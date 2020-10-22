@@ -244,8 +244,7 @@ const SearchSelect = forwardRef(
             theme={theme}
             ref={setPopperElement}
             style={styles.popper}
-            /* width={state.containerWidth} */
-            width={"100%"}
+            width={state.containerWidth}
             {...attributes.popper}
           >
             <div ref={setArrowElement} style={styles.arrow} className="arrow" />
