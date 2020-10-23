@@ -70,7 +70,7 @@ export const select2 = () => {
         id="cabinClass"
         name="cabinClass"
         size={"xs"}
-        defaultValue="00"
+        defaultValue="000"
         options={selectOptions}
         onChange={code => {
           console.log("Change ", code);

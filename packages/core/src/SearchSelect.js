@@ -281,6 +281,7 @@ const SearchSelect = forwardRef(
             onClick={selectOnClick}
             theme={theme}
             value={state.selectValue}
+            readOnly
           >
             {styledChildren}
           </SelectElement>
