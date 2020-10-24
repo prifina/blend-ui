@@ -132,7 +132,7 @@ const AutoComplete = forwardRef(
             show: false,
           });
           if (onSelect) {
-            onSelect(state.filteredList[activeItem].key);
+            onSelect(e, state.filteredList[activeItem].key);
           }
         }
         if (
@@ -196,7 +196,7 @@ const AutoComplete = forwardRef(
           show: false,
         });
         if (onSelect) {
-          onSelect(selectedValue[0].key);
+          onSelect(e, selectedValue[0].key);
         }
       }
 

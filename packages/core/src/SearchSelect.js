@@ -187,6 +187,7 @@ const SearchSelect = forwardRef(
 
     const componentRef = useRef();
     const selectRef = ref || componentRef;
+    const containerBoxRef = containerRef || selectRef;
     //const [openSelect, setOpenSelect] = useState(false);
 
     const [referenceElement, setReferenceElement] = useState(ref);
@@ -227,7 +228,7 @@ const SearchSelect = forwardRef(
         containerRef.current.getBoundingClientRect(),
       );
       */
-      const selectElement = containerRef.current.getBoundingClientRect();
+      const selectElement = containerBoxRef.current.getBoundingClientRect();
       const currentState = state.openSelect;
       /*
       let { popperStyles } = state;
@@ -241,14 +242,14 @@ const SearchSelect = forwardRef(
         /*popperStyles: popperStyles, */
       });
     };
-    const onSelect = selectedKey => {
+    const onSelect = (e, selectedKey) => {
       console.log("SELECT ", selectedKey);
 
       setState({
         openSelect: !state.openSelect,
         selectValue: selectedKey,
       });
-      onChange(selectedKey);
+      onChange(e, selectedKey);
     };
     console.log(state);
     return (
