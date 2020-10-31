@@ -251,7 +251,7 @@ const SearchSelect = forwardRef(
       });
       onChange(e, selectedKey);
     };
-    console.log(state);
+    //console.log(state);
     return (
       <React.Fragment>
         {state.openSelect && (
