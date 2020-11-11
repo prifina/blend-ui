@@ -59,7 +59,9 @@ const textStyles = props => {
   return props.textStyle ? props.theme.textStyles[props.textStyle] : null;
 };
 const colorStyles = props => {
-  return props.colorStyle ? props.theme.colorStyles[props.colorStyle] : null;
+  return props.colorStyle
+    ? props.theme.colorStyles.text[props.colorStyle]
+    : null;
 };
 // https://styled-system.com/guides/build-a-box
 

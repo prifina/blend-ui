@@ -9,6 +9,11 @@ export default (theme = {}) => {
         },
       },
     },
+    text: {
+      error: {
+        color: colors.baseError,
+      },
+    },
     error: {
       color: colors["textError"],
       backgroundColor: colors["backgroundError"],

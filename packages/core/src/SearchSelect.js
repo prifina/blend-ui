@@ -1,4 +1,10 @@
-import React, { forwardRef, useRef, useState, useReducer } from "react";
+import React, {
+  forwardRef,
+  useRef,
+  useState,
+  useReducer,
+  useEffect,
+} from "react";
 import styled from "styled-components";
 import { space, typography } from "styled-system";
 import { default as styledProps } from "@styled-system/prop-types";
@@ -185,6 +191,7 @@ const SearchSelect = forwardRef(
     });
     styledChildren.unshift(<option key="empty-option" value=""></option>);
 
+    const [autoCompleteInput, setAutoCompleteInput] = useState(null);
     const componentRef = useRef();
     const selectRef = ref || componentRef;
     const containerBoxRef = containerRef || selectRef;
@@ -241,6 +248,8 @@ const SearchSelect = forwardRef(
         containerWidth: selectElement.width + "px",
         /*popperStyles: popperStyles, */
       });
+      //console.log(autoCompleteInput.current);
+      //autoCompleteInput.current.focus();
     };
     const onSelect = (e, selectedKey) => {
       console.log("SELECT ", selectedKey);
@@ -251,6 +260,11 @@ const SearchSelect = forwardRef(
       });
       onChange(e, selectedKey);
     };
+    useEffect(() => {
+      if (autoCompleteInput) {
+        autoCompleteInput.focus();
+      }
+    }, [autoCompleteInput]);
     //console.log(state);
     return (
       <React.Fragment>
@@ -271,6 +285,11 @@ const SearchSelect = forwardRef(
               showList={showList}
               activeItem={activeItem}
               searchLength={searchLength}
+              ref={ref => {
+                if (ref) {
+                  setAutoCompleteInput(ref);
+                }
+              }}
             />
           </PopperContainer>
         )}
