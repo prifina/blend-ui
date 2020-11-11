@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.31-alpha.0](https://github.com/prifina/blend-ui/compare/@blend-ui/core@1.1.30-alpha.0...@blend-ui/core@1.1.31-alpha.0) (2020-11-11)
+
+**Note:** Version bump only for package @blend-ui/core
+
+
+
+
+
 ## [1.1.30-alpha.0](https://github.com/prifina/blend-ui/compare/@blend-ui/core@1.1.29-alpha.0...@blend-ui/core@1.1.30-alpha.0) (2020-11-11)
 
 **Note:** Version bump only for package @blend-ui/core
