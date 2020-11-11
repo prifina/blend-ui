@@ -52,7 +52,11 @@ const color = props => {
   //console.log("color PROPS ", props);
 
   return {
-    color: props.color ? props.color : props.theme.colors["textPrimary"],
+    color: props.colorStyle
+      ? null
+      : props.color
+      ? props.color
+      : props.theme.colors["textPrimary"],
   };
 };
 const textStyles = props => {
