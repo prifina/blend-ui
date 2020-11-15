@@ -349,8 +349,7 @@ const TabList = ({ children, ...props }) => {
   //return <React.Fragment>{Items}</React.Fragment>;
   return (
     <UnorderedList title={title} {...props}>
-      {" "}
-      {Items}{" "}
+      {Items}
     </UnorderedList>
   );
 };
@@ -380,7 +379,6 @@ Tabs.displayName = "Tabs";
 Tab.displayName = "Tab";
 TabList.displayName = "TabList";
 TabPanel.displayName = "TabPanel";
-
 TabPanelList.displayName = "TabPanelList";
 
 export { Tabs, Tab, TabList, TabPanel, TabPanelList };
