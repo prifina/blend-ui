@@ -12,6 +12,8 @@ export { default as Label } from "./Label";
 export { default as AutoComplete } from "./AutoComplete";
 export { default as SearchSelect } from "./SearchSelect";
 
+export { default as Select } from "./Select";
+
 export { default as theme } from "./theme/theme";
 export { default as ThemeProvider } from "./theme/ThemeProvider";
 export * from "./theme/ThemeProvider";
