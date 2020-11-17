@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 
 import styled from "styled-components";
-import { space } from "styled-system";
+import { space, typography } from "styled-system";
 import PropTypes from "prop-types";
 
 const LinkElement = styled.a.attrs(props => ({
@@ -16,6 +16,7 @@ const LinkElement = styled.a.attrs(props => ({
     text-decoration: underline;
   }
   ${space}
+  ${typography}
 `;
 
 const Link = forwardRef(({ href, ...props }, ref) => {
