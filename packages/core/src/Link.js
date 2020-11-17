@@ -12,7 +12,7 @@ const LinkElement = styled.a.attrs(props => ({
   color: ${props => props.theme.colors.textLink};
 
   &:hover {
-    color: ${props => props.theme.colors.textLink};
+    color: ${props => props.theme.colors.baseLinkHover};
     text-decoration: underline;
   }
   ${space}
