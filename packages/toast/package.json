@@ -1,0 +1,23 @@
+{
+  "name": "toast",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "prifina-admin <tero@prifina.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/toast.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@prifina-admin:prifina/blend-ui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
