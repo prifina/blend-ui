@@ -1,23 +1,45 @@
 {
-  "name": "toast",
-  "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "prifina-admin <tero@prifina.com>",
-  "homepage": "",
-  "license": "ISC",
-  "main": "lib/toast.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+  "name": "@blend-ui/toast",
+  "version": "0.0.1-alpha.0",
+  "description": "Toast Component",
+  "author": "Tero <tero@prifina.com>",
+  "license": "MIT",
+  "main": "dist/esm/index.js",
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
-    "lib"
+    "dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git@prifina-admin:prifina/blend-ui.git"
-  },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "yarn build:cjs && yarn build:es && yarn build:esm",
+    "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel ./src --out-dir ./dist/esm",
+    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel ./src --out-dir ./dist/cjs",
+    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel ./src --out-dir ./dist/es",
+    "storybook": "start-storybook"
+  },
+  "dependencies": {
+    "@reach/auto-id": "^0.11.2",
+    "aria-hidden": "^1.1.1",
+    "exenv": "^1.2.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@storybook/addon-actions": "^6.1.0",
+    "@storybook/addon-storyshots": "^6.1.0",
+    "@storybook/react": "^6.1.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
   }
 }
