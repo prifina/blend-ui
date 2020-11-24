@@ -1,0 +1,3 @@
+https://github.com/evandromacedo/react-simple-snackbar/blob/master/src/useSnackbar.js
+
+https://github.com/briancodex/react-modal-v1/blob/main/src/components/Modal.js

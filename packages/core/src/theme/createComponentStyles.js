@@ -51,8 +51,45 @@ font-style: normal;
 font-weight: normal;
 font-size: 12px;
 line-height: 18px;
+
+
+const error = css`
+  background: #fed7d7;
+  border-color: #f40431;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  color: #f40431;
+`;
 */
+  const alertStyles = {
+    borderWidth: "1px",
+    borderStyle: "solid",
+    borderRadius: "10px",
+  };
   return {
+    alert: {
+      error: {
+        backgroundColor: colors.alert.error.backgrooundcolor,
+        color: colors.alert.error.color,
+        ...alertStyles,
+      },
+      warning: {
+        backgroundColor: colors.alert.warning.backgrooundcolor,
+        color: colors.alert.warning.color,
+        ...alertStyles,
+      },
+      info: {
+        backgroundColor: colors.alert.info.backgrooundcolor,
+        color: colors.alert.info.color,
+        ...alertStyles,
+      },
+      success: {
+        backgroundColor: colors.alert.success.backgrooundcolor,
+        color: colors.alert.success.color,
+        ...alertStyles,
+      },
+    },
     scrollBar: scrollBar,
     input: {
       base: { ...baseProps, height: sizeOptions.componentSizes["base"].height },

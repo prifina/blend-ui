@@ -15,6 +15,18 @@ const baseLinkHover = "#539EF0";
 const baseInputDisabled = "#E5E4E4";
 const baseModalBackground = "rgba(30, 29, 29, 0.75)";
 
+const alertErrorText = "#f40431";
+const alertErrorBackground = "#fed7d7";
+
+const alertWarningText = "#cb8e12";
+const alertWarningBackground = "#fcefc2";
+
+const alertInfoText = "#007aff";
+const alertInfoBackground = "#d1eaf9";
+
+const alertSuccessText = "#7caf4c";
+const alertSuccessBackground = "#def0d8";
+
 const brandPrimary = "#F6F6F6";
 const brandSecondary = "#1E1D1D";
 const brandAccent = "#00847A";
@@ -50,6 +62,25 @@ const colors = {
   current: "currentColor",
   black: "#000",
   white: "#fff",
+  alert: {
+    error: {
+      color: alertErrorText,
+      backgroundColor: alertErrorBackground,
+    },
+    warning: {
+      color: alertWarningText,
+      backgroundColor: alertWarningBackground,
+    },
+    info: {
+      color: alertInfoText,
+      backgroundColor: alertInfoBackground,
+    },
+    success: {
+      color: alertSuccessText,
+      backgroundColor: alertSuccessBackground,
+    },
+  },
+
   brand: {
     primary: brandPrimary,
     secondary: brandSecondary,
