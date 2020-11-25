@@ -21,7 +21,7 @@ toast.story = {
 export const toastError = () => (
   <React.Fragment>
     <div>Testing...</div>
-    <Toast.Error>
+    <Toast.Error m={15}>
       <div>Toast content</div>
     </Toast.Error>
   </React.Fragment>

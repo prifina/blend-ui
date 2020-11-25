@@ -13,6 +13,8 @@ import { useId } from "@reach/auto-id";
 import exenv from "exenv";
 import styled, { css, ThemeProvider } from "styled-components";
 
+import { space } from "styled-system";
+
 import { Portal } from "@blend-ui/modal";
 
 import { useTheme } from "@blend-ui/core";
@@ -31,7 +33,7 @@ import bxsCheckCircle from "@iconify/icons-bx/bxs-check-circle";
 const { canUseDOM } = exenv;
 
 const minWidth = "353px";
-
+/*
 const error = css`
   background: #fed7d7;
   border-color: #f40431;
@@ -67,7 +69,7 @@ const success = css`
   border-radius: 10px;
   color: #7caf4c;
 `;
-
+*/
 ////////////////////////////////////////////////////////////////////////
 
 function useAriaHider({
@@ -139,6 +141,9 @@ const buttonVariation = props => {
   };
 */
 const alertVariation = props => {
+  //console.log("ALERT ", props);
+  let styles = props.theme.componentStyles.alert[props.componentStyle];
+  /*
   let styles = null;
   if (props.componentStyle === "error") {
     styles = error;
@@ -152,7 +157,7 @@ const alertVariation = props => {
   if (props.componentStyle === "success") {
     styles = success;
   }
-
+*/
   return [styles];
 };
 const positionVariation = props => {
@@ -234,6 +239,7 @@ const Base = styled.div`
   display:flex;
   align-items: center;
   ${props => props.theme.baseStyles};
+  ${space}
 `;
 
 /*
@@ -343,7 +349,7 @@ const Toast = forwardRef(
     const defaultTheme = useTheme();
     theme = theme || defaultTheme;
 
-    console.log("THEME ", theme);
+    //console.log("THEME ", theme);
     const [delay, setDelay] = React.useState(duration);
     const [openToast, setOpenToast] = useState(true);
 
@@ -382,13 +388,15 @@ const Toast = forwardRef(
       console.log("Toast CLOSE");
     };
 
-    //useTimeout(closeToast, delay);
+    if (duration > 0) {
+      useTimeout(closeToast, delay);
+    }
 
     const keyPress = useCallback(
       e => {
         if (e.key === "Escape" && openToast) {
           setOpenToast(false);
-          console.log("I pressed ESC");
+          //console.log("I pressed ESC");
         }
       },
       [setOpenToast, openToast],

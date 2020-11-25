@@ -70,22 +70,22 @@ const error = css`
   return {
     alert: {
       error: {
-        backgroundColor: colors.alert.error.backgrooundcolor,
+        backgroundColor: colors.alert.error.backgroundColor,
         color: colors.alert.error.color,
         ...alertStyles,
       },
       warning: {
-        backgroundColor: colors.alert.warning.backgrooundcolor,
+        backgroundColor: colors.alert.warning.backgroundColor,
         color: colors.alert.warning.color,
         ...alertStyles,
       },
       info: {
-        backgroundColor: colors.alert.info.backgrooundcolor,
+        backgroundColor: colors.alert.info.backgroundColor,
         color: colors.alert.info.color,
         ...alertStyles,
       },
       success: {
-        backgroundColor: colors.alert.success.backgrooundcolor,
+        backgroundColor: colors.alert.success.backgroundColor,
         color: colors.alert.success.color,
         ...alertStyles,
       },
