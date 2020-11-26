@@ -57,7 +57,11 @@ toastInfo.story = {
 export const toastSuccess = () => (
   <React.Fragment>
     <div>Testing...</div>
-    <Toast.Success>
+    <Toast.Success
+      onClose={() => {
+        console.log("ON CLOSE HERE");
+      }}
+    >
       <div>Toast content</div>
     </Toast.Success>
   </React.Fragment>

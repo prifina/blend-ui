@@ -338,6 +338,7 @@ const Toast = forwardRef(
       width = "200px",
       duration = 5000,
       position = "bottom-left",
+      onClose,
       theme,
       children,
       ...props
@@ -385,6 +386,9 @@ const Toast = forwardRef(
 
     const closeToast = () => {
       setOpenToast(false);
+      if (onClose) {
+        onClose();
+      }
       console.log("Toast CLOSE");
     };
 
@@ -396,10 +400,13 @@ const Toast = forwardRef(
       e => {
         if (e.key === "Escape" && openToast) {
           setOpenToast(false);
+          if (onClose) {
+            onClose();
+          }
           //console.log("I pressed ESC");
         }
       },
-      [setOpenToast, openToast],
+      [onClose, setOpenToast, openToast],
     );
 
     useEffect(() => {
