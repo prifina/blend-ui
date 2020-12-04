@@ -19,6 +19,7 @@ const alertErrorText = "#f40431";
 const alertErrorBackground = "#fed7d7";
 
 const alertWarningText = "#cb8e12";
+
 const alertWarningBackground = "#fcefc2";
 
 const alertInfoText = "#007aff";

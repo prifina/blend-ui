@@ -1,5 +1,9 @@
 import React from "react";
 import { Toast } from "../src/Toast";
+import { ToastContext } from "../src/ToastProvider";
+//import ToastContextProvider from "../src/ToastProvider";
+//import useToast from "../src/useToast";
+import useToast, { ToastContextProvider } from "../src/useToast";
 
 export default { title: "Toast" };
 
@@ -21,7 +25,7 @@ toast.story = {
 export const toastError = () => (
   <React.Fragment>
     <div>Testing...</div>
-    <Toast.Error m={15}>
+    <Toast.Error duration={0} m={15}>
       <div>Toast content</div>
     </Toast.Error>
   </React.Fragment>
@@ -69,3 +73,76 @@ export const toastSuccess = () => (
 toastSuccess.story = {
   name: "Toast Success",
 };
+
+/*
+const themeProviderDecorator = story => (
+    <ThemeProvider>
+        <Box px={5}>{story()}</Box>
+    </ThemeProvider>
+)
+*/
+
+export const toastTest = () => {
+  const toast = useToast();
+  console.log("TOAST ", typeof toast);
+  return (
+    <React.Fragment>
+      <div>Testing...</div>
+      <button
+        onClick={() =>
+          toast({
+            content: "Toast here",
+            toastType: "success",
+          })
+        }
+      >
+        TOAST
+      </button>
+    </React.Fragment>
+  );
+};
+toastTest.story = {
+  name: "useToast",
+  decorator: [ToastContextProvider],
+};
+/*
+export const toastTest = () => {
+  const toast = useToast();
+  console.log("TOAST ", toast);
+  return (
+    <React.Fragment>
+      <ToastContextProvider>
+        <div>Testing...</div>
+        <button onClick={() => toast.show("Toast msg", { toastType: "error" })}>
+          TOAST
+        </button>
+      </ToastContextProvider>
+    </React.Fragment>
+  );
+};
+toastTest.story = {
+  name: "useToast",
+};
+*/
+/*
+const AContext = React.createContext();
+
+function ADecorator(StoryFn) {
+  return (
+    <AContext.Provider value="hello">
+      <StoryFn />
+    </AContext.Provider>
+  );
+}
+
+export function Component() {
+  const context = React.useContext(AContext);
+  console.log("context inside Component", { context });
+  return <div>This is my normal page </div>;
+}
+
+Component.story = {
+  name: "Component",
+  decorators: [ADecorator],
+};
+*/
