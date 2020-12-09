@@ -1,6 +1,6 @@
 {
   "name": "@blend-ui/floating-user-menu",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.2-alpha.0",
   "description": "Floating User Menu Component",
   "author": "Tero <tero@prifina.com>",
   "license": "MIT",
@@ -19,9 +19,9 @@
     "storybook": "start-storybook"
   },
   "dependencies": {
+    "@reach/auto-id": "^0.11.2",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "@reach/auto-id": "^0.11.2"
+    "react-dom": "^16.13.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.5",
