@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import styled, { css } from "styled-components";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
+
 const ToastContext = React.createContext();
 
 const getPosition = position => {

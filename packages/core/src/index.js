@@ -15,6 +15,9 @@ export { default as SearchSelect } from "./SearchSelect";
 export { default as Select } from "./Select";
 export { default as Link } from "./Link";
 
+export { default as Avatar } from "./Avatar";
+export { default as Image } from "./Image";
+
 export { default as theme } from "./theme/theme";
 export { default as ThemeProvider } from "./theme/ThemeProvider";
 export * from "./theme/ThemeProvider";
