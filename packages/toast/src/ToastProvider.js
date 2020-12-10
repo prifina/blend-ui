@@ -201,7 +201,8 @@ const ToastContextProvider = ({
 
   const check = useCallback(() => {
     //alertContext.current.alerts.forEach(remove)
-    console.log(alertContext.current.alerts);
+    //console.log(alertContext.current.alerts);
+    return alertContext.current.alerts;
   }, []);
 
   const onMouseEnter = e => {

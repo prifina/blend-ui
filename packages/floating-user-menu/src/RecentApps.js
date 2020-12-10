@@ -49,9 +49,15 @@ export const RecentApps = () => {
     result.data.createDataModels.uuid
   );
 */
+  let recentApps = JSON.parse(localStorage.getItem("PrifinaRecentApps"));
+  if (recentApps === null) {
+    recentApps = ["./AppMarketIcon", "./NewsMuzzlerIcon"];
+    localStorage.setItem("PrifinaRecentApps", JSON.stringify(recentApps));
+  }
+  //console.log(recentApps);
   //const recentApps = ["./AppMarketIcon", "./NewsMuzzlerIcon"];
   //localStorage.setItem("PrifinaRecentApps", JSON.stringify(recentApps));
-  const recentApps = JSON.parse(localStorage.getItem("PrifinaRecentApps"));
+  //const recentApps = JSON.parse(localStorage.getItem("PrifinaRecentApps"));
   const apps = recentApps.map(app => {
     return importComponent(app);
   });
