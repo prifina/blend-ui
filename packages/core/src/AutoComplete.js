@@ -158,11 +158,20 @@ const AutoComplete = forwardRef(
       let showState = false;
       if (userInput.length >= searchLength) {
         showState = true;
-        filteredSuggestions = suggestions.filter(
-          suggestion =>
-            suggestion.value.toLowerCase().indexOf(userInput.toLowerCase()) >
-            -1,
-        );
+        filteredSuggestions = suggestions.filter(suggestion => {
+          if (suggestion.searchValue) {
+            return (
+              suggestion.searchValue
+                .toLowerCase()
+                .indexOf(userInput.toLowerCase()) > -1
+            );
+          } else {
+            return (
+              suggestion.value.toLowerCase().indexOf(userInput.toLowerCase()) >
+              -1
+            );
+          }
+        });
       }
       setState({
         filteredList: filteredSuggestions,

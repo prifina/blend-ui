@@ -33,6 +33,7 @@ const selectOptions = [
   {
     key: "0",
     value: "This is component",
+    searchValue: "This is component +358",
     component: (
       <React.Fragment>
         <Text as="span">This is component</Text>
