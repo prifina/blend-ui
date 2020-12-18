@@ -15,6 +15,7 @@ const baseLinkHover = "#539EF0";
 const baseInputDisabled = "#E5E4E4";
 const baseModalBackground = "rgba(30, 29, 29, 0.75)";
 
+const baseDividers = "#C9E4E0";
 const alertErrorText = "#f40431";
 const alertErrorBackground = "#fed7d7";
 
@@ -150,6 +151,7 @@ const colors = {
   baseInputDisabled,
   baseModalBackground,
   baseErrorHover,
+  baseDividers,
 };
 
 export const palette = {
