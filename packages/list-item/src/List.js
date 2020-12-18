@@ -196,25 +196,25 @@ const ListItem = forwardRef(
     } else {
       if (variation === "icon" && iconify) {
         return (
-          <React.Fragment>
+          <Flex alignItems={"center"}>
             <BlendIcon
               iconify={iconify}
               size={iconSize}
               color={iconColor || "currentColor"}
             />
             {children}
-          </React.Fragment>
+          </Flex>
         );
       } else if (variation === "icon" && iconName) {
         return (
-          <React.Fragment>
+          <Flex alignItems={"center"}>
             <BlendIcon
               name={iconName}
               size={iconSize}
               color={iconColor || "currentColor"}
             />
             {children}
-          </React.Fragment>
+          </Flex>
         );
       } else if (variation === "link") {
         items = (
@@ -225,7 +225,7 @@ const ListItem = forwardRef(
       } else if (variation === "icon-link") {
         if (variation === "icon-link" && iconify) {
           return (
-            <React.Fragment>
+            <Flex alignItems={"center"}>
               <BlendIcon
                 iconify={iconify}
                 size={iconSize}
@@ -234,11 +234,11 @@ const ListItem = forwardRef(
               <Link href={href} target={target}>
                 {children}
               </Link>
-            </React.Fragment>
+            </Flex>
           );
         } else if (variation === "icon-link" && iconName) {
           return (
-            <React.Fragment>
+            <Flex alignItems={"center"}>
               <BlendIcon
                 name={iconName}
                 size={iconSize}
@@ -247,7 +247,7 @@ const ListItem = forwardRef(
               <Link href={href} target={target}>
                 {children}
               </Link>
-            </React.Fragment>
+            </Flex>
           );
         }
       } else {
