@@ -15,7 +15,7 @@ export function Component2() {
       <div>
         <button
           onClick={() => {
-            toast.show("Toast message", {});
+            toast.show("Toast message", { title: "Test title", duration: 0 });
             toast.check();
           }}
         >

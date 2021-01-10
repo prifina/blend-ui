@@ -13,7 +13,7 @@ import { Portal } from "@blend-ui/modal";
 import styled, { css, ThemeProvider } from "styled-components";
 import { space } from "styled-system";
 
-import { useTheme } from "@blend-ui/core";
+import { useTheme, Box } from "@blend-ui/core";
 
 import { BlendIcon } from "@blend-ui/icons";
 
@@ -139,7 +139,8 @@ const IconDiv = styled.div`
 const LabelDiv = styled.div`
   justify-content: center;
   font-weight: 600;
-  margin-right: 8px;
+  /* margin-right: 8px; */
+  ${space};
 `;
 const TextDiv = styled.div`
   justify-content: center;
@@ -371,8 +372,18 @@ const ToastContextProvider = ({
                   <IconDiv>
                     <BlendIcon iconify={alert.icon} />
                   </IconDiv>
-                  <LabelDiv>{alert.options.label}</LabelDiv>
-                  <TextDiv>{alert.message}</TextDiv>
+                  {alert.options.title && (
+                    <Box pt={8} pb={8}>
+                      <LabelDiv>{alert.options.title}</LabelDiv>
+                      <TextDiv>{alert.message}</TextDiv>
+                    </Box>
+                  )}
+                  {typeof alert.options.title === "undefined" && (
+                    <React.Fragment>
+                      <LabelDiv mr={8}>{alert.options.label}</LabelDiv>
+                      <TextDiv>{alert.message}</TextDiv>
+                    </React.Fragment>
+                  )}
                 </AlertBase>
               ))}
             </Base>
