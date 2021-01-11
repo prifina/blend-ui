@@ -202,13 +202,15 @@ const Modal = props => {
 
   useEffect(() => {
     const dialogNode = contentRef.current;
+    if (!dialogNode) return;
     if (isOpen && blockScrollOnMount) {
       disableBodyScroll(dialogNode, {
         reserveScrollBarGap: preserveScrollBarGap,
       });
     }
     return () => enableBodyScroll(dialogNode);
-  }, [isOpen, blockScrollOnMount, preserveScrollBarGap]);
+  }, [contentRef.current, isOpen, blockScrollOnMount, preserveScrollBarGap]);
+  //}, [isOpen, blockScrollOnMount, preserveScrollBarGap]);
 
   // Handle Escape keydown
   useEffect(() => {
