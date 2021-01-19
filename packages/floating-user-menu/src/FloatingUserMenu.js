@@ -20,7 +20,7 @@ import { BlendIcon } from "@blend-ui/icons";
 import bxHome from "@iconify/icons-bx/bx-home";
 import bxBell from "@iconify/icons-bx/bx-bell";
 import bxHistory from '@iconify/icons-bx/bx-history';
-import bxLogOut from '@iconify/icons-bx/bx-log-out';
+//import bxLogOut from '@iconify/icons-bx/bx-log-out';
 import logoutIcon from '@iconify/icons-fe/logout';
 
 
@@ -183,25 +183,6 @@ const Badge = styled.span`
   font-weight: 700;
 `;
 
-/*
-const ModalOverlay = props => {
-    console.log("OVERLAY ", props);
-    const { theme } = useModalContext();
-    //console.log("CONTEXT ", theme);
-    return (
-      <WrapperBox
-        position="fixed"
-        bg={theme.colors.baseModalBackground || "rgba(30, 29, 29, 0.75)"}
-        left="0"
-        top="0"
-        width="100vw"
-        height="100vh"
-        zIndex={theme.zIndices["overlay"]}
-        {...props}
-      />
-    );
-  };
-*/
 
 const UserMenuContextProvider = ({
   offset = "15px",
