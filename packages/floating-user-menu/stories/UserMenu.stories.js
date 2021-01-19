@@ -15,7 +15,7 @@ export function userMenu() {
   //console.log(RecentApps);
 
   useEffect(() => {
-    userMenu.show({ avatar: avatar, notifications: 7, RecentApps: RecentApps });
+    userMenu.show({  notifications: 7, RecentApps: RecentApps });
     //console.log(RecentApps);
   }, [avatar]);
 
@@ -48,7 +48,9 @@ userMenu.story = {
   decorators: [
     Story => {
       return (
-        <UserMenuContextProvider>
+        <UserMenuContextProvider onExit={()=>{
+          console.log('LOGOUT...  ')
+        }}>
           <Story />
         </UserMenuContextProvider>
       );
