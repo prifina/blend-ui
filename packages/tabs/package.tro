@@ -1,7 +1,7 @@
 {
-  "name": "@blend-ui/toast",
-  "version": "0.0.9-alpha.0",
-  "description": "Toast Component",
+  "name": "@blend-ui/tabs",
+  "version": "1.0.3-alpha.0",
+  "description": "Tabs Component",
   "author": "Tero <tero@prifina.com>",
   "license": "MIT",
   "main": "dist/esm/index.js",
@@ -19,27 +19,26 @@
     "storybook": "start-storybook"
   },
   "dependencies": {
-    "@reach/auto-id": "^0.12.1",
-    "aria-hidden": "^1.1.1",
-    "exenv": "^1.2.2"
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "styled-components": "^5.2.0",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.5",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
-    "@storybook/addon-actions": "^6.1.0",
-    "@storybook/addon-storyshots": "^6.1.0",
-    "@storybook/react": "^6.1.0",
+    "@storybook/addon-actions": "^6.0.16",
+    "@storybook/addon-storyshots": "^6.0.16",
+    "@storybook/react": "^6.0.16",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
-    "cross-env": "^7.0.2",
-    "react": ">=16.8.6",
-    "react-dom": ">=16.8.6"
+    "cross-env": "^7.0.2"
   },
   "peerDependencies": {
-    "react": ">=16.8.6",
-    "react-dom": ">=16.8.6"
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
   }
 }

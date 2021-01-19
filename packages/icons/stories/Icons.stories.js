@@ -14,23 +14,29 @@ import React from "react";
 
 import BlendIcon from "../components/BlendIcon";
 //import { accountAddIcon } from "../src/icons-mdi/iconSet";
-import { activityIcon, Icon } from "../components";
+import { GraphqlIcon  } from "../components";
 // npm install --save-dev @iconify/react @iconify/icons-fe
+import { bxAnchorIcon } from "../components/icons-bx/iconSet";
+
 
 export default {
   title: "Icons",
 };
-
+/*
+height={34 * 1.3 + "px"}
+width={"34px"}
+*/
 export const addCircle = () => (
-  <Icon icon={activityIcon} title={"Add"} width={"36px"} color={"green"} />
+  <GraphqlIcon title={"GraphQL"}  height={"64px"}
+  width={"50px"} color={"green"} />
 );
 
 addCircle.story = {
-  name: "ADD",
+  name: "GraphQL",
 };
 
 export const iconify = () => (
-  <BlendIcon iconify={activityIcon} size={"50"} color={"#E535AB"} />
+  <BlendIcon iconify={bxAnchorIcon} size={"50"} color={"#E535AB"} />
 );
 
 iconify.story = {
