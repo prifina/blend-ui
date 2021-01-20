@@ -1,17 +1,18 @@
 import React, { useContext } from "react";
-import {
+import styled,{
   ThemeProvider as StyledThemeProvider,
-  ThemeContext,createGlobalStyle 
+  ThemeContext,createGlobalStyle,css
 } from "styled-components";
 import { default as defaultTheme } from "./theme";
 
 
-
+/*
 const GlobalStyle = createGlobalStyle`
 body: {
   margin:0;
 };
 `;
+*/
 
 /*
 export const Base = styled.div`
@@ -37,14 +38,18 @@ p: {
   }
 `;
 */
-
+export const Base = styled.div`
+  font-family: ${props => props.theme.fonts.body || null};
+  font-weight: ${props => props.theme.fontWeights.medium || null};
+  line-height: ${props => props.theme.lineHeights.standard || null};
+`;
 const ThemeProvider = ({ theme = {}, ...props }) => {
   //console.log("THEME PROVIDER ", theme, defaultTheme);
   //console.log(baseStyles);
   const mergedTheme = { ...defaultTheme, ...theme };
   return (
-    <StyledThemeProvider theme={mergedTheme} >
-      <GlobalStyle />
+    <StyledThemeProvider theme={mergedTheme} {...props}>
+      <Base />
      </StyledThemeProvider> 
   );
 };
