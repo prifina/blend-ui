@@ -1,18 +1,33 @@
 import React, { useContext } from "react";
-import styled, {
+import {
   ThemeProvider as StyledThemeProvider,
-  ThemeContext,
+  ThemeContext,createGlobalStyle 
 } from "styled-components";
-import { default as defaultTheme, baseStyles } from "./theme";
+import { default as defaultTheme } from "./theme";
 
-export const Base = styled.div`
-  ${baseStyles}
+
+
+const GlobalStyle = createGlobalStyle`
+body: {
+  margin:0;
+};
 `;
+
 /*
 export const Base = styled.div`
   font-family: ${props => props.theme.fonts.body || null};
   font-weight: ${props => props.theme.fontWeights.medium || null};
   line-height: ${props => props.theme.lineHeights.standard || null};
+
+  * {
+  box-sizing: border-box;
+};
+body: {
+  margin:0;
+};
+p: {
+  margin: 0;
+};
 
   * {
     box-sizing: border-box;
@@ -28,9 +43,9 @@ const ThemeProvider = ({ theme = {}, ...props }) => {
   //console.log(baseStyles);
   const mergedTheme = { ...defaultTheme, ...theme };
   return (
-    <StyledThemeProvider theme={mergedTheme}>
-      <Base {...props} />
-    </StyledThemeProvider>
+    <StyledThemeProvider theme={mergedTheme} >
+      <GlobalStyle />
+     </StyledThemeProvider> 
   );
 };
 
