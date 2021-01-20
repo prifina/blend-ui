@@ -167,7 +167,7 @@ const ModalDiv = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 11;
-  background-color: rgba(30, 29, 29, 0.75);
+  background-color: rgba(30, 29, 29, 0.1);
 `;
 
 const Badge = styled.span`
