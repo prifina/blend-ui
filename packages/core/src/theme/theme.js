@@ -5,7 +5,7 @@ import colors from "./colors";
 import createTextStyles from "./createTextStyles";
 import createColorStyles from "./createColorStyles";
 import createComponentStyles from "./createComponentStyles";
-//import { createGlobalStyle } from "styled-components";
+import { css } from "styled-components";
 
 //import { borderWidth } from "styled-system";
 //console.log("SIZES ", Object.keys(sizes));
@@ -163,6 +163,12 @@ const transitionDelays = {
   xLarge: `360ms`,
 };
 
+export const baseStyles = css`
+  font-family: ${fonts.body || null};
+  font-weight: ${typography.fontWeights.medium || null};
+  line-height: ${typography.lineHeights.standard || null};
+  
+`;
 const theme = {
   breakpoints,
   mediaQueries,
@@ -187,6 +193,7 @@ const theme = {
   duration,
   timingFunctions,
   transitionDelays,
+  baseStyles
 };
 
 export default theme;

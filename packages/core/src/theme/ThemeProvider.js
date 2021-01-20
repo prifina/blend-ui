@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import styled,{
   ThemeProvider as StyledThemeProvider,
-  ThemeContext,createGlobalStyle,css
+  ThemeContext
 } from "styled-components";
-import { default as defaultTheme } from "./theme";
+import { default as defaultTheme,baseStyles } from "./theme";
 
 
 /*
@@ -38,10 +38,10 @@ p: {
   }
 `;
 */
+
+
 export const Base = styled.div`
-  font-family: ${props => props.theme.fonts.body || null};
-  font-weight: ${props => props.theme.fontWeights.medium || null};
-  line-height: ${props => props.theme.lineHeights.standard || null};
+  ${baseStyles}
 `;
 const ThemeProvider = ({ theme = {}, ...props }) => {
   //console.log("THEME PROVIDER ", theme, defaultTheme);
