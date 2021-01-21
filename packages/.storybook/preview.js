@@ -1,9 +1,8 @@
 import React from "react";
 import { addDecorator } from "@storybook/react";
 import { createGlobalStyle } from "styled-components";
-import ThemeProvider from "../src/theme/ThemeProvider";
 
-import { baseStyles } from "../src/theme/theme";
+import { baseStyles, ThemeProvider } from "@blend-ui/core";
 
 const GlobalStyle = createGlobalStyle`
   body {

@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
-import styled,{
+import styled, {
   ThemeProvider as StyledThemeProvider,
-  ThemeContext
+  ThemeContext,
 } from "styled-components";
-import { default as defaultTheme,baseStyles } from "./theme";
-
+import { default as defaultTheme, baseStyles } from "./theme";
 
 /*
 const GlobalStyle = createGlobalStyle`
@@ -39,7 +38,6 @@ p: {
 `;
 */
 
-
 export const Base = styled.div`
   ${baseStyles}
 `;
@@ -48,9 +46,9 @@ const ThemeProvider = ({ theme = {}, ...props }) => {
   //console.log(baseStyles);
   const mergedTheme = { ...defaultTheme, ...theme };
   return (
-    <StyledThemeProvider theme={mergedTheme} {...props}>
-      <Base />
-     </StyledThemeProvider> 
+    <StyledThemeProvider theme={mergedTheme}>
+      <Base {...props} />
+    </StyledThemeProvider>
   );
 };
 
