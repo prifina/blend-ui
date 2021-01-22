@@ -337,7 +337,6 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
                     }}
                     */
                     onClick={() => {
-                      setAvatarWidth(32);
                       setIsOpen(prev => !prev);
                     }}
                   />
@@ -428,9 +427,10 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
                         />
                       </div>
                       <Avatar
-                        src={userMenu.options.avatar || emptyAvatar}
+                        src={userMenu.options.avatar}
+                        initials={userMenu.options.initials}
+                        width={userMenu.options.width || 32}
                         alt={"avatar"}
-                        width={32}
                         style={{
                           filter:
                             "drop-shadow(0px 4px 8px rgba(91, 92, 91, 0.25))",
