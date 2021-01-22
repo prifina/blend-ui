@@ -15,7 +15,12 @@ export function userMenu() {
   //console.log(RecentApps);
 
   useEffect(() => {
-    userMenu.show({  notifications: 7, RecentApps: RecentApps });
+    userMenu.show({
+      effect: { hover: { width: 42 } },
+      initials: "TA",
+      notifications: 7,
+      RecentApps: RecentApps,
+    });
     //console.log(RecentApps);
   }, [avatar]);
 
@@ -48,9 +53,11 @@ userMenu.story = {
   decorators: [
     Story => {
       return (
-        <UserMenuContextProvider onExit={()=>{
-          console.log('LOGOUT...  ')
-        }}>
+        <UserMenuContextProvider
+          onExit={() => {
+            console.log("LOGOUT...  ");
+          }}
+        >
           <Story />
         </UserMenuContextProvider>
       );

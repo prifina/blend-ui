@@ -16,7 +16,7 @@ const themeProviderDecorator = story => {
   //console.log("STYLES ", GlobalStyle);
 
   return (
-    <ThemeProvider>
+    <ThemeProvider mobileApp={true}>
       <GlobalStyle />
       {story()}
     </ThemeProvider>

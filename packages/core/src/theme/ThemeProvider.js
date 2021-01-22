@@ -41,10 +41,10 @@ p: {
 export const Base = styled.div`
   ${baseStyles}
 `;
-const ThemeProvider = ({ theme = {}, ...props }) => {
+const ThemeProvider = ({ theme = {}, mobileApp = false, ...props }) => {
   //console.log("THEME PROVIDER ", theme, defaultTheme);
   //console.log(baseStyles);
-  const mergedTheme = { ...defaultTheme, ...theme };
+  const mergedTheme = { ...defaultTheme, ...theme, mobile: mobileApp };
   return (
     <StyledThemeProvider theme={mergedTheme}>
       <Base {...props} />

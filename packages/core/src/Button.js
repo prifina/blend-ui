@@ -141,13 +141,13 @@ const FileInputElement = styled.input.attrs(props => ({
 `;
 
 const ButtonElement = styled.button`
-    /*  */
-    ${buttonTheme}
-    ${buttonVariation}
+  /*  */
+  ${buttonTheme}
+  ${buttonVariation}
     ${space}
     ${typography}
     ${themeColorStyles}
-    `;
+`;
 
 const Button = forwardRef((props, ref) => {
   //console.log("BUTTON ", props);

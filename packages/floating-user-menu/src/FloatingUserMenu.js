@@ -19,12 +19,12 @@ import { BlendIcon } from "@blend-ui/icons";
 
 import bxHome from "@iconify/icons-bx/bx-home";
 import bxBell from "@iconify/icons-bx/bx-bell";
-import bxHistory from '@iconify/icons-bx/bx-history';
+import bxHistory from "@iconify/icons-bx/bx-history";
 //import bxLogOut from '@iconify/icons-bx/bx-log-out';
-import logoutIcon from '@iconify/icons-fe/logout';
+import logoutIcon from "@iconify/icons-fe/logout";
 
-
-const emptyAvatar="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTkiIGhlaWdodD0iNTkiIHZpZXdCb3g9IjAgMCA1OSA1OSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjkuNSIgY3k9IjI5LjUiIHI9IjI5LjUiIGZpbGw9IiNDM0MyQzIiLz4KPHBhdGggZD0iTTIzLjY4NzUgMjIuMzk1NkMyMy42ODc1IDI1LjYwMDMgMjYuMjk1NCAyOC4yMDgxIDI5LjUgMjguMjA4MUMzMi43MDQ2IDI4LjIwODEgMzUuMzEyNSAyNS42MDAzIDM1LjMxMjUgMjIuMzk1NkMzNS4zMTI1IDE5LjE5MSAzMi43MDQ2IDE2LjU4MzEgMjkuNSAxNi41ODMxQzI2LjI5NTQgMTYuNTgzMSAyMy42ODc1IDE5LjE5MSAyMy42ODc1IDIyLjM5NTZaTTM5LjgzMzQgNDEuMTI0OEg0MS4xMjVWMzkuODMzMUM0MS4xMjUgMzQuODQ4NiAzNy4wNjc5IDMwLjc5MTUgMzIuMDgzNCAzMC43OTE1SDI2LjkxNjdDMjEuOTMwOSAzMC43OTE1IDE3Ljg3NSAzNC44NDg2IDE3Ljg3NSAzOS44MzMxVjQxLjEyNDhIMzkuODMzNFoiIGZpbGw9IiNGNUY4RjciLz4KPC9zdmc+Cg==";
+const emptyAvatar =
+  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTkiIGhlaWdodD0iNTkiIHZpZXdCb3g9IjAgMCA1OSA1OSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjkuNSIgY3k9IjI5LjUiIHI9IjI5LjUiIGZpbGw9IiNDM0MyQzIiLz4KPHBhdGggZD0iTTIzLjY4NzUgMjIuMzk1NkMyMy42ODc1IDI1LjYwMDMgMjYuMjk1NCAyOC4yMDgxIDI5LjUgMjguMjA4MUMzMi43MDQ2IDI4LjIwODEgMzUuMzEyNSAyNS42MDAzIDM1LjMxMjUgMjIuMzk1NkMzNS4zMTI1IDE5LjE5MSAzMi43MDQ2IDE2LjU4MzEgMjkuNSAxNi41ODMxQzI2LjI5NTQgMTYuNTgzMSAyMy42ODc1IDE5LjE5MSAyMy42ODc1IDIyLjM5NTZaTTM5LjgzMzQgNDEuMTI0OEg0MS4xMjVWMzkuODMzMUM0MS4xMjUgMzQuODQ4NiAzNy4wNjc5IDMwLjc5MTUgMzIuMDgzNCAzMC43OTE1SDI2LjkxNjdDMjEuOTMwOSAzMC43OTE1IDE3Ljg3NSAzNC44NDg2IDE3Ljg3NSAzOS44MzMxVjQxLjEyNDhIMzkuODMzNFoiIGZpbGw9IiNGNUY4RjciLz4KPC9zdmc+Cg==";
 
 const positionVariation = props => {
   //console.log("POS ", props);
@@ -183,7 +183,6 @@ const Badge = styled.span`
   font-weight: 700;
 `;
 
-
 const UserMenuContextProvider = ({
   offset = "15px",
   id,
@@ -192,13 +191,14 @@ const UserMenuContextProvider = ({
   onExit,
   children,
 }) => {
+  //console.log("ID ", id, id === null, typeof id);
   const defaultTheme = useTheme();
   theme = theme || defaultTheme;
   const menuContext = useRef(null);
   const [userMenu, setUserMenu] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const isMountedRef = useIsMountedRef();
-  const [avatarWidth, setAvatarWidth] = useState(32);
+  //const [avatarWidth, setAvatarWidth] = useState(32);
   const [iconButtons, setIconButtons] = useState([false, true, false, false]);
   //let MenuArea = null
 
@@ -210,16 +210,16 @@ const UserMenuContextProvider = ({
 
   const iconClick = (e, i) => {
     console.log("CLICK ", i);
-    if (i===0) {
+    if (i === 0) {
       // logout
       setIsOpen(false);
       onExit();
     } else {
-    let buttons = iconButtons.map(ic => false);
+      let buttons = iconButtons.map(ic => false);
 
-    buttons[i] = true;
-    setIconButtons(buttons);
-    console.log("ICONS ", iconButtons, buttons);
+      buttons[i] = true;
+      setIconButtons(buttons);
+      console.log("ICONS ", iconButtons, buttons);
     }
     //MenuArea = userMenu.options.recentApps;
   };
@@ -284,7 +284,6 @@ const UserMenuContextProvider = ({
     id: menuId,
   };
 
-  
   //filter: drop-shadow(0px 4px 8px rgba(91, 92, 91, 0.25));
   /*
   width: 350px;
@@ -320,27 +319,33 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
               {userMenu && !isOpen && (
                 <React.Fragment>
                   <Avatar
-                    src={userMenu.options.avatar||emptyAvatar}
+                    src={userMenu.options.avatar}
+                    initials={userMenu.options.initials}
                     alt={"avatar"}
-                    width={avatarWidth}
+                    width={userMenu.options.width || 32}
                     style={{
                       margin: offset,
                       filter: "drop-shadow(0px 4px 8px rgba(91, 92, 91, 0.25))",
                     }}
+                    effect={userMenu.options.effect || null}
+                    /*
                     onMouseEnter={e => {
                       setAvatarWidth(42);
                     }}
                     onMouseLeave={e => {
                       setAvatarWidth(32);
                     }}
+                    */
                     onClick={() => {
                       setAvatarWidth(32);
                       setIsOpen(prev => !prev);
                     }}
                   />
-                   {userMenu.options.notifications>0 &&
-                  <Badge isOpen={false}>{userMenu.options.notifications}</Badge>
-                   }
+                  {userMenu.options.notifications > 0 && (
+                    <Badge isOpen={false}>
+                      {userMenu.options.notifications}
+                    </Badge>
+                  )}
                 </React.Fragment>
               )}
               {isOpen && (
@@ -352,15 +357,15 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
                   />
                   <MenuBase>
                     <IconBar>
-                    <div
+                      <div
                         style={{
                           borderRadius: "50%",
                           marginLeft: "15px",
                           boxShadow: "-4px 0px 8px rgba(91, 92, 91, 0.1)",
                           background:
                             "linear-gradient(180deg, #FFFFFF 0%, #E6E8ED 100%)",
-                            position:"relative",
-                            left:"-112px"
+                          position: "relative",
+                          left: "-112px",
                         }}
                       >
                         <BlendIcon
@@ -384,11 +389,11 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
                           onClick={e => iconClick(e, 1)}
                         />
                       </div>
-                      {userMenu.options.notifications>0 &&
-                      <Badge isOpen={true}>
-                        {userMenu.options.notifications}
-                      </Badge>
-                      }
+                      {userMenu.options.notifications > 0 && (
+                        <Badge isOpen={true}>
+                          {userMenu.options.notifications}
+                        </Badge>
+                      )}
                       <div
                         style={{
                           borderRadius: "50%",
@@ -423,7 +428,7 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
                         />
                       </div>
                       <Avatar
-                        src={userMenu.options.avatar||emptyAvatar}
+                        src={userMenu.options.avatar || emptyAvatar}
                         alt={"avatar"}
                         width={32}
                         style={{
