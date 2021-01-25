@@ -297,7 +297,8 @@ const Tabs = ({
   console.log(_theme);
   let _tabList = null;
   let _panelList = null;
-  if (children && Array.isArray(children) && children.length >= activeTab) {
+  console.log("TABS CHILDRENS ", children);
+  if (children && Array.isArray(children)) {
     React.Children.forEach(children, (child, index) => {
       if (React.isValidElement(child)) {
         if (child.type.displayName === "TabList") {
@@ -309,7 +310,7 @@ const Tabs = ({
       }
     });
   }
-
+  console.log("TABS PANEL LIST ", _panelList);
   return (
     <TabContext.Provider value={{ activeTab, onClick, title }}>
       <TabBackground theme={tabTheme}>
@@ -360,7 +361,8 @@ const TabList = ({ children, ...props }) => {
 const TabPanelList = ({ children, ...props }) => {
   const { activeTab } = useTabContext();
   let activePanel = null;
-  //console.log("PANEL ", props);
+  console.log("PANEL ", props);
+  console.log("CHILDREN ", children);
   if (
     children &&
     Array.isArray(children) &&

@@ -17,11 +17,13 @@ export const tabs = () => {
         <Tab>User Details</Tab>
         <Tab test={true}>Usage</Tab>
         <Tab>Settings</Tab>
+        <Tab>Settings2</Tab>
       </TabList>
       <TabPanelList>
         <TabPanel>Eka panel</TabPanel>
         <TabPanel>Toka panel</TabPanel>
         <TabPanel>Kolmas panel</TabPanel>
+        <TabPanel>Kolmas panel2</TabPanel>
       </TabPanelList>
     </Tabs>
   );
