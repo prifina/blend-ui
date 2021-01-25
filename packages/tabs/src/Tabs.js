@@ -129,10 +129,11 @@ const tabsCss = css`
     width: 100%;
     bottom: 0;
     left: 0;
-    border-bottom: 1px solid ${props =>
-      props.theme && props.theme.colors
-        ? props.theme.colors.baseSecondary
-        : "#00847a"};
+    border-bottom: 1px solid
+      ${props =>
+        props.theme && props.theme.colors
+          ? props.theme.colors.baseSecondary
+          : "#00847a"};
     z-index: 1;
   }
   ::before {
@@ -263,6 +264,7 @@ const TabPanelItem = styled.div`
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   padding-top: 15px;
+  height: 100%;
 `;
 
 const TabBackground = styled.div`
@@ -271,8 +273,9 @@ const TabBackground = styled.div`
     props.theme && props.theme.colors
       ? props.theme.colors.baseSecondary
       : "#00847a"};
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  /*border-top-left-radius: 15px;
+  border-top-right-radius: 15px; */
+  height: 100vh;
   border: 0px;
   padding-top: 65px;
 `;
