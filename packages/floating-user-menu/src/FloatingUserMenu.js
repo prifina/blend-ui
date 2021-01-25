@@ -189,6 +189,7 @@ const UserMenuContextProvider = ({
   position = "top-right",
   theme,
   onExit,
+  onHome,
   children,
 }) => {
   //console.log("ID ", id, id === null, typeof id);
@@ -214,6 +215,9 @@ const UserMenuContextProvider = ({
       // logout
       setIsOpen(false);
       onExit();
+    } else if (i === 3) {
+      setIsOpen(false);
+      onHome();
     } else {
       let buttons = iconButtons.map(ic => false);
 
@@ -421,9 +425,7 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
                         <BlendIcon
                           iconify={bxHome}
                           color={"#00847A"}
-                          onClick={() => {
-                            setIsOpen(prev => !prev);
-                          }}
+                          onClick={e => iconClick(e, 3)}
                         />
                       </div>
                       <Avatar

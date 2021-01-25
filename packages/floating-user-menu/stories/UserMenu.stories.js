@@ -57,6 +57,9 @@ userMenu.story = {
           onExit={() => {
             console.log("LOGOUT...  ");
           }}
+          onHome={() => {
+            console.log("HOME...  ");
+          }}
         >
           <Story />
         </UserMenuContextProvider>
