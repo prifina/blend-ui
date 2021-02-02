@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { css } from "styled-components";
 
 export default (theme = {}) => {
@@ -191,6 +192,16 @@ const error = css`
       file: {
         backgroundColor: "none",
         color: colors.brandAccent,
+      },
+    },
+    iconField: {
+      normal: {
+        border: baseProps.border,
+        borderRadius: baseProps.borderRadius,
+      },
+      mobile: {
+        border: 0,
+        borderBottom: baseProps.border,
       },
     },
   };

@@ -5,10 +5,43 @@ import Text from "./Text";
 import Input from "./Input";
 import { BlendIcon } from "@blend-ui/icons";
 
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { space } from "styled-system";
 //import PropTypes from "prop-types";
 import { useTheme } from "./theme/ThemeProvider";
+
+const fieldVariation = props => {
+  //console.log("VARIATION ", props);
+  //let buttonProps = props.theme.componentStyles.button[props.variation];
+  let fieldProps = {};
+  if (typeof props.borders !== "undefined") {
+    fieldProps = props.borders;
+  } else {
+    // deep-copy... otherwise componentStyle is referenced
+    fieldProps = Object.assign(
+      {},
+      props.theme.componentStyles.iconField[props.variation],
+    );
+    if (
+      props.variation === "normal" &&
+      typeof props.errorinput !== "undefined" &&
+      props.errorinput === 1
+    ) {
+      fieldProps.border = props.theme.borders.input.error;
+    }
+    if (
+      props.variation === "mobile" &&
+      typeof props.errorinput !== "undefined" &&
+      props.errorinput === 1
+    ) {
+      fieldProps.borderBottom = props.theme.borders.input.error;
+    }
+  }
+
+  //console.log(props, fieldProps);
+
+  return [fieldProps];
+};
 
 const StyledBox = styled(Box)`
   ${space}
@@ -22,6 +55,8 @@ const StyledBox = styled(Box)`
       ? props.theme.colors.text.muted
       : props.theme.componentStyles.input.base.backgroundColor ||
         "transparent"};
+  ${fieldVariation};
+  /*      
   border: ${props =>
     typeof props.borders !== "undefined"
       ? props.borders
@@ -32,6 +67,7 @@ const StyledBox = styled(Box)`
     typeof props.borderRadius !== "undefined"
       ? props.borderRadius
       : props.theme.componentStyles.input.base.borderRadius};
+*/
 
   &:focus,
   &:not([disabled]):hover {
@@ -40,6 +76,7 @@ const StyledBox = styled(Box)`
     box-shadow: none;
     border: ${props => props.theme.borders.input.active};
   }
+
   /*
   &:disabled {
     background: ${props => props.theme.colors.text.muted};
@@ -59,12 +96,14 @@ const StyledBox = styled(Box)`
 const InputContext = createContext();
 const useInputContext = () => useContext(InputContext);
 
-const IconField = ({ children, disabled, ...props }) => {
+const IconField = ({ children, disabled, variation = "normal", ...props }) => {
   //console.log("ICON FIELD ", props);
   const isIcon = item => item.type.isIcon || item.type.isIconButton;
-  const { colors } = useTheme();
-  //console.log("ICON FIELD ", theme);
+  const { colors, mobile } = useTheme();
+  //console.log("ICON FIELD ", mobile);
   //let icons = 0;
+  if (mobile && variation === "normal") variation = "mobile";
+
   let leftIconExists = false;
   let rightIconExists = false;
   let inputError = false;
@@ -98,6 +137,7 @@ const IconField = ({ children, disabled, ...props }) => {
       <StyledBox
         disabled={disabled || null}
         errorinput={inputError ? 1 : undefined}
+        variation={variation}
       >
         {children}
       </StyledBox>

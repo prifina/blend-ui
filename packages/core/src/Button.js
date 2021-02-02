@@ -15,7 +15,10 @@ const buttonVariations = ["fill", "outline", "link", "file"];
 
 const buttonVariation = props => {
   //console.log("VARIATION ", props);
-  let buttonProps = props.theme.componentStyles.button[props.variation];
+  let buttonProps = Object.assign(
+    {},
+    props.theme.componentStyles.button[props.variation],
+  );
   let hoverVariations = null;
   if (props.variation === "link")
     hoverVariations = css`
@@ -49,7 +52,7 @@ const buttonTheme = css`
   text-decoration: none;
   font-family: inherit;
   height: auto;
-  width: auto;
+  width: ${props => props.width || "auto"};
   min-width: ${props =>
     props.minWidth || props.theme.componentStyles.button[props.size].minWidth};
   line-height: ${props =>

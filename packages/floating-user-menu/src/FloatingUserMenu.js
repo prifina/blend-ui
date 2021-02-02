@@ -328,6 +328,7 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
                     alt={"avatar"}
                     width={userMenu.options.width || 32}
                     style={{
+                      curson: "pointer",
                       margin: offset,
                       filter: "drop-shadow(0px 4px 8px rgba(91, 92, 91, 0.25))",
                     }}
@@ -346,7 +347,9 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
                   />
                   {userMenu.options.notifications > 0 && (
                     <Badge isOpen={false}>
-                      {userMenu.options.notifications}
+                      {userMenu.options.notifications > 99
+                        ? "99+"
+                        : userMenu.options.notifications}
                     </Badge>
                   )}
                 </React.Fragment>
@@ -434,6 +437,7 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
                         width={userMenu.options.width || 32}
                         alt={"avatar"}
                         style={{
+                          curson: "pointer",
                           filter:
                             "drop-shadow(0px 4px 8px rgba(91, 92, 91, 0.25))",
                         }}

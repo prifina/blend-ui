@@ -18,7 +18,7 @@ export function userMenu() {
     userMenu.show({
       effect: { hover: { width: 42 } },
       initials: "TA",
-      notifications: 7,
+      notifications: 999,
       RecentApps: RecentApps,
     });
     //console.log(RecentApps);
