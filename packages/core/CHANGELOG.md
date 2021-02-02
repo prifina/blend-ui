@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.55-alpha.0](https://prifina-admin/prifina/blend-ui/compare/@blend-ui/core@1.1.54-alpha.0...@blend-ui/core@1.1.55-alpha.0) (2021-02-02)
+
+**Note:** Version bump only for package @blend-ui/core
+
+
+
+
+
 ## [1.1.54-alpha.0](https://prifina-admin/prifina/blend-ui/compare/@blend-ui/core@1.1.53-alpha.0...@blend-ui/core@1.1.54-alpha.0) (2021-01-22)
 
 **Note:** Version bump only for package @blend-ui/core
