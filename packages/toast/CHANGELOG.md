@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.12-alpha.0](https://prifina-admin/prifina/blend-ui/compare/@blend-ui/toast@0.0.11-alpha.0...@blend-ui/toast@0.0.12-alpha.0) (2021-02-18)
+
+**Note:** Version bump only for package @blend-ui/toast
+
+
+
+
+
 ## [0.0.11-alpha.0](https://prifina-admin/prifina/blend-ui/compare/@blend-ui/toast@0.0.10-alpha.0...@blend-ui/toast@0.0.11-alpha.0) (2021-01-21)
 
 **Note:** Version bump only for package @blend-ui/toast
