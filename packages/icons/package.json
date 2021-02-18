@@ -1,6 +1,6 @@
 {
   "name": "@blend-ui/icons",
-  "version": "1.1.6-alpha.0",
+  "version": "1.1.7-alpha.0",
   "description": "Core Icons compoment",
   "author": "Tero <tero@prifina.com>",
   "license": "MIT",
@@ -62,10 +62,10 @@
     "typescript": "^4.0.2"
   },
   "peerDependencies": {
+    "@styled-system/theme-get": "^5.1.2",
     "react": ">=16.8.6",
     "react-dom": ">=16.8.6",
     "styled-components": "^5.2.1",
-    "styled-system": "^5.1.5",
-    "@styled-system/theme-get": "^5.1.2"
+    "styled-system": "^5.1.5"
   }
 }
