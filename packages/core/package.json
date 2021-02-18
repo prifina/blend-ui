@@ -22,9 +22,7 @@
     "@blend-ui/icons": "^1.1.6-alpha.0",
     "@popperjs/core": "^2.5.3",
     "@reach/auto-id": "^0.12.1",
-    "@styled-system/theme-get": "^5.1.2",
-    "react-popper": "^2.2.3",
-    "styled-components": "^5.1.1"
+    "react-popper": "^2.2.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.5",

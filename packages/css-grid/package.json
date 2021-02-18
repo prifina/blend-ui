@@ -19,9 +19,7 @@
     "storybook": "start-storybook"
   },
   "dependencies": {
-    "styled-components": "^5.2.0",
-    "styled-css-grid": "^1.2.1",
-    "styled-system": "^5.1.5"
+    "styled-css-grid": "^1.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.5",

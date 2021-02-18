@@ -18,10 +18,7 @@
     "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel ./src --out-dir ./dist/es",
     "storybook": "start-storybook"
   },
-  "dependencies": {
-    "styled-components": "^5.2.0",
-    "styled-system": "^5.1.5"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.11.5",
     "@babel/core": "^7.9.0",
