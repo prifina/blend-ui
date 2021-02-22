@@ -1,35 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {
-    space, 
-    border, 
-    layout, 
-    flexbox, 
-    typography, 
-    position, 
-    shadow,
-    fontFamily,
-} from "styled-system";
-import ProgressTimer from 'react-progress-timer';
 import { useTheme } from "@blend-ui/core";
 
 
 const theme = useTheme();
-const backgroundColor = theme.colors.baseTertiary //backgroundColor = "rgba(0, 132, 122, 0.1)";
 const barHeight = "4px";
 const barwidth = "400px";
-
-const Wrapper = styled.div`
-  /* Using styled-system */
-  ${space} 
-  ${border}
-  ${layout}
-  ${flexbox}
-  ${typography}
-  ${position}
-  ${shadow}
-`;
 
 const ProgressContainer = styled.div`
   progress {
@@ -48,17 +25,15 @@ const ProgressContainer = styled.div`
   progress[value]:: -webkit-progress-bar {
       height: ${props => props.height};
       border-radius: 20px;
-      background-color: ${backgroundColor};
+      background-color: ${props => props.backgroundColor};
   }
 
   progress[value]:: -webkit-progress-value {
-    height: 15 px;
+    height: ${props => props.height};
     border-radius: 20px;
     background-color: ${props => props.color};
 }
   `;
-
-
 
 const ProgressBarIndicator = props => {
   const{
@@ -68,35 +43,19 @@ const ProgressBarIndicator = props => {
     min = 0,
     value,
     color,
+    backgroundColor,
     children,
     ...rest
 
   } = props;
 
   const _color = color || theme.colors.baseSecondary;  //_color = color || "#00847A";
- 
-
-  let percent = (value /max) * 100;
-
-  const rootProps = {
-    size: "1em",
-    fontFamily: "Montserrat, sans-serif",
-    fontSize: 10 + "px",
-    display: "inline-block",
-    position: "relative",
-    veriticalAlign: "middle",
-    role: "progressbar",
-  };
+  const _backGroundColor = backgroundColor || theme.colors.baseTertiary //backgroundColor = "rgba(0, 132, 122, 0.1)";
 
   return (
-    <Wrapper {...rootProps} {...rest}> 
-      <ProgressContainer color={_color} width={width} height ={height}>
-        {/*<span float = "right" text-align="center">{percent}%</span>*/}
-         <progress value = {value} max = {max} min = {min}/>
-        {/*<ProgressTimer percentage = {percent} format = "{value} {unit}" completedText = " " initialText = {initialText} >  </ProgressTimer>*/}
-      </ProgressContainer>
-    </Wrapper>
-    
+      <ProgressContainer color={_color} backgroundColor ={_backGroundColor} width={width} height ={height}>
+         <progress value = {value} max = {max}/>
+      </ProgressContainer>    
   )
 
 };
@@ -106,6 +65,7 @@ ProgressBarIndicator.propTypes ={
   value:PropTypes.number.isRequired,
   max: PropTypes.number,
   color: PropTypes.string, 
+  backgroundColor: PropTypes.string,
   width: PropTypes.string, 
   height: PropTypes.string,
 }
@@ -130,6 +90,7 @@ ProgressBarIndicator.defaultProps = {
     }
  },
 };
+
 ProgressBarIndicator.displayName = "ProgressBarIndicator";
 export default ProgressBarIndicator;
 export {ProgressBarIndicator};
