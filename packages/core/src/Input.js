@@ -57,6 +57,7 @@ const inputTheme = css`
 `;
 */
 const inputTheme = css`
+  margin: 0; // system props are overriding above values
   ${systemProps}
   appearance: none;
   display: block;
@@ -85,7 +86,7 @@ const inputTheme = css`
     typeof props.borderRadius !== "undefined"
       ? props.borderRadius
       : props.theme.componentStyles[props.as].base.borderRadius};
-  margin: 0;
+
   padding-left: ${props =>
     props.theme.componentStyles[props.as].base.paddingLeft};
   padding-right: ${props =>
@@ -108,7 +109,8 @@ const inputTheme = css`
     box-shadow: none;
     border: ${props => (props.isIcon ? 0 : props.theme.borders.input.error)};
   }
-  &:focus, &:not([disabled]):hover {
+  &:focus,
+  &:not([disabled]):hover {
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -125,7 +127,6 @@ const inputTheme = css`
   ::-ms-clear {
     display: none;
   }
-  
 `;
 /*
 :not([disabled])

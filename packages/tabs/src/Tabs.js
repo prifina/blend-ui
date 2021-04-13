@@ -1,8 +1,18 @@
 import React, { forwardRef, createContext, useContext, useRef } from "react";
 
 import styled, { css } from "styled-components";
+import {
+  space,
+  layout,
+  typography,
+  border,
+  color,
+  compose,
+} from "styled-system";
 
 import { useTheme } from "@blend-ui/core";
+
+const systemProps = compose(layout, color, space, border, typography);
 /*
 .tab-list {
     border-bottom: 1px solid #ccc;
@@ -269,13 +279,14 @@ const TabPanelItem = styled.div`
 
 const TabBackground = styled.div`
   /* */
+  ${systemProps}
   background-color: ${props =>
     props.theme && props.theme.colors
       ? props.theme.colors.baseSecondary
       : "#00847a"};
   /*border-top-left-radius: 15px;
   border-top-right-radius: 15px; */
-  height: 100vh;
+  /*height: 100vh; */
   border: 0px;
   padding-top: 65px;
 `;
@@ -313,7 +324,7 @@ const Tabs = ({
   console.log("TABS PANEL LIST ", _panelList);
   return (
     <TabContext.Provider value={{ activeTab, onClick, title }}>
-      <TabBackground theme={tabTheme}>
+      <TabBackground theme={tabTheme} {...props}>
         {_tabList}
         {_panelList}
       </TabBackground>

@@ -12,7 +12,12 @@ export const tabs = () => {
   };
 
   return (
-    <Tabs activeTab={activeTab} onClick={tabClick} title={"Account Settings"}>
+    <Tabs
+      activeTab={activeTab}
+      onClick={tabClick}
+      title={"Account Settings"}
+      style={{ height: "100vh" }}
+    >
       <TabList>
         <Tab>User Details</Tab>
         <Tab test={true}>Usage</Tab>
