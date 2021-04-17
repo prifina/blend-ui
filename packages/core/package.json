@@ -20,9 +20,9 @@
   },
   "dependencies": {
     "@blend-ui/icons": "^1.1.8-alpha.0",
-    "@popperjs/core": "^2.5.3",
+    "@popperjs/core": "^2.9.2",
     "@reach/auto-id": "^0.12.1",
-    "react-popper": "^2.2.3"
+    "react-popper": "^2.2.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.5",

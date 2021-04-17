@@ -177,8 +177,14 @@ const tabCss = css`
       : "#00847a"};
   font-size: 12px;
   font-weight: 400;
+  /*
   padding-top: 7px;
   padding-bottom: 21px;
+  */
+  padding-top: 12px;
+  padding-bottom: 11px;
+  
+  
   padding-left: 21px;
   padding-right: 21px;
   line-height: 16px;
@@ -288,7 +294,7 @@ const TabBackground = styled.div`
   border-top-right-radius: 15px; */
   /*height: 100vh; */
   border: 0px;
-  padding-top: 65px;
+  padding-top: 19px;
 `;
 
 const TabContext = createContext();

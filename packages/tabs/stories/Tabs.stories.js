@@ -21,14 +21,10 @@ export const tabs = () => {
       <TabList>
         <Tab>User Details</Tab>
         <Tab test={true}>Usage</Tab>
-        <Tab>Settings</Tab>
-        <Tab>Settings2</Tab>
       </TabList>
       <TabPanelList>
         <TabPanel>Eka panel</TabPanel>
         <TabPanel>Toka panel</TabPanel>
-        <TabPanel>Kolmas panel</TabPanel>
-        <TabPanel>Kolmas panel2</TabPanel>
       </TabPanelList>
     </Tabs>
   );
@@ -36,3 +32,28 @@ export const tabs = () => {
 tabs.story = {
   name: "Tabs",
 };
+
+/*
+return (
+  <Tabs
+    activeTab={activeTab}
+    onClick={tabClick}
+    title={"Account Settings"}
+    style={{ height: "100vh" }}
+  >
+    <TabList>
+      <Tab>User Details</Tab>
+      <Tab test={true}>Usage</Tab>
+      <Tab>Settings</Tab>
+      <Tab>Settings2</Tab>
+    </TabList>
+    <TabPanelList>
+      <TabPanel>Eka panel</TabPanel>
+      <TabPanel>Toka panel</TabPanel>
+      <TabPanel>Kolmas panel</TabPanel>
+      <TabPanel>Kolmas panel2</TabPanel>
+    </TabPanelList>
+  </Tabs>
+);
+};
+*/

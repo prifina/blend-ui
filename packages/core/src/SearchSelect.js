@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, {
   forwardRef,
   useRef,
@@ -45,19 +47,23 @@ const SelectElement = styled.select`
   display: block;
   width: ${props => props.width || "100%"};
   font-family: ${props => props.theme.fonts.body};
-  margin:0;
+  margin: 0;
   ${componentStyle}
   ${space} ${typography}
 
   ::-ms-expand {
     display: none;
   }
+
   &:disabled {
-    opacity: 0.25;
+    /* safari is not working with onClick event and thus it is not possible to prevent default click behaviour.... */
+    /* opacity: 0.25; */
+    opacity: 1;
   }
+
   option {
-    display:none;
-    }
+    display: none;
+  }
   &:focus {
     outline: none;
     -webkit-box-shadow: none;
@@ -68,6 +74,7 @@ const SelectElement = styled.select`
 const StyledBox = styled(Box)`
   display: flex;
   align-items: center;
+  z-index: 1;
 `;
 const PopperContainer = styled.div`
   /* */
@@ -228,13 +235,16 @@ const SearchSelect = forwardRef(
       //setState({openSelect:true})
       //console.log(selectRef.current.parentElement.getBoundingClientRect());
       //const selectElement = selectRef.current.parentElement.getBoundingClientRect();
-      /*
+
       console.log(
-        containerRef,
-        containerRef.current,
-        containerRef.current.getBoundingClientRect(),
+        "CLICK ",
+        containerBoxRef.current,
+
+        containerBoxRef.current.getBoundingClientRect(),
+        //containerRef.current,
+        //containerRef.current.getBoundingClientRect(),
       );
-      */
+
       const selectElement = containerBoxRef.current.getBoundingClientRect();
       const currentState = state.openSelect;
       /*
@@ -293,18 +303,19 @@ const SearchSelect = forwardRef(
             />
           </PopperContainer>
         )}
-        <StyledBox>
+        <StyledBox onClick={selectOnClick}>
           <SelectElement
             {...props}
             ref={mergeRefs(setReferenceElement, selectRef)}
             sizevariation={size}
-            onClick={selectOnClick}
             theme={theme}
             value={state.selectValue}
-            readOnly
+            style={{ zIndex: -1 }}
+            disabled={true}
           >
             {styledChildren}
           </SelectElement>
+
           <ClickableIcon
             iconify={state.openSelect ? iconUp : iconDown}
             sizevariation={size}
