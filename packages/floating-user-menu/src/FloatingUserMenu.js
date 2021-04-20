@@ -360,7 +360,7 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
                       setIsOpen(prev => !prev);
                     }}
                   />
-                  {userMenu.options.notifications > 0 && (
+                  {notificationCount > 0 && (
                     <Badge isOpen={false}>
                       {notificationCount > 99 ? "99+" : notificationCount}
                     </Badge>
