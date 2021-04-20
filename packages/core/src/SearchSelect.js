@@ -74,6 +74,7 @@ const SelectElement = styled.select`
 const StyledBox = styled(Box)`
   display: flex;
   align-items: center;
+  /* to make sure this is top layer.... */
   z-index: 1;
 `;
 const PopperContainer = styled.div`

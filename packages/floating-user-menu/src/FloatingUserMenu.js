@@ -100,15 +100,21 @@ const Base = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  left: 0;
+  /* left: 0; */
   display: flex;
   align-items: flex-end;
+
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  /*
+  justify-content: flex-end;
+  flex-direction: row;
+  */
+  min-width: 100px;
   /* pointer-events: none; */
 
   overflow: hidden;
+
   z-index: 10;
   ${props => props.theme.baseStyles};
   ${space}
@@ -201,13 +207,15 @@ const UserMenuContextProvider = ({
   const isMountedRef = useIsMountedRef();
   //const [avatarWidth, setAvatarWidth] = useState(32);
   const [iconButtons, setIconButtons] = useState([false, true, false, false]);
-  //let MenuArea = null
+
+  const [notificationCount, setNotificationCount] = useState(0);
 
   const uuid = useId();
   const _id = id || uuid;
   const portalId = `blend-usermenu-portal-${_id}`;
   const menuId = `blend-usermenu-${_id}`;
   const root = useRef(null);
+  //const notificationLabel = useRef(null);
 
   const iconClick = (e, i) => {
     console.log("CLICK ", i);
@@ -237,6 +245,10 @@ const UserMenuContextProvider = ({
       if (root.current) document.body.removeChild(root.current);
     };
   }, []);
+  const onUpdate = useCallback(() => {
+    console.log("UPDATE NOTIFICATION");
+    setNotificationCount(111);
+  }, []);
 
   const show = useCallback(
     (options = {}) => {
@@ -250,7 +262,7 @@ const UserMenuContextProvider = ({
         id,
         options: menuOptions,
       };
-
+      setNotificationCount(menu.options.notifications || 0);
       setUserMenu(menu);
       return menu;
     },
@@ -276,6 +288,7 @@ const UserMenuContextProvider = ({
   menuContext.current = {
     userMenu,
     show,
+    onUpdate,
   };
   //console.log(alertContext);
   const baseProps = {
@@ -286,6 +299,7 @@ const UserMenuContextProvider = ({
       onMouseLeave: onMouseLeave,
   */
     id: menuId,
+    //w:window.innerWidth
   };
 
   //filter: drop-shadow(0px 4px 8px rgba(91, 92, 91, 0.25));
@@ -313,6 +327,7 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
 }
 
 */
+
   return (
     <UserMenuContext.Provider value={menuContext}>
       {children}
@@ -347,9 +362,7 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
                   />
                   {userMenu.options.notifications > 0 && (
                     <Badge isOpen={false}>
-                      {userMenu.options.notifications > 99
-                        ? "99+"
-                        : userMenu.options.notifications}
+                      {notificationCount > 99 ? "99+" : notificationCount}
                     </Badge>
                   )}
                 </React.Fragment>
@@ -395,9 +408,9 @@ box-shadow: 0px 4px 4px rgba(0, 132, 122, 0.6);
                           onClick={e => iconClick(e, 1)}
                         />
                       </div>
-                      {userMenu.options.notifications > 0 && (
+                      {notificationCount > 0 && (
                         <Badge isOpen={true}>
-                          {userMenu.options.notifications}
+                          {notificationCount > 99 ? "99+" : notificationCount}
                         </Badge>
                       )}
                       <div

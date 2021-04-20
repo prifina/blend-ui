@@ -1,7 +1,9 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable import/no-anonymous-default-export */
 import React, { useEffect, lazy } from "react";
 import UserMenuContextProvider, { useUserMenu } from "../src/FloatingUserMenu";
-import { avatar } from "./avatar-base64";
-import { RecentApps } from "../src/RecentApps";
+//import { avatar } from "./avatar-base64";
+import { RecentApps } from "../backup/RecentApps";
 
 export default { title: "UserMenu" };
 //export const userMenu = () => <div>Testing...</div>;
@@ -9,28 +11,33 @@ export default { title: "UserMenu" };
 export function userMenu() {
   //const toast = React.useContext(ToastContext);
 
-  const userMenu = useUserMenu();
-  console.log("Context inside Component", typeof userMenu);
+  const floatingUserMenu = useUserMenu();
+  console.log("Context inside Component", typeof floatingUserMenu);
   //console.log("ALERTS", toast.alerts.length > 0 ? toast.alerts[0] : null);
   //console.log(RecentApps);
 
   useEffect(() => {
-    userMenu.show({
+    floatingUserMenu.show({
       effect: { hover: { width: 42 } },
       initials: "TA",
-      notifications: 999,
+      notifications: 9,
       RecentApps: RecentApps,
     });
     //console.log(RecentApps);
-  }, [avatar]);
+  }, [floatingUserMenu]);
 
   return (
-    <React.Fragment>
+    <div style={{ pointerEvents: "all", cursor: "pointer" }}>
       <div>User menu test</div>
-      {/* 
-      <RecentApps />
-      */}
-    </React.Fragment>
+      <button
+        onClick={() => {
+          console.log("UPDATE CLICK");
+          floatingUserMenu.onUpdate();
+        }}
+      >
+        UPDATE
+      </button>
+    </div>
   );
 }
 
