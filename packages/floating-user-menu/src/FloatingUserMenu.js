@@ -245,9 +245,9 @@ const UserMenuContextProvider = ({
       if (root.current) document.body.removeChild(root.current);
     };
   }, []);
-  const onUpdate = useCallback(() => {
-    console.log("UPDATE NOTIFICATION");
-    setNotificationCount(111);
+  const onUpdate = useCallback(cnt => {
+    console.log("UPDATE NOTIFICATION ", cnt);
+    setNotificationCount(cnt);
   }, []);
 
   const show = useCallback(

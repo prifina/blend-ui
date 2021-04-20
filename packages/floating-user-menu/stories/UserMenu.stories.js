@@ -32,7 +32,7 @@ export function userMenu() {
       <button
         onClick={() => {
           console.log("UPDATE CLICK");
-          floatingUserMenu.onUpdate();
+          floatingUserMenu.onUpdate(111);
         }}
       >
         UPDATE
