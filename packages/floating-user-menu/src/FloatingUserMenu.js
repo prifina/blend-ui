@@ -247,7 +247,7 @@ const UserMenuContextProvider = ({
   }, []);
   const onUpdate = useCallback(cnt => {
     console.log("UPDATE NOTIFICATION ", cnt);
-    setNotificationCount(cnt);
+    setNotificationCount(notificationCount + cnt);
   }, []);
 
   const show = useCallback(
