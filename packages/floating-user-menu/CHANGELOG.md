@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.19-alpha.0](https://prifina-admin/prifina/blend-ui/compare/@blend-ui/floating-user-menu@0.0.18-alpha.0...@blend-ui/floating-user-menu@0.0.19-alpha.0) (2021-04-21)
+
+**Note:** Version bump only for package @blend-ui/floating-user-menu
+
+
+
+
+
 ## [0.0.18-alpha.0](https://prifina-admin/prifina/blend-ui/compare/@blend-ui/floating-user-menu@0.0.17-alpha.0...@blend-ui/floating-user-menu@0.0.18-alpha.0) (2021-04-20)
 
 **Note:** Version bump only for package @blend-ui/floating-user-menu
