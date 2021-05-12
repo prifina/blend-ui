@@ -60,6 +60,19 @@ const backgroundError = "#FFCCCC";
 const backgroundNotification = "#F40431";
 const backgroundLight = "#FFFFFF";
 
+const avatarColors = [
+  "#3BE8B0",
+  "#3BF7D1",
+  "#1AAFD0",
+  "#02CEFF",
+  "#6A67CE",
+  "#A177FF",
+  "#FFB900",
+  "#DB00FF",
+  "#2E3C54",
+  "#FF00B8",
+];
+
 const colors = {
   transparent: "transparent",
   current: "currentColor",
@@ -154,6 +167,7 @@ const colors = {
   baseErrorHover,
   baseDividers,
   menuModalBackground,
+  avatarColors,
 };
 
 export const palette = {

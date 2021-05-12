@@ -15,7 +15,7 @@ const InitialsElement = styled(Box)`
 `;
 
 const Avatar = forwardRef(
-  ({ src, alt, width, initials = "", effect, ...props }, ref) => {
+  ({ src, alt, width, initials = "", effect, outerCircle, ...props }, ref) => {
     const [avatarWidth, setAvatarWidth] = useState(width);
     const [fontWeight, setFontWeight] = useState("normal");
 
@@ -46,10 +46,14 @@ const Avatar = forwardRef(
           onMouseLeave={onMouseLeave}
           ref={ref}
           {...props}
+          {...(outerCircle
+            ? { border: `${avatarWidth / 5}px solid #F5F8F7` }
+            : {})}
         />
       );
     } else {
       const fontSize = width / (initials.length + 0.3);
+
       return (
         <InitialsElement
           borderWidth={1}
@@ -64,6 +68,9 @@ const Avatar = forwardRef(
           onMouseLeave={onMouseLeave}
           ref={ref}
           {...props}
+          {...(outerCircle
+            ? { border: `${avatarWidth / 5}px solid #F5F8F7` }
+            : {})}
         >
           <Text as={"span"} colorStyle={"avatar"}>
             {initials}
@@ -78,6 +85,7 @@ Avatar.propTypes = {
   src: PropTypes.string,
   alt: PropTypes.string,
   initials: PropTypes.string,
+  outerCircle: PropTypes.bool,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 export default Avatar;

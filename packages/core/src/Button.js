@@ -3,7 +3,7 @@ import React, { forwardRef } from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import { default as styledProps } from "@styled-system/prop-types";
-import { space, typography } from "styled-system";
+import { alignContent, justifyContent, space, typography } from "styled-system";
 import Box from "./Box";
 import { useId } from "@reach/auto-id";
 
@@ -40,6 +40,8 @@ const themeColorStyles = props => {
   if (props.colorStyle) {
     if (props.variation === "outline") {
       buttonProps = props.theme.colorStyles.button.outline[props.colorStyle];
+    } else if (props.variation === "fill") {
+      buttonProps = props.theme.colorStyles.button.fill[props.colorStyle];
     }
   }
   return [buttonProps, hoverVariations];

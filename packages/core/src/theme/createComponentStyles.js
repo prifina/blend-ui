@@ -204,5 +204,10 @@ const error = css`
         borderBottom: baseProps.border,
       },
     },
+    avatar:{
+      sm:{
+        
+      }
+    }
   };
 };

@@ -2,31 +2,8 @@ import React from "react";
 import Button from "../src/Button";
 import { BlendIcon } from "@blend-ui/icons";
 import { default as eyeIcon } from "@iconify/icons-bx/bx-show";
-//import { eyeLine as eyeIcon } from "@iconify/icons-ri/eye-line";
-/*
+import colors from "../src/theme/colors";
 
-import { BlendIcon } from "@blend-ui/icons";
-import { default as BoxChecked } from "@iconify/icons-bx/bx-check-square";
-import { default as BoxEmpty } from "@iconify/icons-bx/bx-square";
-// npm install --save-dev @iconify/react @iconify/icons-fe
-import { Icon, InlineIcon } from '@iconify/react';
-import eyeIcon from '@iconify/icons-fe/eye';
-
-// npm install --save-dev @iconify/react @iconify/icons-bx
-import { Icon, InlineIcon } from '@iconify/react';
-import bxHide from '@iconify/icons-bx/bx-hide';
-
-// npm install --save-dev @iconify/react @iconify/icons-bx
-import { Icon, InlineIcon } from '@iconify/react';
-import bxShow from '@iconify/icons-bx/bx-show';
-
-// npm install --save-dev @iconify/react @iconify/icons-ri
-import { Icon, InlineIcon } from '@iconify/react';
-import eyeLine from '@iconify/icons-ri/eye-line';
-// npm install --save-dev @iconify/react @iconify/icons-ri
-import { Icon, InlineIcon } from '@iconify/react';
-import eyeOffLine from '@iconify/icons-ri/eye-off-line';
-*/
 export default { title: "Button" };
 
 export const button = () => <Button>Default</Button>;
@@ -49,16 +26,16 @@ button4.story = {
   name: "Button link",
 };
 
-export const button41 = () => (
+export const button5 = () => (
   <Button disabled variation={"link"}>
     Something
   </Button>
 );
-button41.story = {
+button5.story = {
   name: "Button disabled link",
 };
 
-export const button5 = () => (
+export const button6 = () => (
   <Button
     variation={"file"}
     input={""}
@@ -69,15 +46,15 @@ export const button5 = () => (
     Something
   </Button>
 );
-button5.story = {
+button6.story = {
   name: "Button file",
 };
 
-export const button6 = () => <input type="file" />;
-button6.story = {
+export const button7 = () => <input type="file" />;
+button7.story = {
   name: "Input file",
 };
-export const button7 = () => (
+export const button8 = () => (
   <Button
     onChange={e => {
       console.log(e);
@@ -87,15 +64,135 @@ export const button7 = () => (
     Something
   </Button>
 );
-button7.story = {
+button8.story = {
   name: "Icon Button",
 };
 
-export const button8 = () => (
+export const button9 = () => (
   <Button variation={"outline"} colorStyle={"error"}>
     Outline
   </Button>
 );
-button8.story = {
-  name: "Button outline colorStyle",
+button9.story = {
+  name: "Button Outline",
+};
+
+export const button10 = () => (
+  <div
+    style={{
+      height: 100,
+      width: 600,
+      flexDirection: "row",
+      justifyContent: "space-between",
+    }}
+  >
+    <Button size="lg">Large</Button>
+    <Button size="md">Medium</Button>
+    <Button size="sm">Small</Button>
+    <Button size="xs">Extra small</Button>
+  </div>
+);
+button10.story = {
+  name: "Size Varation",
+};
+
+export const button11 = () => (
+  <div
+    style={{
+      height: 100,
+      width: 600,
+      flexDirection: "row",
+      justifyContent: "space-between",
+    }}
+  >
+    <Button>Default</Button>
+    <Button
+      style={{ backgroundColor: colors.baseHover, border: colors.baseHover }}
+    >
+      Hover
+    </Button>
+    <Button disabled>Disabled</Button>
+  </div>
+);
+button11.story = {
+  name: "State Varation",
+};
+
+export const button12 = () => (
+  <div
+    style={{
+      height: 100,
+      width: 60,
+      flexDirection: "row",
+      justifyContent: "space-between",
+    }}
+  >
+    <Button variation={"fill"}>Fill</Button>
+    <Button variation={"outline"}>Outline</Button>
+    <Button variation={"link"}>Link</Button>
+    <Button variation={"file"}>File</Button>
+  </div>
+);
+button12.story = {
+  name: "Style Varation",
+};
+
+export const button13 = () => (
+  <div>
+    <Button variation={"fill"} colorStyle={"secondary"}>
+      Default
+    </Button>
+    <Button variation={"fill"} colorStyle={"error"}>
+      Default
+    </Button>
+
+    <Button variation={"outline"} colorStyle={"secondary"}>
+      Outline
+    </Button>
+    <Button variation={"outline"} colorStyle={"error"}>
+      Outline
+    </Button>
+  </div>
+);
+button13.story = {
+  name: "Color Variations",
+};
+
+export const button14 = () => (
+  <div
+    style={{
+      height: 100,
+      width: 600,
+      flexDirection: "row",
+      justifyContent: "space-between",
+    }}
+  >
+    <Button
+      onChange={e => {
+        console.log(e);
+      }}
+    >
+      <BlendIcon iconify={eyeIcon} size="12px" />R
+    </Button>
+    <Button
+      onChange={e => {
+        console.log(e);
+      }}
+    >
+      L
+      <BlendIcon iconify={eyeIcon} size="12px" />
+    </Button>
+    <Button
+      onChange={e => {
+        console.log(e);
+      }}
+    >
+      <BlendIcon iconify={eyeIcon} size="12px" />
+      L&R
+      <BlendIcon iconify={eyeIcon} size="12px" />
+    </Button>
+  </div>
+);
+button14.story = {
+  name: "Icon L&R",
 };

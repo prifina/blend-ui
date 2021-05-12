@@ -8,6 +8,7 @@ export const avatar = () => (
     initials={"TR"}
     width={100}
     effect={{ hover: { width: 110, fontWeight: 600 } }}
+    outerCircle
   />
 );
 avatar.story = {
@@ -24,8 +25,21 @@ export const avatar2 = () => (
       margin: "15px",
       filter: "drop-shadow(0px 4px 8px rgba(91, 92, 91, 0.25))",
     }}
+    outerCircle
   />
 );
 avatar2.story = {
   name: "Avatar photo",
+};
+
+export const avatar4 = () => (
+  <Avatar
+    initials={"TR"}
+    width={100}
+    effect={{ hover: { width: 110, fontWeight: 600 } }}
+    outerCircle
+  />
+);
+avatar4.story = {
+  name: "Avatar",
 };
