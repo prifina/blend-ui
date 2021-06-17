@@ -155,7 +155,8 @@ const AutoComplete = forwardRef(
     const searchInput = e => {
       const userInput = e.currentTarget.value;
       let filteredSuggestions = [];
-      let showState = false;
+      //let showState = false;
+      let showState = showList;
       if (userInput.length >= searchLength) {
         showState = true;
         filteredSuggestions = suggestions.filter(suggestion => {
@@ -172,6 +173,9 @@ const AutoComplete = forwardRef(
             );
           }
         });
+      }
+      if (showList && filteredSuggestions.length === 0) {
+        filteredSuggestions = suggestions;
       }
       setState({
         filteredList: filteredSuggestions,
