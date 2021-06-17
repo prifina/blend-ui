@@ -174,7 +174,11 @@ const AutoComplete = forwardRef(
           }
         });
       }
-      if (showList && filteredSuggestions.length === 0) {
+      if (
+        showList &&
+        filteredSuggestions.length === 0 &&
+        userInput.length === 0
+      ) {
         filteredSuggestions = suggestions;
       }
       setState({
