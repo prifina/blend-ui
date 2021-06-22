@@ -5,7 +5,7 @@ export default { title: "Avatar" };
 
 export const avatar = () => (
   <Avatar
-    initials={"TR"}
+    src={"https://i.pravatar.cc/100"}
     width={100}
     effect={{ hover: { width: 110, fontWeight: 600 } }}
     outerCircle
@@ -22,7 +22,7 @@ export const avatar2 = () => (
     width={100}
     effect={{ hover: { width: 110 } }}
     style={{
-      margin: "15px",
+      margin: "30px",
       filter: "drop-shadow(0px 4px 8px rgba(91, 92, 91, 0.25))",
     }}
     outerCircle
@@ -43,3 +43,4 @@ export const avatar4 = () => (
 avatar4.story = {
   name: "Avatar",
 };
+

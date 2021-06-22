@@ -10,12 +10,27 @@ const emptyAvatar =
 
 const InitialsElement = styled(Box)`
   text-transform: uppercase;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // text-align: center;
   line-height: ${props => props.width + "px"};
+  border: ${props => (props.outerCircle ? `${props.width / 5}px solid #F5F8F7` : "")};
+  // position:'absolute';
+
 `;
 
+const ImageElement = styled(Image)`
+  border: ${props => (props.outerCircle ? `${props.width / 5}px solid #F5F8F7` : "")};
+
+`;
+
+
 const Avatar = forwardRef(
-  ({ src, alt, width, initials = "", effect, outerCircle, ...props }, ref) => {
+  (
+    { src, alt, width, initials = "", effect, outerCircle, ...props },
+    ref,
+  ) => {
     const [avatarWidth, setAvatarWidth] = useState(width);
     const [fontWeight, setFontWeight] = useState("normal");
 
@@ -37,7 +52,7 @@ const Avatar = forwardRef(
 
     if (src || initials === "") {
       return (
-        <Image
+        <ImageElement
           src={src || emptyAvatar}
           alt={alt}
           shape={"circle"}
@@ -46,13 +61,14 @@ const Avatar = forwardRef(
           onMouseLeave={onMouseLeave}
           ref={ref}
           {...props}
-          {...(outerCircle
-            ? { border: `${avatarWidth / 5}px solid #F5F8F7` }
-            : {})}
+          outerCircle={outerCircle}
+
+         
+
         />
       );
     } else {
-      const fontSize = width / (initials.length + 0.3);
+      const fontSize = width / (initials.length + 1.7);
 
       return (
         <InitialsElement
@@ -68,9 +84,7 @@ const Avatar = forwardRef(
           onMouseLeave={onMouseLeave}
           ref={ref}
           {...props}
-          {...(outerCircle
-            ? { border: `${avatarWidth / 5}px solid #F5F8F7` }
-            : {})}
+          outerCircle={outerCircle}
         >
           <Text as={"span"} colorStyle={"avatar"}>
             {initials}
