@@ -13,8 +13,8 @@ const changeAction = e => {
 };
 
 export const select = () => (
-  <Box width="150px" >
-    {/* <Label htmlFor="cabinClass">Select</Label> */}
+  <Box width="100%" >
+    <Label htmlFor="cabinClass">Select</Label>
     <Select
       id="cabinClass"
       name="cabinClass"
