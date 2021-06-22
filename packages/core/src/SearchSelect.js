@@ -168,6 +168,7 @@ const SearchSelect = forwardRef(
       containerRef,
       containerOffset,
       onChange,
+      maxHeight,
       ...props
     },
     ref,
@@ -296,6 +297,7 @@ const SearchSelect = forwardRef(
               showList={showList}
               activeItem={activeItem}
               searchLength={searchLength}
+              maxHeight={maxHeight}
               ref={ref => {
                 if (ref) {
                   setAutoCompleteInput(ref);
