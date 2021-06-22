@@ -1,91 +1,52 @@
-import React, { createRef } from "react";
-import SearchSelect from "../src/SearchSelect";
+import React from "react";
+import Select from "../src/Select";
 import Label from "../src/Label";
 import Box from "../src/Box";
-import Text from "../src/Text";
+import { action } from "@storybook/addon-actions";
 
-//import { Icon } from "@blend-ui/icons";
-//import { Graphql } from "@blend-ui/icons";
-//import { Icon, InlineIcon } from "@iconify/react";
-//import { default as ChevronDown } from "@iconify/icons-fe/drop-down";
+export default { title: "Select" };
 
-export default { title: "Search Select" };
-/*
-export default {
-  title: "Icons",
+const changeAction = e => {
+  // console.log("CHANGE ", e);
+  // console.log("CHANGE ", e.target, e.currentTarget, e.currentTarget.id);
+  action(`${e.currentTarget.id} was clicked`)(e.currentTarget.value);
 };
-//<BlendIcon icon={ChevronDown} title={"Add"} width={"36px"} color={"green"} />
 
-export const addCircle = () => <div>Testing</div>;
-
-addCircle.story = {
-  name: "ADD",
-};
-*/
-/*
-const selectOptions = [
-  { value: 0, option: "Economy" },
-  { value: 1, option: "Premium Economy" },
-  { value: 2, option: "Something" },
-];
-*/
-const selectOptions = [
-  {
-    key: "0",
-    value: "This is component",
-    searchValue: "This is component +358",
-    component: (
-      <React.Fragment>
-        <Text as="span">This is component</Text>
-        <Text as="span">(+358)</Text>
-      </React.Fragment>
-    ),
-  },
-  { key: "1", value: "Premium Economy" },
-  { key: "2", value: "Something" },
-];
 export const select = () => (
-  <Box>
-    <Label htmlFor="cabinClass">Cabin Class</Label>
-    <SearchSelect
+  <Box width="150px" >
+    {/* <Label htmlFor="cabinClass">Select</Label> */}
+    <Select
       id="cabinClass"
       name="cabinClass"
-      defaultValue="1"
-      options={selectOptions}
-      onChange={e => {
-        console.log("Change ", e.target.value);
-      }}
-    />
+      defaultValue="Premium Economy"
+      onChange={changeAction}
+    >
+      <option>Economy</option>
+      <option>Premium Economy</option>
+      <option>Business</option>
+      <option>First Class</option>
+      <option>
+        With a super long label that doesn't get clobbered by the chevron
+      </option>
+    </Select>
+    <Select
+      id="cabinClass"
+      name="cabinClass"
+      defaultValue="Premium Economy"
+      onChange={changeAction}
+      variation="outline"
+    >
+      <option>Economy</option>
+      <option>Premium Economy</option>
+      <option>Business</option>
+      <option>First Class</option>
+      <option>
+        With a super long label that doesn't get clobbered by the chevron
+      </option>
+    </Select>
+
   </Box>
 );
 select.story = {
-  name: "Search Select",
-};
-export const select2 = () => {
-  const boxRef = createRef();
-
-  return (
-    <Box width={"200px"} ref={boxRef}>
-      <Label htmlFor="cabinClass">Cabin Class</Label>
-      <SearchSelect
-        id="cabinClass"
-        name="cabinClass"
-        size={"xs"}
-        defaultValue="000"
-        options={selectOptions}
-        onChange={(e, code) => {
-          console.log("Change ", e);
-          console.log("Change ", code);
-        }}
-        showList={true}
-        selectOption={"key"}
-        width={"50px"}
-        containerRef={boxRef}
-        containerOffset={"20px"}
-      />
-    </Box>
-  );
-};
-select2.story = {
-  name: "Search Select with full list visible",
+  name: "Select",
 };
