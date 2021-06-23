@@ -61,7 +61,7 @@ const buttonTheme = css`
   text-align: center;
   text-decoration: none;
   font-family: inherit;
-  height: r;
+  height: auto;
   width: ${props => props.width || "auto"};
   min-width: ${props =>
     props.minWidth || props.theme.componentStyles.button[props.size].minWidth};
