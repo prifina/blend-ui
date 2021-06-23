@@ -130,13 +130,11 @@ const error = css`
     button: {
       xs: {
         fontSize: sizeOptions.buttonSizes.xs.fontSize,
-        minHeight:sizeOptions.buttonSizes.xs.height,
         paddingLeft: sizeOptions[8],
         paddingRight: sizeOptions[8],
         paddingTop:sizeOptions[4],
         paddingBottom:sizeOptions[4],
         lineHeight: sizeOptions[16],
-        height:[24],
         minWidth: sizeOptions[84],
         fontWeight: fontWeights["semiBold"],
       },
