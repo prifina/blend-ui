@@ -31,13 +31,15 @@ export const baseSizes = {
   4: "0.25rem",
   5: "0.3125rem",
   6: "0.375rem",
+  6.5:"0.406rem",
   7: "0.4375rem",
   8: "0.5rem",
   8.5: "0.5313rem",
-
   9: "0.5625rem",
+  9.5:"0.594rem",
   10: "0.625rem",
   11: "0.6875rem",
+  11.5:"0.719rem",
   12: "0.75rem",
   13: "0.8125rem",
   14: "0.875rem",
@@ -69,11 +71,13 @@ export const baseSizes = {
   72: "4.5rem",
 
   80: "5rem",
+  84:"5.25rem",
   90: "5.625rem",
   100: "6.25rem",
   128: "8rem",
   129: "8.0625rem",
   131: "8.1875rem",
+  134:"8.375rem",
 };
 
 const largeSizes = {
@@ -111,13 +115,13 @@ const borderWidths = {
 
 const buttonSizes = {
   xs: {
-    fontSize: baseSizes[10],
-  },
-  sm: {
     fontSize: baseSizes[12],
   },
-  md: {
+  sm: {
     fontSize: baseSizes[14],
+  },
+  md: {
+    fontSize: baseSizes[12],
   },
   lg: {
     fontSize: baseSizes[16],

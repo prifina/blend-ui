@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { randomAvatarColor } from "./theme";
 
 export default (theme = {}) => {
@@ -5,6 +6,18 @@ export default (theme = {}) => {
 
   return {
     button: {
+      fill: {
+        error: {
+          backgroundColor: colors.baseError,
+          color: colors.baseWhite,
+          borderColor: colors.baseWhite,
+        },
+        secondary: {
+          backgroundColor: colors.baseSecondary,
+          color: colors.baseWhite,
+          borderColor: colors.baseSecondary,
+        },
+      },
       outline: {
         error: {
           color: colors.baseError,
@@ -15,16 +28,12 @@ export default (theme = {}) => {
           borderColor: colors.baseSecondary,
         },
       },
-      fill: {
+      link: {
         error: {
-          color: colors.baseWhite,
-          borderColor: colors.baseWhite,
-          backgroundColor: colors.baseError,
+          color: colors.baseError,
         },
         secondary: {
-          backgroundColor: colors.baseSecondary,
-          color: colors.baseWhite,
-          borderColor: colors.baseSecondary,
+          color: colors.baseSecondary,
         },
       },
     },

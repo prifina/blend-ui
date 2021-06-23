@@ -69,7 +69,7 @@ button8.story = {
 };
 
 export const button9 = () => (
-  <Button variation={"outline"} colorStyle={"error"}>
+  <Button variation={"outline"} colorStyle={"secondary"}>
     Outline
   </Button>
 );
@@ -78,19 +78,13 @@ button9.story = {
 };
 
 export const button10 = () => (
-  <div
-    style={{
-      height: 100,
-      width: 600,
-      flexDirection: "row",
-      justifyContent: "space-between",
-    }}
-  >
-    <Button size="lg">Large</Button>
-    <Button size="md">Medium</Button>
-    <Button size="sm">Small</Button>
-    <Button size="xs">Extra small</Button>
-  </div>
+ 
+<>
+    <Button size="lg">Button</Button>
+    <Button size="md">Button</Button>
+    <Button size="sm">Button</Button>
+    <Button size="xs">Button</Button>
+</>
 );
 button10.story = {
   name: "Size Varation",
