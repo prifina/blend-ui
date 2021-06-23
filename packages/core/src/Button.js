@@ -29,10 +29,26 @@ const buttonVariation = props => {
         border: 0 !important;
       }
     `;
-    }else if (props.variation === "outline" ){
+    }else if (props.colorStyle === "error" && props.variation === "fill" ){
+      hoverVariations = css`
+      &:hover {
+        text-decoration: none;
+        color: ${props => props.theme.colors.baseWhite}!important;
+        background-color: ${props => props.theme.colors.baseErrorHover} !important;
+        border: '${props => props.theme.borders.button.hoverError}';
+      }
+    `;
+
+    }else if (props.colorStyle === "error" && props.variation === "outline" ){
+      hoverVariations = css`
+      &:hover {
+        text-decoration: none;
+        color: ${props => props.theme.colors.baseErrorHover}!important;
+        border: '${props => props.theme.borders.button.hoverError}';
+      }
+    `;
 
     }
-    
     
   //console.log(hoverVariations);
   return [buttonProps, hoverVariations];
@@ -100,7 +116,7 @@ const buttonTheme = css`
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    border: ${props => props.theme.borders.button.hover};
+    border: ${props => props.colorStyle ==='error' ? props.theme.borders.button.hoverError : props.theme.borders.button.hover };
     color: ${props =>
       props.variation === "fill"
         ? props.theme.colors.baseWhite

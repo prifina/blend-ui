@@ -114,6 +114,7 @@ export const borders = {
     base: `${borderWidths["2xs"]} solid ${colors.baseSecondary}`,
     disabled: `${borderWidths["2xs"]} solid ${colors.baseMuted}`,
     hover: `${borderWidths["2xs"]} solid ${colors.baseHover}`,
+    hoverError: `${borderWidths["2xs"]} solid ${colors.baseErrorHover}`,
     borderRadius: radii["input"],
   },
 };
