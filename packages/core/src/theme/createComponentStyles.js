@@ -106,7 +106,6 @@ const error = css`
         backgroundColor: "transparent",
         border: borders.select.base,
         borderRadius: borders.select.borderRadius,
-
         paddingLeft: sizeOptions[12],
         paddingRight: sizeOptions[32],
         paddingTop: sizeOptions[13],
@@ -132,9 +131,7 @@ const error = css`
         fontSize: sizeOptions.buttonSizes.xs.fontSize,
         paddingLeft: sizeOptions[8],
         paddingRight: sizeOptions[8],
-        paddingTop:sizeOptions[4],
-        paddingBottom:sizeOptions[4],
-        lineHeight: sizeOptions[16],
+        lineHeight: sizeOptions[24],
         minWidth: sizeOptions[84],
         fontWeight: fontWeights["semiBold"],
       },
@@ -142,19 +139,15 @@ const error = css`
         fontSize: sizeOptions.buttonSizes.sm.fontSize,
         paddingLeft: sizeOptions[12],
         paddingRight: sizeOptions[12],
-        paddingTop:sizeOptions[6.5],
-        paddingBottom:sizeOptions[6.5],
-        lineHeight: sizeOptions[19],
-        minWidth: sizeOptions[131],
+        lineHeight: sizeOptions[32],
+        minWidth: sizeOptions[134],
         fontWeight: fontWeights["semiBold"],
       },
       md: {
         fontSize: sizeOptions.buttonSizes.xs.fontSize,
         paddingLeft: sizeOptions[16],
         paddingRight: sizeOptions[16],
-        paddingTop:sizeOptions[9.5],
-        paddingBottom:sizeOptions[9.5],
-        lineHeight: sizeOptions[17],
+        lineHeight: sizeOptions[35],
         minWidth: sizeOptions[134],
         fontWeight: fontWeights["bold"],
       },
@@ -162,9 +155,7 @@ const error = css`
         fontSize: sizeOptions.buttonSizes.lg.fontSize,
         paddingLeft: sizeOptions[24],
         paddingRight: sizeOptions[24],
-        paddingTop:sizeOptions[11.5],
-        paddingBottom:sizeOptions[11.5],
-        lineHeight: sizeOptions[25],
+        lineHeight: sizeOptions[48],
         minWidth: sizeOptions[134],
         fontWeight: fontWeights["semiBold"],
       },
@@ -212,10 +203,8 @@ const error = css`
         borderBottom: baseProps.border,
       },
     },
-    avatar:{
-      sm:{
-        
-      }
-    }
+    avatar: {
+      sm: {},
+    },
   };
 };

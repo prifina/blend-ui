@@ -38,6 +38,7 @@ const buttonVariation = props => {
         border: '${props => props.theme.borders.button.hoverError}';
       }
     `;
+    //important check to 
 
     }else if (props.colorStyle === "error" && props.variation === "outline" ){
       hoverVariations = css`
@@ -100,12 +101,6 @@ const buttonTheme = css`
     props.fontWeight ||
     props.theme.componentStyles.button[props.size].fontWeight};
   padding: 0;
-  padding-top: ${props =>
-    props.paddingTop ||
-    props.theme.componentStyles.button[props.size].paddingTop};
-    padding-bottom: ${props =>
-      props.paddingTop ||
-      props.theme.componentStyles.button[props.size].paddingBottom};
   padding-left: ${props =>
     props.paddingLeft ||
     props.theme.componentStyles.button[props.size].paddingLeft};
