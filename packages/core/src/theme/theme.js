@@ -21,6 +21,7 @@ const addAliases = (arr, aliases) =>
     }),
   );
 
+//Random color generator for Avatar
 export const randomAvatarColor =
   colors.avatarColors[Math.floor(Math.random() * colors.avatarColors.length)];
 

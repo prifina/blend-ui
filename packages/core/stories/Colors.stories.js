@@ -31,19 +31,6 @@ storiesOf("Colors", module).add("Default Theme", () => (
   </div>
 ));
 
-// Convert the color key to the color variable name.
-// const colorVariable = color => {
-//   const array = color.split("-")[1].split(/(?=[A-Z])/);
-//   return `$color-${array.join("-").toLowerCase()}`;
-// };
-
-// // Convert the color key to the color proper name.
-// const colorName = color => {
-//   const array = color.split("-")[1].split(/(?=[A-Z])/);
-//   return `${array.join(" ").toLowerCase()}`;
-// };
-
-// A component for displaying individual color swatches.
 const Color = ({ color }) => (
   <>
     <li
@@ -74,7 +61,6 @@ Color.propTypes = {
   color: PropTypes.string.isRequired,
 };
 
-// A component for displaying a group of colors.
 const ColorGroup = ({ group }) => (
   <ul
     style={{

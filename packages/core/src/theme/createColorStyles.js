@@ -1,5 +1,4 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { randomAvatarColor } from "./theme";
 
 export default (theme = {}) => {
   const { colors } = theme;
@@ -17,7 +16,6 @@ export default (theme = {}) => {
           color: colors.baseWhite,
           borderColor: colors.baseSecondary,
         },
-  
       },
       outline: {
         error: {
@@ -51,20 +49,8 @@ export default (theme = {}) => {
     avatar: [
       {
         color: colors.text.light,
-        // backgroundColor: colors.background.accent,
-        backgroundColor: randomAvatarColor,
+        backgroundColor: colors.background.accent,
       },
     ],
   };
-};
-
-const ThemeProvider = ({ theme = {}, mobileApp = false, ...props }) => {
-  //console.log("THEME PROVIDER ", theme, defaultTheme);
-  //console.log(baseStyles);
-  const mergedTheme = { ...defaultTheme, ...theme, mobile: mobileApp };
-  return (
-    <StyledThemeProvider theme={mergedTheme}>
-      <Base {...props} />
-    </StyledThemeProvider>
-  );
 };
