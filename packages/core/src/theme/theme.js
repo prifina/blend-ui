@@ -102,7 +102,6 @@ export const borders = {
     base: `${borderWidths["2xs"]} solid ${colors.baseMuted}`,
     borderRadius: radii["inputField"],
     disabled: `${borderWidths["2xs"]} solid ${colors.baseWhite}`,
-    borderRadius: radii["inputField"],
     error: `${borderWidths["2xs"]} solid ${colors.baseError}`,
     hover: `${borderWidths["2xs"]} solid ${colors.baseSecondary}`,
     active: `${borderWidths["2xs"]} solid ${colors.baseSecondary}`,
