@@ -10,27 +10,20 @@ const emptyAvatar =
 
 const InitialsElement = styled(Box)`
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // text-align: center;
-  line-height: ${props => props.width + "px"};
-  border: ${props => (props.outerCircle ? `${props.width / 5}px solid #F5F8F7` : "")};
-  // position:'absolute';
-
+  text-align: center;
+  line-height: ${props =>
+    props.outerCircle ? props.width / 1.6 + "px" : props.width + "px"};
+  border: ${props =>
+    props.outerCircle ? `${props.width / 5}px solid #F5F8F7` : ""};
 `;
 
 const ImageElement = styled(Image)`
-  border: ${props => (props.outerCircle ? `${props.width / 5}px solid #F5F8F7` : "")};
-
+  border: ${props =>
+    props.outerCircle ? `${props.width / 5}px solid #F5F8F7` : ""};
 `;
 
-
 const Avatar = forwardRef(
-  (
-    { src, alt, width, initials = "", effect, outerCircle, ...props },
-    ref,
-  ) => {
+  ({ src, alt, width, initials = "", effect, outerCircle, ...props }, ref) => {
     const [avatarWidth, setAvatarWidth] = useState(width);
     const [fontWeight, setFontWeight] = useState("normal");
 
@@ -62,13 +55,12 @@ const Avatar = forwardRef(
           ref={ref}
           {...props}
           outerCircle={outerCircle}
-
-         
-
         />
       );
     } else {
-      const fontSize = width / (initials.length + 1.7);
+      const fontSize = outerCircle
+        ? width / (initials.length + 1.7)
+        : width / (initials.length + 0.3);
 
       return (
         <InitialsElement

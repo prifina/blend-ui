@@ -37,10 +37,20 @@ export const avatar4 = () => (
     initials={"TR"}
     width={100}
     effect={{ hover: { width: 110, fontWeight: 600 } }}
-    outerCircle
   />
 );
 avatar4.story = {
   name: "Avatar",
 };
 
+export const avatar5 = () => (
+  <Avatar
+    initials={"TR"}
+    width={100}
+    effect={{ hover: { width: 110, fontWeight: 600 } }}
+    outerCircle
+  />
+);
+avatar5.story = {
+  name: "Avatar Outer Circle",
+};
