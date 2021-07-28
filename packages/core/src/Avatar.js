@@ -11,11 +11,19 @@ const emptyAvatar =
 const InitialsElement = styled(Box)`
   text-transform: uppercase;
   text-align: center;
-  line-height: ${props => props.width + "px"};
+  line-height: ${props =>
+    props.outerCircle ? props.width / 1.6 + "px" : props.width + "px"};
+  border: ${props =>
+    props.outerCircle ? `${props.width / 5}px solid #F5F8F7` : ""};
+`;
+
+const ImageElement = styled(Image)`
+  border: ${props =>
+    props.outerCircle ? `${props.width / 5}px solid #F5F8F7` : ""};
 `;
 
 const Avatar = forwardRef(
-  ({ src, alt, width, initials = "", effect, ...props }, ref) => {
+  ({ src, alt, width, initials = "", effect, outerCircle, ...props }, ref) => {
     const [avatarWidth, setAvatarWidth] = useState(width);
     const [fontWeight, setFontWeight] = useState("normal");
 
@@ -37,7 +45,7 @@ const Avatar = forwardRef(
 
     if (src || initials === "") {
       return (
-        <Image
+        <ImageElement
           src={src || emptyAvatar}
           alt={alt}
           shape={"circle"}
@@ -46,10 +54,14 @@ const Avatar = forwardRef(
           onMouseLeave={onMouseLeave}
           ref={ref}
           {...props}
+          outerCircle={outerCircle}
         />
       );
     } else {
-      const fontSize = width / (initials.length + 0.3);
+      const fontSize = outerCircle
+        ? width / (initials.length + 1.7)
+        : width / (initials.length + 0.3);
+
       return (
         <InitialsElement
           borderWidth={1}
@@ -64,6 +76,7 @@ const Avatar = forwardRef(
           onMouseLeave={onMouseLeave}
           ref={ref}
           {...props}
+          outerCircle={outerCircle}
         >
           <Text as={"span"} colorStyle={"avatar"}>
             {initials}
@@ -78,6 +91,7 @@ Avatar.propTypes = {
   src: PropTypes.string,
   alt: PropTypes.string,
   initials: PropTypes.string,
+  outerCircle: PropTypes.bool,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 export default Avatar;

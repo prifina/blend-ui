@@ -1,32 +1,27 @@
 /*   */
-
 const basePrimary = "#1E1D1D";
 const baseSecondary = "#00847A";
-const baseTertiary = "rgba(0, 132, 122, 0.1)";
-
+const baseTertiary = "#ECF5F2";
 const baseMuted = "#C3C2C2";
 const baseWhite = "#F5F8F7";
 const baseError = "#F40431";
-const baseErrorHover = "#DF5C75";
+const baseErrorHover = "#FD4E4E";
 const baseLink = "#007AFF";
 const baseSuccess = "#84BC4F";
 const baseHover = "#1CAA9F";
 const baseLinkHover = "#539EF0";
 const baseInputDisabled = "#E5E4E4";
 const baseModalBackground = "rgba(30, 29, 29, 0.75)";
+const baseDividers = "#C9E4E0";
+
 const menuModalBackground = "rgba(30, 29, 29, 0.1)";
 
-const baseDividers = "#C9E4E0";
 const alertErrorText = "#f40431";
 const alertErrorBackground = "#fed7d7";
-
 const alertWarningText = "#cb8e12";
-
 const alertWarningBackground = "#fcefc2";
-
 const alertInfoText = "#007aff";
 const alertInfoBackground = "#d1eaf9";
-
 const alertSuccessText = "#7caf4c";
 const alertSuccessBackground = "#def0d8";
 
@@ -35,21 +30,17 @@ const brandSecondary = "#1E1D1D";
 const brandAccent = "#00847A";
 
 const textPrimary = basePrimary;
-//const textMuted = "#9E9E9E";
 const textMuted = baseMuted;
 const textLight = "#FFFFFF";
 const textError = baseError;
 const textLink = baseLink;
-const textAccent = "#00847A";
+const textAccent = baseSecondary;
 
 const componentPrimary = baseSecondary;
-//const componentPrimary = "#2F80ED";
-//const componentPrimary = "#F6F6F6";
-const componentSecondary = "#1E1D1D";
-const componentAccent = "#00847A";
+const componentSecondary = basePrimary;
+const componentAccent = baseSecondary;
 const componentLightText = "#FFFFFF";
 const componentDarkText = "#D1D1D1";
-//const componentDarkText = "#1E1D1D";
 const componentBorder = "#D1D6DB";
 
 const backgroundPrimary = "#F6F6F6";
@@ -59,6 +50,19 @@ const backgroundMuted = "#7DC0BA";
 const backgroundError = "#FFCCCC";
 const backgroundNotification = "#F40431";
 const backgroundLight = "#FFFFFF";
+
+const avatarColors = [
+  "#3BE8B0",
+  "#3BF7D1",
+  "#1AAFD0",
+  "#02CEFF",
+  "#6A67CE",
+  "#A177FF",
+  "#FFB900",
+  "#DB00FF",
+  "#2E3C54",
+  "#FF00B8",
+];
 
 const colors = {
   transparent: "transparent",
@@ -154,6 +158,7 @@ const colors = {
   baseErrorHover,
   baseDividers,
   menuModalBackground,
+  avatarColors,
 };
 
 export const palette = {
@@ -314,3 +319,51 @@ export const palette = {
   },
 };
 export default colors;
+
+export const colorsList = {
+  brandPrimary,
+  brandSecondary,
+  brandAccent,
+  textPrimary,
+  textMuted,
+  textLight,
+  textError,
+  textLink,
+  textAccent,
+  componentPrimary,
+  componentSecondary,
+  componentAccent,
+  componentLightText,
+  componentDarkText,
+  componentBorder,
+  backgroundPrimary,
+  backgroundSecondary,
+  backgroundAccent,
+  backgroundMuted,
+  backgroundError,
+  backgroundNotification,
+  backgroundLight,
+  basePrimary,
+  baseSecondary,
+  baseTertiary,
+  baseMuted,
+  baseWhite,
+  baseError,
+  baseLink,
+  baseSuccess,
+  baseHover,
+  baseLinkHover,
+  baseInputDisabled,
+  baseModalBackground,
+  baseErrorHover,
+  baseDividers,
+  menuModalBackground,
+  alertErrorText,
+  alertErrorBackground,
+  alertWarningText,
+  alertWarningBackground,
+  alertInfoText,
+  alertInfoBackground,
+  alertSuccessText,
+  alertSuccessBackground,
+};

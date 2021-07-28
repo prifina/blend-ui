@@ -11,14 +11,6 @@ import bxUser from "@iconify/icons-bx/bx-user";
 import bxEnvelope from "@iconify/icons-bx/bx-envelope";
 
 import bxHide from "@iconify/icons-bx/bx-hide";
-//import bxHide from '@iconify/icons-bx/bx-hide';
-
-//import bxLock from '@iconify/icons-bx/bx-lock';
-//import bxPhone from '@iconify/icons-bx/bx-phone';
-//import bxUser from '@iconify/icons-bx/bx-user';
-//import bxEnvelope from '@iconify/icons-bx/bx-envelope';
-
-//import { accountIcon, eyeIcon, BlendIcon } from "@blend-ui/icons";
 
 export default { title: "Icon Field" };
 

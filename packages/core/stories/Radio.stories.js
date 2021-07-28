@@ -32,7 +32,7 @@ export const radio = () => (
 );
 
 /*
-export const radio = () => (
+export const radio2 = () => (
   <div>
     <Label fontSize="14px" onClick={checkAction}>
       <Radio checked value="TABLE" />

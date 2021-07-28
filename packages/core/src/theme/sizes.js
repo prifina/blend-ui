@@ -25,55 +25,61 @@ export const baseSizes = {
 
 export const baseSizes = {
   px: "1px",
-  "1": "0.0625rem",
-  "2": "0.125rem",
-  "3": "0.1875rem",
-  "4": "0.25rem",
-  "5": "0.3125rem",
-  "6": "0.375rem",
-  "7": "0.4375rem",
-  "8": "0.5rem",
-  "8.5": "0.5313rem",
+  1: "0.0625rem",
+  2: "0.125rem",
+  3: "0.1875rem",
+  4: "0.25rem",
+  5: "0.3125rem",
+  6: "0.375rem",
+  6.5: "0.406rem",
+  7: "0.4375rem",
+  8: "0.5rem",
+  8.5: "0.5313rem",
+  9: "0.5625rem",
+  9.5: "0.594rem",
+  10: "0.625rem",
+  11: "0.6875rem",
+  11.5: "0.719rem",
+  12: "0.75rem",
+  13: "0.8125rem",
+  14: "0.875rem",
+  15: "0.9375rem",
+  16: "1rem",
+  17: "1.0625rem",
+  18: "1.125rem",
+  19: "1.188rem",
+  20: "1.25rem",
+  22: "1.375rem",
+  24: "1.5rem",
+  25: "1.5625rem",
+  26: "1.625rem",
+  28: "1.75rem",
+  29: "1.8125rem",
+  30: "1.875rem",
+  31: "1.9375rem",
+  32: "2rem",
+  33: "2.0625rem",
+  34: "2.125rem",
+  35: "2.188rem",
+  36: "2.25rem",
+  38: "2.375rem",
+  40: "2.5rem",
+  42: "2.625rem",
+  48: "3rem",
+  50: "3.125rem",
+  60: "3.75rem",
+  64: "4rem",
+  70: "4.375rem",
+  72: "4.5rem",
 
-  "9": "0.5625rem",
-  "10": "0.625rem",
-  "11": "0.6875rem",
-  "12": "0.75rem",
-  "13": "0.8125rem",
-  "14": "0.875rem",
-  "15": "0.9375rem",
-  "16": "1rem",
-  "17": "1.0625rem",
-  "18": "1.125rem",
-  "20": "1.25rem",
-  "22": "1.375rem",
-  "24": "1.5rem",
-  "25": "1.5625rem",
-  "26": "1.625rem",
-  "28": "1.75rem",
-  "29": "1.8125rem",
-  "30": "1.875rem",
-  "31": "1.9375rem",
-  "32": "2rem",
-  "33": "2.0625rem",
-  "34": "2.125rem",
-  "36": "2.25rem",
-  "38": "2.375rem",
-  "40": "2.5rem",
-  "42": "2.625rem",
-  "48": "3rem",
-  "50": "3.125rem",
-  "60": "3.75rem",
-  "64": "4rem",
-  "70": "4.375rem",
-  "72": "4.5rem",
-
-  "80": "5rem",
-  "90": "5.625rem",
-  "100": "6.25rem",
-  "128": "8rem",
-  "129": "8.0625rem",
-  "131": "8.1875rem",
+  80: "5rem",
+  84: "5.25rem",
+  90: "5.625rem",
+  100: "6.25rem",
+  128: "8rem",
+  129: "8.0625rem",
+  131: "8.1875rem",
+  134: "8.375rem",
 };
 
 const largeSizes = {
@@ -111,16 +117,16 @@ const borderWidths = {
 
 const buttonSizes = {
   xs: {
-    fontSize: baseSizes[10],
-  },
-  sm: {
     fontSize: baseSizes[12],
   },
-  md: {
+  sm: {
     fontSize: baseSizes[14],
   },
+  md: {
+    fontSize: baseSizes[12],
+  },
   lg: {
-    fontSize: baseSizes[16],
+    fontSize: baseSizes[18],
   },
   xl: {
     fontSize: baseSizes[18],
@@ -163,6 +169,24 @@ const modalSizes = {
   "6xl": "72rem",
 };
 
+const avatarSizes = {
+  small: {
+    fontSize: baseSizes[10],
+  },
+  medium: {
+    fontSize: baseSizes[12],
+  },
+  large: {
+    fontSize: baseSizes[14],
+  },
+  xxl: {
+    fontSize: baseSizes[16],
+  },
+  xl: {
+    fontSize: baseSizes[18],
+  },
+};
+
 const sizes = {
   ...baseSizes,
   ...largeSizes,
@@ -171,6 +195,7 @@ const sizes = {
   buttonSizes,
   componentSizes,
   modalSizes,
+  avatarSizes,
 };
 
 export default sizes;

@@ -62,6 +62,7 @@ const color = props => {
 const textStyles = props => {
   return props.textStyle ? props.theme.textStyles[props.textStyle] : null;
 };
+
 const colorStyles = props => {
   return props.colorStyle
     ? props.theme.colorStyles.text[props.colorStyle]

@@ -17,45 +17,7 @@ import { useTheme } from "./theme/ThemeProvider";
 //import PropTypes from "prop-types";
 
 const systemProps = compose(layout, color, space, border, typography);
-/*
-const inputTheme = css`
-  appearance: none;
-  display: block;
-  font-family: inherit;
-  font-size: ${props => props.theme.fontSizes["14"]};
-  line-height: ${props => props.theme.sizes["20"]};
-  color: inherit;
-  background-color: transparent;
-  border: ${props =>
-    typeof props.borders !== "undefined"
-      ? props.borders
-      : props.theme.borders.input.base};
-  border-radius: ${props =>
-    typeof props.borderRadius !== "undefined"
-      ? props.borderRadius
-      : props.theme.borders.input.borderRadius};
-  margin: 0;
-  padding-left: ${props => props.theme.sizes[7]};
-  padding-right: ${props => props.theme.sizes[7]};
-  padding-top: ${props => props.theme.sizes[13]};
-  padding-bottom: ${props => props.theme.sizes[13]};
-  ::placeholder {
-    color: ${props => props.theme.colors.text.muted};
-  }
-  &:disabled {
-    opacity: 0.25;
-  }
-  &:focus {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  ::-ms-clear {
-    display: none;
-  }
-  ${systemProps}
-`;
-*/
+
 const inputTheme = css`
   margin: 0; // system props are overriding above values
   ${systemProps}
@@ -121,32 +83,18 @@ const inputTheme = css`
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    border: ${props => props.theme.borders.input.active};
+    // border: ${props => props.theme.borders.input.active};
   }
   */
   ::-ms-clear {
     display: none;
   }
 `;
-/*
-:not([disabled])
-background: #C3C2C2;
-border: 1px solid #F5F8F7;
-box-sizing: border-box;
-border-radius: 5px;
-*/
+
 const themeColorStyles = props => {
-  //console.log("INPUT STYLED PROPS ", props);
   return props.colorStyle ? props.theme.colorStyles[props.colorStyle] : null;
 };
 const errorStyles = props => {
-  /*
-  console.log("INPUT STYLED PROPS ", props);
-  console.log(
-    "INPUT STYLED CSS ",
-    props.error ? props.theme.borders.input.error : null,
-  );
-  */
   return props.error
     ? { border: props.isIcon ? 0 : props.theme.borders.input.error }
     : null;
@@ -197,9 +145,5 @@ Input.defaultProps = {
 
 Input.displayName = "Input";
 Input.isField = true;
-/*
-Input.propTypes = {
-  type: PropTypes.string.isRequired,
-};
-*/
+
 export default Input;

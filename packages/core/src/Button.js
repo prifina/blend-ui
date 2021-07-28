@@ -3,7 +3,7 @@ import React, { forwardRef } from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import { default as styledProps } from "@styled-system/prop-types";
-import { space, typography } from "styled-system";
+import {  space, typography } from "styled-system";
 import Box from "./Box";
 import { useId } from "@reach/auto-id";
 
@@ -20,15 +20,37 @@ const buttonVariation = props => {
     props.theme.componentStyles.button[props.variation],
   );
   let hoverVariations = null;
-  if (props.variation === "link")
+  if (props.variation === "link"){
     hoverVariations = css`
       &:hover {
         text-decoration: underline;
-        color: ${props => props.theme.colors.baseLinkHover}!important;
+        color: ${props => props.theme.colors.baseHover}!important;
         background-color: transparent !important;
         border: 0 !important;
       }
     `;
+    }else if (props.colorStyle === "error" && props.variation === "fill" ){
+      hoverVariations = css`
+      &:hover {
+        text-decoration: none;
+        color: ${props => props.theme.colors.baseWhite}!important;
+        background-color: ${props => props.theme.colors.baseErrorHover} !important;
+        border: '${props => props.theme.borders.button.hoverError}';
+      }
+    `;
+    //important check to 
+
+    }else if (props.colorStyle === "error" && props.variation === "outline" ){
+      hoverVariations = css`
+      &:hover {
+        text-decoration: none;
+        color: ${props => props.theme.colors.baseErrorHover}!important;
+        border: '${props => props.theme.borders.button.hoverError}';
+      }
+    `;
+
+    }
+    
   //console.log(hoverVariations);
   return [buttonProps, hoverVariations];
 };
@@ -40,13 +62,18 @@ const themeColorStyles = props => {
   if (props.colorStyle) {
     if (props.variation === "outline") {
       buttonProps = props.theme.colorStyles.button.outline[props.colorStyle];
+    } else if (props.variation === "fill") {
+      buttonProps = props.theme.colorStyles.button.fill[props.colorStyle];
+    }
+    else if (props.variation === "link") {
+      buttonProps = props.theme.colorStyles.button.link[props.colorStyle];
     }
   }
   return [buttonProps, hoverVariations];
 };
 
 const buttonTheme = css`
-  display: inline-block;
+  display: inline-block; 
   vertical-align: middle;
   text-align: center;
   text-decoration: none;
@@ -84,7 +111,7 @@ const buttonTheme = css`
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    border: ${props => props.theme.borders.button.hover};
+    border: ${props => props.colorStyle ==='error' ? props.theme.borders.button.hoverError : props.theme.borders.button.hover };
     color: ${props =>
       props.variation === "fill"
         ? props.theme.colors.baseWhite
@@ -184,7 +211,7 @@ const Button = forwardRef((props, ref) => {
 
 Button.propTypes = {
   /** Fixed width&height */
-  size: PropTypes.oneOf(["sm", "md", "lg"]),
+  size: PropTypes.oneOf(["xs","sm", "md", "lg","xl"]),
   /** Styled layout props */
   ...styledProps.layout,
   /** Styled space props */
@@ -205,7 +232,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   variation: "fill",
-  size: "sm",
+  size: "md",
 };
 
 Button.displayName = "Button";

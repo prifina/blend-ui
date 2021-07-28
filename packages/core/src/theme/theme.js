@@ -21,6 +21,10 @@ const addAliases = (arr, aliases) =>
     }),
   );
 
+//Random color generator for Avatar
+export const randomAvatarColor =
+  colors.avatarColors[Math.floor(Math.random() * colors.avatarColors.length)];
+
 export const breakpoints = [32, 40, 48, 64, 80].map(n => n + "em");
 
 export const mediaQueries = breakpoints.map(createMediaQuery);
@@ -77,10 +81,11 @@ export const radii = {
   avatar: "4%",
   //input: "0.25rem",
   input: "0.3125rem",
+  inputField: "5px 5px 0px 0px",
 };
 
 export const opacity = {
-  "0": "0",
+  0: "0",
   "20%": "0.2",
   "40%": "0.4",
   "60%": "0.6",
@@ -95,11 +100,11 @@ export const borderWidths = { ...sizeOptions.borderWidths };
 export const borders = {
   input: {
     base: `${borderWidths["2xs"]} solid ${colors.baseMuted}`,
+    borderRadius: radii["inputField"],
     disabled: `${borderWidths["2xs"]} solid ${colors.baseWhite}`,
     error: `${borderWidths["2xs"]} solid ${colors.baseError}`,
     hover: `${borderWidths["2xs"]} solid ${colors.baseSecondary}`,
     active: `${borderWidths["2xs"]} solid ${colors.baseSecondary}`,
-    borderRadius: radii["input"],
   },
   select: {
     base: `${borderWidths["2xs"]} solid ${colors.baseMuted}`,
@@ -109,6 +114,7 @@ export const borders = {
     base: `${borderWidths["2xs"]} solid ${colors.baseSecondary}`,
     disabled: `${borderWidths["2xs"]} solid ${colors.baseMuted}`,
     hover: `${borderWidths["2xs"]} solid ${colors.baseHover}`,
+    hoverError: `${borderWidths["2xs"]} solid ${colors.baseErrorHover}`,
     borderRadius: radii["input"],
   },
 };
@@ -167,7 +173,6 @@ export const baseStyles = css`
   font-family: ${fonts.body || null};
   font-weight: ${typography.fontWeights.medium || null};
   line-height: ${typography.lineHeights.standard || null};
-  
 `;
 const theme = {
   breakpoints,
@@ -193,7 +198,7 @@ const theme = {
   duration,
   timingFunctions,
   transitionDelays,
-  baseStyles
+  baseStyles,
 };
 
 export default theme;

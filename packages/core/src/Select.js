@@ -22,6 +22,13 @@ const componentStyle = props => {
       backgroundColor: props.theme.colors.baseSecondary,
       border: "none",
     };
+  } else if (props.variation === "outline") {
+    variationProps = {
+      color: props.theme.colors.baseSecondary,
+      backgroundColor: 'transparent',
+      border: `1px solid ${props.theme.colors.baseSecondary}`,
+
+    };
   }
   return [selectProps, variationProps];
 };
@@ -30,6 +37,9 @@ const SelectElement = styled.select`
   appearance: none;
   display: block;
   width: ${props => props.width || "100%"};
+  height: ${props =>
+    props.height
+      || "20px"}
   font-family: ${props => props.theme.fonts.body};
   margin:0;
   ${componentStyle}
@@ -63,6 +73,10 @@ const ClickableIcon = styled(BlendIcon)`
     props.variation === "fill"
       ? props.theme.colors.baseWhite
       : props.theme.colors.basePrimary};
+  color: ${props =>
+    props.variation === "outline"
+      ? props.theme.colors.baseSecondary
+      : props.theme.colors.baseWhite};
   pointer-events: none;
   margin-left: ${props =>
     props.sizevariation === "xs" || props.sizevariation === "sm"
@@ -91,7 +105,7 @@ const Select = forwardRef(
       }
     };
     return (
-      <StyledBox width={"100%"}>
+      <StyledBox width={"100%"} >
         <SelectElement
           {...props}
           ref={ref}
