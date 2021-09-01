@@ -160,6 +160,19 @@ const tabsCss = css`
   }
 `;
 
+const lineTabsCss = css`
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /*
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: ${props => props.theme.colors.baseMuted};
+  */
+  font-size: 16px;
+  font-weight: 600;
+`;
+
 const tabCss = css`
   text-align: center;
 
@@ -193,6 +206,35 @@ const tabCss = css`
     props.theme && props.theme.colors
       ? props.theme.colors.baseWhite
       : "#F5F8F7"};
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+
+  }
+`;
+
+const lineTabCss = css`
+  text-align: center;
+
+  display: inline-block;
+  list-style: none outside none;
+  /*
+  margin: 0 10px;
+  
+  */
+  padding: 0 10px 5px 0;
+  
+  
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: ${props => props.theme.colors.baseMuted};
+
+  line-height: 16px;
+
+  color: ${props =>
+    props.theme && props.theme.colors
+      ? props.theme.colors.basePrimary
+      : "#000000"};
   position: relative;
   z-index: 0;
   cursor: pointer;
@@ -253,6 +295,9 @@ const selectedTab = css`
           : "#F5F8F7"};
   }
 `;
+const selectedLineTab = css`
+  border-color: #4295e1;
+`;
 /*
 const testVariation = props => {
   console.log("VARIATION ", props);
@@ -261,13 +306,16 @@ const testVariation = props => {
 */
 const UnorderedList = styled.ul`
   /* */
-  ${tabsCss}
+  ${props => (props.variant === "rounded" ? tabsCss : lineTabsCss)}
 `;
 
 const TabItem = styled.li`
   /* */
-  ${tabCss}
-  ${props => (props.selected ? selectedTab : null)}
+  ${props => (props.variant === "rounded" ? tabCss : lineTabCss)}
+  ${props =>
+    props.selected && props.variant === "rounded" ? selectedTab : null}
+      ${props =>
+    props.selected && props.variant === "line" ? selectedLineTab : null}
 `;
 
 const TabPanelItem = styled.div`
@@ -306,6 +354,7 @@ const Tabs = ({
   title = "",
   children,
   theme,
+  variant,
   ...props
 }) => {
   console.log("TABS ", props, theme);
@@ -329,11 +378,19 @@ const Tabs = ({
   }
   console.log("TABS PANEL LIST ", _panelList);
   return (
-    <TabContext.Provider value={{ activeTab, onClick, title }}>
-      <TabBackground theme={tabTheme} {...props}>
-        {_tabList}
-        {_panelList}
-      </TabBackground>
+    <TabContext.Provider value={{ activeTab, onClick, title, variant }}>
+      {variant === "line" && (
+        <>
+          {_tabList}
+          {_panelList}
+        </>
+      )}
+      {variant === "rounded" && (
+        <TabBackground theme={tabTheme} {...props}>
+          {_tabList}
+          {_panelList}
+        </TabBackground>
+      )}
     </TabContext.Provider>
   );
 };
@@ -347,7 +404,7 @@ const Tab = forwardRef(({ tab, ...props }, ref) => {
 });
 
 const TabList = ({ children, ...props }) => {
-  const { activeTab, title } = useTabContext();
+  const { activeTab, title, variant } = useTabContext();
 
   const Items = React.Children.map(children, (child, index) => {
     if (!React.isValidElement(child)) return;
@@ -356,12 +413,14 @@ const TabList = ({ children, ...props }) => {
       if (index === activeTab) {
         return React.cloneElement(child, {
           selected: true,
+          variant: variant,
           tab: index,
           ...props,
         });
       } else {
         return React.cloneElement(child, {
           tab: index,
+          variant: variant,
           ...props,
         });
       }
@@ -369,7 +428,7 @@ const TabList = ({ children, ...props }) => {
   });
   //return <React.Fragment>{Items}</React.Fragment>;
   return (
-    <UnorderedList title={title} {...props}>
+    <UnorderedList title={title} variant={variant} {...props}>
       {Items}
     </UnorderedList>
   );

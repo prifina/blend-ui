@@ -17,6 +17,7 @@ export const tabs = () => {
       onClick={tabClick}
       title={"Account Settings"}
       style={{ height: "100vh" }}
+      variant={"line"}
     >
       <TabList>
         <Tab>User Details</Tab>
