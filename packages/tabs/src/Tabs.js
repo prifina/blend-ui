@@ -321,10 +321,12 @@ const TabItem = styled.li`
 const TabPanelItem = styled.div`
   /* */
   z-index: 2;
+  /*
   background-color: ${props =>
     props.theme && props.theme.colors
       ? props.theme.colors.baseWhite
       : "#F5F8F7"};
+      */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   padding-top: 15px;
