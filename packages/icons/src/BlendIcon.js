@@ -3,11 +3,12 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 //import * as icons from "./index";
 //import * as mdiIcons from "./icons-mdi/iconSet";
-import * as feIcons from "./icons-fe/iconSet";
-import { InlineIcon, Icon } from "@iconify/react";
+//import * as feIcons from "./icons-fe/iconSet";
+//import { InlineIcon, Icon } from "@iconify/react";
+import { InlineIcon } from "@iconify/react";
 import { themeGet } from "@styled-system/theme-get";
 
-const prefix = "Mat";
+//const prefix = "Mat";
 
 const getPaletteColor = (...args) => props => {
   let color = args.length === 2 ? args[0] : props.color;
@@ -77,11 +78,11 @@ const BaseIcon = props => {
       <InlineIcon icon={iconify} width={_width} color={_color} {...rest} />
     );
   } else {
+    console.trace("iconify prop is missing");
+    return null;
+    /*
     let icons = {};
     icons = Object.assign(icons, feIcons);
-    //console.log("ICONS ", icons);
-    //icons = Object.assign(icons, mdiIcons);
-    //const returnedTarget = Object.assign(target, source);
 
     const Component = icons[name] || icons[prefix + name];
 
@@ -93,8 +94,7 @@ const BaseIcon = props => {
       }
       return null;
     } else {
-      //const _width=48;
-      //<Icon icon={activityIcon} title={"Add"} width={"36px"} color={"green"} />
+     
       return (
         <Icon
           icon={Component}
@@ -104,20 +104,9 @@ const BaseIcon = props => {
           {...rest}
         />
       );
-      /*
-      return (
-        <Component
-          title={title || name}
-          tabIndex={-1}
-          focusable={false}
-          stroke={stroke}
-          width={_width}
-          color={_color}
-          {...rest}
-        />
-      );
-      */
+     
     }
+    */
   }
 };
 

@@ -16,7 +16,8 @@ const template = icons => {
   //iconsToExport.push(`export * from './icons-fe/iconSet'\n`);
   //iconsToExport.push(`export * from './icons-bx/iconSet'\n`);
   //iconsToExport.push(`export * from './icons-mdi/iconSet'\n`);
-  iconsToExport.push(`\nexport { Icon, InlineIcon } from '@iconify/react'\n`);
+
+  //iconsToExport.push(`\nexport { Icon, InlineIcon } from '@iconify/react'\n`);
   iconsToExport.push(`export { default as BlendIcon } from './BlendIcon'\n`);
   //iconsToExport.unshift("\n");
   return iconsToExport.join("\n");

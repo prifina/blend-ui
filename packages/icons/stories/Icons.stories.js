@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 //import IconBase from "../components/IconBase";
 //import { default as BlendIcon } from "../components/Icon";
@@ -14,10 +15,10 @@ import React from "react";
 
 import BlendIcon from "../components/BlendIcon";
 //import { accountAddIcon } from "../src/icons-mdi/iconSet";
-import { GraphqlIcon  } from "../components";
+import { Graphql } from "../components";
 // npm install --save-dev @iconify/react @iconify/icons-fe
-import { bxAnchorIcon } from "../components/icons-bx/iconSet";
-
+//import { bxAnchorIcon } from "../components/icons-bx/iconSet";
+import rocketIcon from "@iconify/icons-fe/rocket";
 
 export default {
   title: "Icons",
@@ -26,17 +27,14 @@ export default {
 height={34 * 1.3 + "px"}
 width={"34px"}
 */
-export const addCircle = () => (
-  <GraphqlIcon title={"GraphQL"}  height={"64px"}
-  width={"50px"} color={"green"} />
-);
+export const addCircle = () => <Graphql title={"GraphQL"} color={"green"} />;
 
 addCircle.story = {
   name: "GraphQL",
 };
 
 export const iconify = () => (
-  <BlendIcon iconify={bxAnchorIcon} size={"50"} color={"#E535AB"} />
+  <BlendIcon iconify={rocketIcon} size={"50"} color={"#E535AB"} />
 );
 
 iconify.story = {
