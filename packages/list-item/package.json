@@ -1,6 +1,6 @@
 {
   "name": "@blend-ui/list-item",
-  "version": "0.0.6-alpha.0",
+  "version": "0.0.7-alpha.0",
   "description": "List Component",
   "author": "Tero <tero@prifina.com>",
   "license": "MIT",
@@ -28,8 +28,8 @@
     "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
-    "@blend-ui/core": "^1.1.64-alpha.0",
-    "@blend-ui/icons": "^1.1.8-alpha.0",
+    "@blend-ui/core": "^1.1.65-alpha.0",
+    "@blend-ui/icons": "^1.1.9-alpha.0",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.1.3",

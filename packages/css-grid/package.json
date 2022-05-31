@@ -1,6 +1,6 @@
 {
   "name": "@blend-ui/css-grid",
-  "version": "1.0.6-alpha.0",
+  "version": "1.0.7-alpha.0",
   "description": "CssGrid Component",
   "author": "Tero <tero@prifina.com>",
   "license": "MIT",
@@ -69,5 +69,4 @@
     "styled-components": "^5.3.5",
     "styled-system": "^5.1.5"
   }
-
 }
