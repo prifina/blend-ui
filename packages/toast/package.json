@@ -23,9 +23,7 @@
     "test": "./node_modules/.bin/jest --env=jsdom"
   },
   "dependencies": {
-    "@reach/auto-id": "^0.12.1",
-    "aria-hidden": "^1.1.1",
-    "exenv": "^1.2.2"
+   
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",
@@ -65,7 +63,10 @@
     "rollup": "^2.70.1",
     "rollup-plugin-node-externals": "^4.0.0",
     "style-loader": "^3.3.1",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "@reach/auto-id": "^0.16.0",
+    "aria-hidden": "^1.1.1",
+    "exenv": "^1.2.2"
   },
   "peerDependencies": {
     "@blend-ui/core": "^1.1.65-alpha.0",
@@ -76,6 +77,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-components": "^5.3.5",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "@reach/auto-id": "^0.16.0",
+    "aria-hidden": "^1.1.1",
+    "exenv": "^1.2.2"
   }
 }
