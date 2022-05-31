@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Divider renders correctly 1`] = `
-<hr
-  className="Divider__DividerElement-qfr82c-0 dJhULX"
-/>
+<div
+  className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
+>
+  <hr
+    className="Divider__DividerElement-sc-qfr82c-0 bZUdke"
+  />
+</div>
 `;

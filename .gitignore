@@ -13,3 +13,4 @@ packages/*/.env
 yarn.lock
 yarn-error.log
 coverage/
+packages/*/backup

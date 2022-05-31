@@ -2,10 +2,10 @@
 
 exports[`Text renders correctly 1`] = `
 <div
-  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+  className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <div
-    className="Text__TextElement-z9dcxz-0 cLaQsF"
+    className="Text__TextElement-sc-z9dcxz-0 hTjRsr"
   >
      Something
      
@@ -16,10 +16,10 @@ exports[`Text renders correctly 1`] = `
 
 exports[`Text renders fontStyle correctly 1`] = `
 <div
-  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+  className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <div
-    className="Text__TextElement-z9dcxz-0 dsjxJP"
+    className="Text__TextElement-sc-z9dcxz-0 dewSvx"
   >
      Something 
   </div>

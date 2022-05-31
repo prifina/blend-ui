@@ -2,22 +2,24 @@
 
 exports[`Link renders correctly 1`] = `
 <div
-  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+  className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <label
-    className="Label__LabelElement-sc-1r8ik4v-0 eywAIY"
+    className="Label__LabelElement-sc-1r8ik4v-0 cGWEb"
     htmlFor="cabinClass"
   >
     Cabin Class
   </label>
   <div
-    className="Box__BoxElement-sc-12sd5m8-0 dVEzYQ Select__StyledBox-hvu8mh-1 itKGC"
+    className="Box__BoxElement-sc-12sd5m8-0 gAxCcj Select__StyledBox-sc-hvu8mh-1 gjVqGs"
   >
     <select
-      className="Select__SelectElement-hvu8mh-0 bUFvPY"
+      className="Select__SelectElement-sc-hvu8mh-0 jQMeKa"
       defaultValue="Premium Economy"
       id="cabinClass"
       name="cabinClass"
+      onChange={[Function]}
+      onClick={[Function]}
     >
       <option>
         Economy
@@ -36,24 +38,28 @@ exports[`Link renders correctly 1`] = `
       </option>
     </select>
     <svg
-      className="BlendIcon-sc-1i0m6ln-0 Select__ClickableIcon-hvu8mh-2 krDdLV"
+      aria-hidden={true}
+      className="BlendIcon-sc-1i0m6ln-0 Select__ClickableIcon-sc-hvu8mh-2 kLCpLN ghmKFf"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "<path d=\\"M5 8l7 8l7-8z\\" fill=\\"#000\\" fill-rule=\\"evenodd\\"/>",
+          "__html": "<path fill=\\"currentColor\\" d=\\"M16.293 9.293L12 13.586L7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z\\"/>",
         }
       }
-      focusable={false}
       height="24"
       preserveAspectRatio="xMidYMid meet"
+      role="img"
+      sizevariation="xs"
       style={
         Object {
-          "transform": "rotate(360deg)",
+          "color": "currentColor",
           "verticalAlign": "-0.125em",
         }
       }
+      variation="fill"
       viewBox="0 0 24 24"
       width="24"
       xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
     />
   </div>
 </div>

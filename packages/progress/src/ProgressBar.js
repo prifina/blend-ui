@@ -12,10 +12,20 @@ ProgressLabel.propTypes = {
   /** Text/Number on tracker bar */
   children: PropTypes.node.isRequired,
 };
+const Wrapper = styled.div`
+  background-color: lightgrey;
+  border-radius: 10px;
+  height: ${props => props.height};
+  font-size: ${props => props.height};
+  line-height: ${props => props.height}; // vertical center
+  width: 100%;
+  /*box-shadox: inset 0 0 5px #000;*/
+`;
 
 const ProgressBarWrapper = props => {
   //console.log('WRAPPER ',props);
   const { height, children } = props;
+  /*
   const _wrapper = styled.div`
     background-color: lightgrey;
     border-radius: 10px;
@@ -23,9 +33,10 @@ const ProgressBarWrapper = props => {
     font-size: ${height};
     line-height: ${height}; // vertical center
     width: 100%;
-    /*box-shadox: inset 0 0 5px #000;*/
+    
   `;
-  return <_wrapper>{children}</_wrapper>;
+  */
+  return <Wrapper height={height}>{children}</Wrapper>;
 };
 const fill = keyframes`
   0% {width: 0%}

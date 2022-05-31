@@ -2,145 +2,157 @@
 
 exports[`Link renders correctly 1`] = `
 <div
-  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+  className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <label
-    className="Label__LabelElement-sc-1r8ik4v-0 djgTsv"
+    className="Label__LabelElement-sc-1r8ik4v-0 bLjjgM"
     fontSize="14px"
     onClick={[Function]}
   >
     <label
-      className="Label__LabelElement-sc-1r8ik4v-0 eywAIY"
+      className="Label__LabelElement-sc-1r8ik4v-0 cGWEb"
+      onChange={[Function]}
     >
       <div
         checked={true}
-        className="Radio__RadioWrap-mwkpiy-0 ehTiPE"
+        className="Radio__RadioWrap-sc-mwkpiy-0 fknoAu"
       >
         <input
-          className="Radio__RadioInput-mwkpiy-1 lkUAeg"
+          className="Radio__RadioInput-sc-mwkpiy-1 cMdnQa"
+          id="blend-radio-1"
           type="radio"
           value="TABLE"
         />
         <svg
-          className="BlendIcon-sc-1i0m6ln-0 gGmBNS"
+          aria-hidden={true}
+          className="BlendIcon-sc-1i0m6ln-0 kLCpLN"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<path d=\\"M12 5c-3.859 0-7 3.141-7 7s3.141 7 7 7s7-3.141 7-7s-3.141-7-7-7zm0 12c-2.757 0-5-2.243-5-5s2.243-5 5-5s5 2.243 5 5s-2.243 5-5 5z\\" fill=\\"currentColor\\"/><path d=\\"M12 9c-1.627 0-3 1.373-3 3s1.373 3 3 3s3-1.373 3-3s-1.373-3-3-3z\\" fill=\\"currentColor\\"/>",
+              "__html": "<path fill=\\"currentColor\\" d=\\"M12 5c-3.859 0-7 3.141-7 7s3.141 7 7 7s7-3.141 7-7s-3.141-7-7-7zm0 12c-2.757 0-5-2.243-5-5s2.243-5 5-5s5 2.243 5 5s-2.243 5-5 5z\\"/><path fill=\\"currentColor\\" d=\\"M12 9c-1.627 0-3 1.373-3 3s1.373 3 3 3s3-1.373 3-3s-1.373-3-3-3z\\"/>",
             }
           }
-          focusable={false}
           height="2.0rem"
           preserveAspectRatio="xMidYMid meet"
+          role="img"
           style={
             Object {
-              "transform": "rotate(360deg)",
+              "color": "#00847A",
               "verticalAlign": "-0.125em",
             }
           }
           viewBox="0 0 24 24"
           width="2.0rem"
           xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
         />
       </div>
       <span
-        className="Radio__LabelText-mwkpiy-2 iaObmc"
+        className="Radio__LabelText-sc-mwkpiy-2 gvyAXi"
       />
     </label>
     <span
-      className="Radiotest__LabelText-m692a0-0 fxZnJZ"
+      className="Radiotest__LabelText-sc-m692a0-0 iztavn"
     >
       selected
     </span>
   </label>
   <label
-    className="Label__LabelElement-sc-1r8ik4v-0 djgTsv"
+    className="Label__LabelElement-sc-1r8ik4v-0 bLjjgM"
     fontSize="14px"
     onClick={[Function]}
   >
     <label
-      className="Label__LabelElement-sc-1r8ik4v-0 eywAIY"
+      className="Label__LabelElement-sc-1r8ik4v-0 cGWEb"
+      onChange={[Function]}
     >
       <div
-        className="Radio__RadioWrap-mwkpiy-0 ehTiPE"
+        className="Radio__RadioWrap-sc-mwkpiy-0 fknoAu"
       >
         <input
-          className="Radio__RadioInput-mwkpiy-1 lkUAeg"
+          className="Radio__RadioInput-sc-mwkpiy-1 cMdnQa"
+          id="blend-radio-2"
           type="radio"
           value="OBJECT"
         />
         <svg
-          className="BlendIcon-sc-1i0m6ln-0 gGmBNS"
+          aria-hidden={true}
+          className="BlendIcon-sc-1i0m6ln-0 kLCpLN"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<path d=\\"M5 12c0 3.859 3.14 7 7 7c3.859 0 7-3.141 7-7s-3.141-7-7-7c-3.86 0-7 3.141-7 7zm12 0c0 2.757-2.243 5-5 5s-5-2.243-5-5s2.243-5 5-5s5 2.243 5 5z\\" fill=\\"currentColor\\"/>",
+              "__html": "<path fill=\\"currentColor\\" d=\\"M5 12c0 3.859 3.14 7 7 7c3.859 0 7-3.141 7-7s-3.141-7-7-7c-3.86 0-7 3.141-7 7zm12 0c0 2.757-2.243 5-5 5s-5-2.243-5-5s2.243-5 5-5s5 2.243 5 5z\\"/>",
             }
           }
-          focusable={false}
           height="2.0rem"
           preserveAspectRatio="xMidYMid meet"
+          role="img"
           style={
             Object {
-              "transform": "rotate(360deg)",
+              "color": "#00847A",
               "verticalAlign": "-0.125em",
             }
           }
           viewBox="0 0 24 24"
           width="2.0rem"
           xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
         />
       </div>
       <span
-        className="Radio__LabelText-mwkpiy-2 iaObmc"
+        className="Radio__LabelText-sc-mwkpiy-2 gvyAXi"
       />
     </label>
     <span
-      className="Radiotest__LabelText-m692a0-0 fxZnJZ"
+      className="Radiotest__LabelText-sc-m692a0-0 iztavn"
     >
       not selected
     </span>
   </label>
   <label
-    className="Label__LabelElement-sc-1r8ik4v-0 djgTsv"
+    className="Label__LabelElement-sc-1r8ik4v-0 bLjjgM"
     fontSize="14px"
   >
     <label
-      className="Label__LabelElement-sc-1r8ik4v-0 eywAIY"
+      className="Label__LabelElement-sc-1r8ik4v-0 cGWEb"
+      onChange={[Function]}
     >
       <div
-        className="Radio__RadioWrap-mwkpiy-0 ehTiPE"
+        className="Radio__RadioWrap-sc-mwkpiy-0 fknoAu"
         disabled={true}
       >
         <input
-          className="Radio__RadioInput-mwkpiy-1 lkUAeg"
+          className="Radio__RadioInput-sc-mwkpiy-1 cMdnQa"
+          id="blend-radio-3"
           type="radio"
         />
         <svg
-          className="BlendIcon-sc-1i0m6ln-0 gGmBNS"
+          aria-hidden={true}
+          className="BlendIcon-sc-1i0m6ln-0 kLCpLN"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<path d=\\"M5 12c0 3.859 3.14 7 7 7c3.859 0 7-3.141 7-7s-3.141-7-7-7c-3.86 0-7 3.141-7 7zm12 0c0 2.757-2.243 5-5 5s-5-2.243-5-5s2.243-5 5-5s5 2.243 5 5z\\" fill=\\"currentColor\\"/>",
+              "__html": "<path fill=\\"currentColor\\" d=\\"M5 12c0 3.859 3.14 7 7 7c3.859 0 7-3.141 7-7s-3.141-7-7-7c-3.86 0-7 3.141-7 7zm12 0c0 2.757-2.243 5-5 5s-5-2.243-5-5s2.243-5 5-5s5 2.243 5 5z\\"/>",
             }
           }
-          focusable={false}
           height="2.0rem"
           preserveAspectRatio="xMidYMid meet"
+          role="img"
           style={
             Object {
-              "transform": "rotate(360deg)",
+              "color": "#00847A",
               "verticalAlign": "-0.125em",
             }
           }
           viewBox="0 0 24 24"
           width="2.0rem"
           xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
         />
       </div>
       <span
-        className="Radio__LabelText-mwkpiy-2 iaObmc"
+        className="Radio__LabelText-sc-mwkpiy-2 gvyAXi"
       />
     </label>
     <span
-      className="Radiotest__LabelText-m692a0-0 fxZnJZ"
+      className="Radiotest__LabelText-sc-m692a0-0 iztavn"
     >
       disabled
     </span>

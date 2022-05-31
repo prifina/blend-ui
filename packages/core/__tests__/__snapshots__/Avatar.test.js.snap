@@ -2,12 +2,14 @@
 
 exports[`Avater renders image correctly 1`] = `
 <div
-  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+  className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <img
     alt="photo"
-    className="Image__ImageElement-llmt0i-0 dutfRj"
+    className="Image__ImageElement-sc-llmt0i-0 kCIkjh Avatar__ImageElement-sc-sim7fl-1 dMKkTc"
     height="auto"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     src="https://i.pravatar.cc/100"
     width={100}
   />
@@ -16,13 +18,15 @@ exports[`Avater renders image correctly 1`] = `
 
 exports[`Avater renders initials correctly 1`] = `
 <div
-  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+  className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <div
-    className="Box__BoxElement-sc-12sd5m8-0 dWmPzL Avatar__InitialsElement-sim7fl-0 jBCKIo"
+    className="Box__BoxElement-sc-12sd5m8-0 epiACM Avatar__InitialsElement-sc-sim7fl-0 cZZLdM"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <span
-      className="Text__TextElement-z9dcxz-0 gDeFRs"
+      className="Text__TextElement-sc-z9dcxz-0"
     >
       TR
     </span>

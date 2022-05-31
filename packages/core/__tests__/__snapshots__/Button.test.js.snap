@@ -2,10 +2,10 @@
 
 exports[`Button renders correctly 1`] = `
 <div
-  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+  className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <button
-    className="Button__ButtonElement-u7scuu-2 jWHRhU"
+    className="Button__ButtonElement-sc-u7scuu-2 iwcJvJ"
     size="md"
   >
     Something

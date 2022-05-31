@@ -2,10 +2,10 @@
 
 exports[`Box renders correctly 1`] = `
 <div
-  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+  className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <div
-    className="Box__BoxElement-sc-12sd5m8-0 gIcLpI"
+    className="Box__BoxElement-sc-12sd5m8-0 KqDwL"
   >
     Something
   </div>
@@ -14,10 +14,10 @@ exports[`Box renders correctly 1`] = `
 
 exports[`Box renders sth with Ref correctly 1`] = `
 <div
-  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+  className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <div
-    className="Box__BoxElement-sc-12sd5m8-0 gIcLpI"
+    className="Box__BoxElement-sc-12sd5m8-0 KqDwL"
     foo="bar"
   >
     Something with Ref

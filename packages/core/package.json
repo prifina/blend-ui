@@ -20,7 +20,7 @@
   "scripts": {
     "build": "rm -rf ./dist && rollup -c",
     "storybook": "start-storybook",
-    "test": "./node_modules/.bin/jest"
+    "test": "./node_modules/.bin/jest -u"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",

@@ -2,10 +2,10 @@
 
 exports[`Link renders correctly 1`] = `
 <div
-  className="ThemeProvider__Base-sc-1w52cfi-0 eyQfDY"
+  className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <a
-    className="Link__LinkElement-m2w4lu-0 iszJMN"
+    className="Link__LinkElement-sc-m2w4lu-0 hphgpU"
     href="#"
     rel="noopener"
     target="_blank"
