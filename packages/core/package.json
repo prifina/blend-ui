@@ -69,7 +69,7 @@
     "styled-system": "^5.1.5"
   },
   "peerDependencies": {
-    "@blend-ui/icons": "^1.1.8-alpha.0",
+    "@blend-ui/icons": "^1.1.9-alpha.0",
     "@iconify/icons-bx": "^1.2.3",
     "@iconify/icons-fe": "^1.2.1",
     "@iconify/icons-mdi": "^1.2.17",

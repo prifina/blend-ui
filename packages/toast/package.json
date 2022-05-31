@@ -68,9 +68,9 @@
     "styled-components": "^5.3.5"
   },
   "peerDependencies": {
-    "@blend-ui/core": "^1.1.64-alpha.0",
-    "@blend-ui/icons": "^1.1.8-alpha.0",
-    "@blend-ui/modal": "^1.0.10-alpha.0",
+    "@blend-ui/core": "^1.1.65-alpha.0",
+    "@blend-ui/icons": "^1.1.9-alpha.0",
+    "@blend-ui/modal": "^1.0.11-alpha.0",
     "@iconify/icons-bx": "^1.2.3",
     "@styled-system/theme-get": "^5.1.2",
     "react": "^17.0.2",
