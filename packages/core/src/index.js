@@ -8,20 +8,16 @@ export { default as Cell } from "./Cell";
 
 export { default as Divider } from "./Divider";
 export { default as Input } from "./Input";
-export { default as IconField } from "./IconField";
+
 export { default as Checkbox } from "./Checkbox";
 
 export { default as Button } from "./Button";
 export { default as Label } from "./Label";
 
-export { default as AutoComplete } from "./AutoComplete";
-export { default as SearchSelect } from "./SearchSelect";
-
 export { default as Select } from "./Select";
 export { default as Link } from "./Link";
 export { default as Radio } from "./Radio";
 
-export { default as Avatar } from "./Avatar";
 export { default as Image } from "./Image";
 
 export { default as theme } from "./theme/theme";
