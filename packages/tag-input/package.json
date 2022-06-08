@@ -32,6 +32,7 @@
     "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@blend-ui/core": "^1.1.67-alpha.0",
     "@iconify/icons-fe": "^1.2.1",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.0",
@@ -66,6 +67,7 @@
     "svgson": "^4.1.0"
   },
   "peerDependencies": {
+    "@blend-ui/core": "^1.1.67-alpha.0",
     "@iconify/icons-bx": "^1.2.3",
     "@iconify/icons-fe": "^1.2.1",
     "@iconify/icons-mdi": "^1.2.17",
@@ -73,7 +75,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-components": "^5.3.5",
-    "styled-system": "^5.1.5",
-    "@blend-ui/core": "^1.1.64-alpha.0"
+    "styled-system": "^5.1.5"
   }
 }

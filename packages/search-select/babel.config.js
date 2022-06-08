@@ -1,1 +1,1 @@
-../../babel.config.js
+../babel.config.js

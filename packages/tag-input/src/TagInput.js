@@ -1,154 +1,71 @@
-import React, { forwardRef, useState } from "react";
+import React, { useState } from "react";
 
-import styled, { css } from "styled-components";
-import {
-  space,
-  layout,
-  typography,
-  border,
-  color,
-  compose,
-} from "styled-system";
+import styled from "styled-components";
 
-import { Button, useTheme } from "@blend-ui/core";
+import { Button, Input, Text } from "@blend-ui/core";
 
-const systemProps = compose(layout, color, space, border, typography);
-
-const inputTheme = css`
-  margin: 0; // system props are overriding above values
-  ${systemProps}
-  appearance: none;
-  display: block;
-  height: ${props =>
-    props.height
-      ? props.height
-      : props.isIcon
-      ? "100%"
-      : props.theme.componentStyles[props.as].base.height};
-  font-family: inherit;
-  font-size: ${props => props.theme.componentStyles[props.as].base.fontSize};
-  line-height: ${props =>
-    props.theme.componentStyles[props.as].base.lineHeight};
-  color: ${props =>
-    typeof props.color !== "undefined"
-      ? props.color
-      : props.theme.componentStyles[props.as].base.color};
-  background-color: ${props =>
-    props.theme.componentStyles[props.as].base.backgroundColor ||
-    "transparent"};
-  border: ${props =>
-    typeof props.borders !== "undefined"
-      ? props.borders
-      : props.theme.componentStyles[props.as].base.border};
-  border-radius: ${props =>
-    typeof props.borderRadius !== "undefined"
-      ? props.borderRadius
-      : props.theme.componentStyles[props.as].base.borderRadius};
-
-  padding-left: ${props =>
-    props.theme.componentStyles[props.as].base.paddingLeft};
-  padding-right: ${props =>
-    props.theme.componentStyles[props.as].base.paddingRight};
-  padding-top: ${props =>
-    props.theme.componentStyles[props.as].base.paddingTop};
-  padding-bottom: ${props =>
-    props.theme.componentStyles[props.as].base.paddingBottom};
-  ::placeholder {
-    color: ${props => props.theme.colors.text.muted};
-  }
-  &:disabled {
-    background: ${props => props.theme.colors.text.muted};
-    border: ${props => (props.isIcon ? 0 : props.theme.borders.input.disabled)};
-    pointer-events: none;
-  }
-  &:invalid {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: ${props => (props.isIcon ? 0 : props.theme.borders.input.error)};
-  }
-  &:focus,
-  &:not([disabled]):hover {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: ${props => (props.isIcon ? 0 : props.theme.borders.input.active)};
-  }
-  /*
-  &:hover {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    // border: ${props => props.theme.borders.input.active};
-  }
-  */
-  ::-ms-clear {
-    display: none;
-  }
-`;
-
-const themeColorStyles = props => {
-  return props.colorStyle ? props.theme.colorStyles[props.colorStyle] : null;
-};
-const errorStyles = props => {
-  return props.error
-    ? { border: props.isIcon ? 0 : props.theme.borders.input.error }
-    : null;
-};
-const InputElement = styled.input`
-  ${inputTheme}
-  ${themeColorStyles}
-  ${errorStyles}
-`;
+import PropTypes from "prop-types";
 
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;
   width: 382px;
-  //   height: 162px;
   gap: 16px 4px;
-  max-height: 382px;
+  max-height: 162px;
+  padding: ${props =>
+    props.variant === "inner" ? "12px 20px 16px 14px" : "16px 20px 16px 18px"};
 
-  padding: 16px 16px 24px 24px;
-  border: 1px #00847a solid;
+  border: ${props =>
+    props.variant === "inner" ? props.theme.borders.input.base : 0};
   border-radius: 4px;
-
-  background: #f8fcfc;
-
-  & > input {
-    height: 19px;
-    border: none;
+  background: ${props => props.theme.colors.baseBright};
+  
+  &:hover {
     outline: none;
-    background: transparent;
-    color: #0d776e;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: ${props =>
+      props.variant === "inner" ? props.theme.borders.input.active : 0};
   }
+  &:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border:  ${props =>
+      props.variant === "inner" ? props.theme.borders.input.active : 0};};
+  }  
+
 `;
 
 const Tag = styled.div`
   display: flex;
   align-items: center;
-  padding-right: 6.5px;
+  padding-right: 8px;
   padding-left: 8px;
+  padding-bottom: 2px;
+  padding-top: 2px;
   border-radius: 10px;
-  background-color: #dbf0ee;
-  color: #0d776e;
-
+  background-color: ${props => props.theme.colors.subtleHiover};
+  color: ${props => props.theme.colors.brandAccent};
   height: 20px;
+  max-height: auto;
   font-size: 12px;
   max-width: 50%;
-
-  & > button {
-    display: flex;
-    // margin-left: 6.5px;
-    border: none;
-    background-color: unset;
-    cursor: pointer;
-    color: #0d776e;
-  }
 `;
 
-const TagText = styled.div`
+const StyledInput = styled(Input)`
+  height: 19px;
+  border: none !important;
+  outline: none;
+  background: transparent;
+  color: ${props => props.theme.colors.brandAccent};
+  max-width: 84px;
+  padding: 0;
+`;
+
+const TagText = styled(Text)`
+  color: ${props => props.theme.colors.brandAccent};
   overflow: hidden;
   white-space: nowrap;
   display: inline-block;
@@ -157,18 +74,35 @@ const TagText = styled.div`
 
 const TagButton = styled(Button)`
   display: flex;
-  // margin-left: 6.5px;
   border: none;
   background-color: unset;
   cursor: pointer;
-  color: #0d776e;
+  color: ${props => props.theme.colors.brandAccent};
+  min-width: 0 !important;
+  padding: 0;
+  margin-left: 6.5px;
+  padding-bottom: 2px;
+  font-size: 11px;
+  font-weight: 400;
+
+  &:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: unset !important;
+    border: 0 !important;
+    color: unset !important;
+  }
+  &:hover {
+    outline: none;
+    background-color: unset !important;
+    border: 0 !important;
+    color: unset !important;
+  }
 `;
 
-const TagInput = forwardRef(({ errorMsg, promptMsg, ...props }, ref) => {
-  const { colors } = useTheme();
-
+const TagInput = ({ placeholder, helperText, tags, setTags, ...props }) => {
   const [input, setInput] = useState("");
-  const [tags, setTags] = useState([]);
 
   console.log("tags", tags);
 
@@ -213,33 +147,58 @@ const TagInput = forwardRef(({ errorMsg, promptMsg, ...props }, ref) => {
   };
 
   return (
-    <React.Fragment>
-      <Container className="container">
-        {tags.map((tag, index) => (
-          <Tag className="tag">
-            <TagText>{tag}</TagText>
-
-            <button onClick={() => deleteTag(index)}>x</button>
-            {/* <TagButton onClick={() => deleteTag(index)}>x</TagButton> */}
-          </Tag>
-        ))}
-        <input
-          {...props}
-          ref={ref}
-          value={input}
-          placeholder="Add features"
-          onKeyDown={onKeyDown}
-          onKeyUp={onKeyUp}
-          onChange={onChange}
-        />
-      </Container>
-    </React.Fragment>
+    <>
+      {props.variant === "inner" && (
+        <Container className="container" {...props}>
+          {tags.map((tag, index) => (
+            <Tag className="tag" key={index}>
+              <TagText>{tag}</TagText>
+              <TagButton onClick={() => deleteTag(index)}>x</TagButton>
+            </Tag>
+          ))}
+          <StyledInput
+            value={input}
+            placeholder={placeholder}
+            onKeyDown={onKeyDown}
+            onKeyUp={onKeyUp}
+            onChange={onChange}
+          />
+        </Container>
+      )}
+      {props.variant === "outer" && (
+        <div style={{ width: 379 }}>
+          <Input
+            value={input}
+            placeholder={placeholder}
+            onKeyDown={onKeyDown}
+            onKeyUp={onKeyUp}
+            onChange={onChange}
+          />
+          <Text fontSize="xs" mb={14}>
+            {helperText}
+          </Text>
+          <Container className="container" {...props}>
+            {tags.map((tag, index) => (
+              <Tag className="tag" key={index}>
+                <TagText>{tag}</TagText>
+                <TagButton onClick={() => deleteTag(index)}>x</TagButton>
+              </Tag>
+            ))}
+          </Container>
+        </div>
+      )}
+    </>
   );
-});
+};
 TagInput.defaultProps = {
-  as: "input",
-  type: "text",
-  width: "100%",
+  variant: "inner",
+  placeholder: "Add Features",
+  helperText: "",
+};
+
+TagInput.propTypes = {
+  tags: PropTypes.array.isRequired,
+  setTags: PropTypes.func.isRequired,
 };
 
 TagInput.displayName = "TagInput";

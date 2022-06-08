@@ -14,6 +14,10 @@ const baseInputDisabled = "#E5E4E4";
 const baseModalBackground = "rgba(30, 29, 29, 0.75)";
 const baseDividers = "#C9E4E0";
 
+const baseBright = "#F8FCFC";
+
+const subtleHiover = "#DBF0EE";
+
 const menuModalBackground = "rgba(30, 29, 29, 0.1)";
 
 const alertErrorText = "#f40431";
@@ -157,8 +161,10 @@ const colors = {
   baseModalBackground,
   baseErrorHover,
   baseDividers,
+  baseBright,
   menuModalBackground,
   avatarColors,
+  subtleHiover,
 };
 
 export const palette = {
@@ -357,6 +363,7 @@ export const colorsList = {
   baseModalBackground,
   baseErrorHover,
   baseDividers,
+  baseBright,
   menuModalBackground,
   alertErrorText,
   alertErrorBackground,
@@ -366,4 +373,5 @@ export const colorsList = {
   alertInfoBackground,
   alertSuccessText,
   alertSuccessBackground,
+  subtleHiover,
 };
