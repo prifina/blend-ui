@@ -17,14 +17,16 @@ export const tabs = () => {
       onClick={tabClick}
       title={"Account Settings"}
       style={{ height: "100vh" }}
-      variant={"line"}
+      variant={"rectangle"}
     >
       <TabList>
         <Tab>User Details</Tab>
         <Tab test={true}>Usage</Tab>
+        <Tab>Usage</Tab>
       </TabList>
       <TabPanelList>
         <TabPanel>Eka panel</TabPanel>
+        <TabPanel>Toka panel</TabPanel>
         <TabPanel>Toka panel</TabPanel>
       </TabPanelList>
     </Tabs>
