@@ -1,6 +1,6 @@
 {
   "name": "@blend-ui/icon-field",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.1-alpha.0",
   "description": "IconField component",
   "author": "hamza <hamzahalilovic.12@gmail.com>",
   "homepage": "https://github.com/hamzahalilovic/blend-ui#readme",
@@ -29,7 +29,7 @@
     "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
-    "@blend-ui/core": "^1.1.67-alpha.0",
+    "@blend-ui/core": "^1.1.68-alpha.0",
     "@iconify/icons-bx": "^1.2.3",
     "@iconify/icons-fe": "^1.2.1",
     "@iconify/icons-mdi": "^1.2.17",

@@ -1,6 +1,6 @@
 {
   "name": "@blend-ui/toast",
-  "version": "0.0.15-alpha.0",
+  "version": "0.0.16-alpha.0",
   "description": "Toast Component",
   "author": "Tero <tero@prifina.com>",
   "license": "MIT",
@@ -28,8 +28,8 @@
     "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
-    "@blend-ui/core": "^1.1.67-alpha.0",
-    "@blend-ui/modal": "^1.0.13-alpha.0",
+    "@blend-ui/core": "^1.1.68-alpha.0",
+    "@blend-ui/modal": "^1.0.14-alpha.0",
     "@iconify/icons-bx": "^1.2.3",
     "@reach/auto-id": "^0.16.0",
     "@rollup/plugin-babel": "^5.3.1",
