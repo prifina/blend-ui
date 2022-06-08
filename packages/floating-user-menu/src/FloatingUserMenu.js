@@ -13,7 +13,8 @@ import { Portal } from "@blend-ui/modal";
 import styled, { css, ThemeProvider } from "styled-components";
 import { space } from "styled-system";
 
-import { useTheme, Avatar } from "@blend-ui/core";
+import { useTheme } from "@blend-ui/core";
+import { Avatar } from "@blend-ui/avatar";
 
 import { BlendIcon } from "@blend-ui/icons";
 

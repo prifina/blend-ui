@@ -81,7 +81,7 @@ export const radii = {
   avatar: "4%",
   //input: "0.25rem",
   input: "0.3125rem",
-  inputField: "5px 5px 0px 0px",
+  // inputField: "5px 5px 0px 0px",
 };
 
 export const opacity = {
@@ -100,7 +100,7 @@ export const borderWidths = { ...sizeOptions.borderWidths };
 export const borders = {
   input: {
     base: `${borderWidths["2xs"]} solid ${colors.baseMuted}`,
-    borderRadius: radii["inputField"],
+    borderRadius: radii["input"],
     disabled: `${borderWidths["2xs"]} solid ${colors.baseWhite}`,
     error: `${borderWidths["2xs"]} solid ${colors.baseError}`,
     hover: `${borderWidths["2xs"]} solid ${colors.baseSecondary}`,

@@ -1,8 +1,9 @@
 {
-  "name": "@blend-ui/core",
-  "version": "1.1.67-alpha.0",
-  "description": "Blend core cmponents",
-  "author": "Tero <tero@prifina.com>",
+  "name": "@blend-ui/auto-complete",
+  "version": "1.0.0-alpha.0",
+  "description": "AutoComplete component",
+  "author": "hamza <hamzahalilovic.12@gmail.com>",
+  "homepage": "https://github.com/hamzahalilovic/blend-ui#readme",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -28,8 +29,8 @@
     "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@blend-ui/core": "^1.1.67-alpha.0",
     "@blend-ui/icon-field": "^1.0.0-alpha.0",
-    "@blend-ui/icons": "^1.1.9-alpha.0",
     "@iconify/icons-bx": "^1.2.3",
     "@iconify/icons-fe": "^1.2.1",
     "@iconify/icons-mdi": "^1.2.17",
@@ -68,6 +69,7 @@
     "styled-system": "^5.1.5"
   },
   "peerDependencies": {
+    "@blend-ui/core": "^1.1.67-alpha.0",
     "@blend-ui/icon-field": "^1.0.0-alpha.0",
     "@blend-ui/icons": "^1.1.9-alpha.0",
     "@iconify/icons-bx": "^1.2.3",

@@ -4,9 +4,9 @@ import { BlendIcon } from "@blend-ui/icons";
 
 import rocketIcon from "@iconify/icons-fe/rocket";
 
-import Input from "../src/Input";
+import Input from "@blend-ui/core";
 import IconField from "../src/IconField";
-import ThemeProvider from "../src/theme/ThemeProvider";
+import ThemeProvider from "@blend-ui/core";
 
 test("IconField renders correctly", () => {
   const tree = renderer

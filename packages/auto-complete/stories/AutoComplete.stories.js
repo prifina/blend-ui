@@ -1,6 +1,7 @@
 import React from "react";
 import AutoComplete from "../src/AutoComplete";
-import Text from "../src/Text";
+
+import { Text } from "@blend-ui/core";
 
 export default { title: "AutoComplete" };
 

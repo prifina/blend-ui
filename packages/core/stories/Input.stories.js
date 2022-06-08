@@ -1,9 +1,11 @@
 import React from "react";
 import Input from "../src/Input";
 import Select from "../src/Select";
-import IconField from "../src/IconField";
+
 // import { BlendIcon } from "../../icons/components";
 import { BlendIcon } from "@blend-ui/icons";
+
+import { IconField } from "@blend-ui/icon-field";
 
 import accountIcon from "@iconify/icons-mdi/account";
 

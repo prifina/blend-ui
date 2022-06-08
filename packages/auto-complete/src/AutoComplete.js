@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useReducer, forwardRef } from "react";
 
 import styled, { css } from "styled-components";
-import Text from "./Text";
-import IconField from "./IconField";
-import Box from "./Box";
+
+import { Text, Box, useTheme } from "@blend-ui/core";
+
+import { IconField } from "@blend-ui/icon-field";
 
 import PropTypes from "prop-types";
 import bxSearchAlt2 from "@iconify/icons-bx/bx-search-alt-2";
-
-import { useTheme } from "./theme/ThemeProvider";
 
 const listTheme = css`
   &:hover,

@@ -20,10 +20,11 @@ import bxChevronUp from "@iconify/icons-bx/bx-chevron-up";
 import bxChevronDown from "@iconify/icons-bx/bx-chevron-down";
 
 import { usePopper } from "react-popper";
-import { useTheme } from "./theme/ThemeProvider";
-import AutoComplete from "./AutoComplete";
 
-import Box from "./Box";
+import { useTheme, Box } from "@blend-ui/core";
+
+import { AutoComplete } from "@blend-ui/auto-complete";
+
 //import PropTypes from "prop-types";
 
 const selectVariations = ["fill", "outline"];

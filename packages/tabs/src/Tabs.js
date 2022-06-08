@@ -304,18 +304,69 @@ const testVariation = props => {
   return null;
 };
 */
+const rectangleTabsCss = css`
+  margin: 0;
+  padding: 4px;
+  position: relative;
+  font-size: 12px;
+  font-weight: 600;
+  background: ${props => props.theme.colors.baseTertiary};
+  border-radius: 6px;
+`;
+
+const rectangleTabCss = css`
+text-align: center;
+display: inline-block;
+list-style: none outside none;
+padding: 4px 8px 4px 8px;
+border:0
+line-height: 16px;
+color:${props => props.theme.colors.textPrimary};
+position: relative;
+z-index: 0;
+cursor: pointer;
+margin-right:4px;
+}`;
+
+const selectedRectangleTab = css`
+  border-radius: 6px;
+  background: ${props => props.theme.colors.baseBright};
+  border: 0;
+`;
+
 const UnorderedList = styled.ul`
   /* */
-  ${props => (props.variant === "rounded" ? tabsCss : lineTabsCss)}
+  ${props => {
+    if (props.variant === "rounded") {
+      return tabsCss;
+    } else if (props.variant === "line") {
+      return lineTabsCss;
+    } else if (props.variant === "rectangle") {
+      return rectangleTabsCss;
+    }
+  }}
 `;
 
 const TabItem = styled.li`
   /* */
-  ${props => (props.variant === "rounded" ? tabCss : lineTabCss)}
+  // ${props => (props.variant === "rounded" ? tabCss : lineTabCss)}
+  ${props => {
+    if (props.variant === "rounded") {
+      return tabCss;
+    } else if (props.variant === "line") {
+      return lineTabCss;
+    } else if (props.variant === "rectangle") {
+      return rectangleTabCss;
+    }
+  }}
   ${props =>
     props.selected && props.variant === "rounded" ? selectedTab : null}
       ${props =>
     props.selected && props.variant === "line" ? selectedLineTab : null}
+    ${props =>
+    props.selected && props.variant === "rectangle"
+      ? selectedRectangleTab
+      : null}
 `;
 
 const TabPanelItem = styled.div`
@@ -388,6 +439,12 @@ const Tabs = ({
         </>
       )}
       {variant === "rounded" && (
+        <TabBackground theme={tabTheme} {...props}>
+          {_tabList}
+          {_panelList}
+        </TabBackground>
+      )}
+      {variant === "rectangle" && (
         <TabBackground theme={tabTheme} {...props}>
           {_tabList}
           {_panelList}

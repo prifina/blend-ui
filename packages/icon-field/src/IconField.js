@@ -1,14 +1,12 @@
 import React, { forwardRef, createContext, useContext } from "react";
-import Box from "./Box";
-import Text from "./Text";
 
-import Input from "./Input";
+import { Box, Text, Input, useTheme } from "@blend-ui/core";
+
 import { BlendIcon } from "@blend-ui/icons";
 
 import styled, { css } from "styled-components";
 import { space } from "styled-system";
 //import PropTypes from "prop-types";
-import { useTheme } from "./theme/ThemeProvider";
 
 const fieldVariation = props => {
   //console.log("VARIATION ", props);

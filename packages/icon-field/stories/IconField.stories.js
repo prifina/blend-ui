@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import IconField from "../src/IconField";
-import Input from "../src/Input";
-import Box from "../src/Box";
+
+import { Box } from "@blend-ui/core";
 
 import { BlendIcon } from "@blend-ui/icons";
 import { default as eyeIcon } from "@iconify/icons-bx/bx-show";

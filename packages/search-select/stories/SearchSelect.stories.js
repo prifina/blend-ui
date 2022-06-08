@@ -1,8 +1,7 @@
 import React, { createRef } from "react";
 import SearchSelect from "../src/SearchSelect";
-import Label from "../src/Label";
-import Box from "../src/Box";
-import Text from "../src/Text";
+
+import { Label, Box, Text } from "@blend-ui/core";
 
 //import { Icon } from "@blend-ui/icons";
 //import { Graphql } from "@blend-ui/icons";
