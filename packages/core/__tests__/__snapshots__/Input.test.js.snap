@@ -41,7 +41,7 @@ exports[`Input Styled no border renders correctly 1`] = `
   className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <input
-    className="Input__InputElement-sc-1cjfi0-0 feoZul"
+    className="Input__InputElement-sc-1cjfi0-0 loxQoY"
     placeholder="Enter value here"
     type="text"
     width="100%"
@@ -64,7 +64,7 @@ exports[`Input with placeholder renders correctly 1`] = `
   className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <input
-    className="Input__InputElement-sc-1cjfi0-0 lfQsbC"
+    className="Input__InputElement-sc-1cjfi0-0 cvrvuX"
     placeholder="Enter value here"
     type="text"
     width="100%"

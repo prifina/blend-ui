@@ -5,7 +5,7 @@ exports[`Expanded TextArea renders correctly 1`] = `
   className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <textarea
-    className="Input__InputElement-sc-1cjfi0-0 kiDCsH TextArea__StyledExpandTextArea-sc-7p0yi8-1 ldNrVl"
+    className="Input__InputElement-sc-1cjfi0-0 eEDxzK TextArea__StyledExpandTextArea-sc-7p0yi8-1 ldNrVl"
     height="1.0625rem"
     onInput={[Function]}
     rows="1"
@@ -20,7 +20,7 @@ exports[`TextArea renders correctly 1`] = `
   className="ThemeProvider__Base-sc-1w52cfi-0 fMEevm"
 >
   <textarea
-    className="Input__InputElement-sc-1cjfi0-0 kpVLpB TextArea__StyledTextArea-sc-7p0yi8-0 kzUZvX"
+    className="Input__InputElement-sc-1cjfi0-0 ftuORA TextArea__StyledTextArea-sc-7p0yi8-0 kzUZvX"
     rows="1"
     type="text"
     width="100%"
