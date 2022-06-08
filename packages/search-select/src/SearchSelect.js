@@ -21,7 +21,9 @@ import bxChevronDown from "@iconify/icons-bx/bx-chevron-down";
 
 import { usePopper } from "react-popper";
 
-import { AutoComplete, useTheme, Box } from "@blend-ui/core";
+import { useTheme, Box } from "@blend-ui/core";
+
+import { AutoComplete } from "@blend-ui/auto-complete";
 
 //import PropTypes from "prop-types";
 

@@ -2,7 +2,9 @@ import React, { useState, useEffect, useReducer, forwardRef } from "react";
 
 import styled, { css } from "styled-components";
 
-import { Text, IconField, Box, useTheme } from "@blend-ui/core";
+import { Text, Box, useTheme } from "@blend-ui/core";
+
+import { IconField } from "@blend-ui/icon-field";
 
 import PropTypes from "prop-types";
 import bxSearchAlt2 from "@iconify/icons-bx/bx-search-alt-2";

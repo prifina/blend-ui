@@ -28,6 +28,7 @@
     "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@blend-ui/icon-field": "^1.0.0-alpha.0",
     "@blend-ui/icons": "^1.1.9-alpha.0",
     "@iconify/icons-bx": "^1.2.3",
     "@iconify/icons-fe": "^1.2.1",
@@ -67,6 +68,7 @@
     "styled-system": "^5.1.5"
   },
   "peerDependencies": {
+    "@blend-ui/icon-field": "^1.0.0-alpha.0",
     "@blend-ui/icons": "^1.1.9-alpha.0",
     "@iconify/icons-bx": "^1.2.3",
     "@iconify/icons-fe": "^1.2.1",
