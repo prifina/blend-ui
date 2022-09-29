@@ -75,7 +75,7 @@ const BaseIcon = props => {
   const _width = width || size.replace("px", "");
   if (iconify) {
     return (
-      <InlineIcon icon={iconify} width={_width} color={_color} {...rest} />
+      <span {...rest}><InlineIcon icon={iconify} width={_width} color={_color} /></span>
     );
   } else {
     console.trace("iconify prop is missing");
