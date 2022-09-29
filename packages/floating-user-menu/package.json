@@ -30,7 +30,6 @@
     "@babel/preset-react": "^7.16.7",
     "@blend-ui/avatar": "^1.0.1-alpha.0",
     "@blend-ui/core": "^1.1.68-alpha.0",
-    "@blend-ui/icons": "^1.1.9-alpha.0",
     "@blend-ui/modal": "^1.0.14-alpha.0",
     "@iconify/icons-bx": "^1.2.3",
     "@iconify/icons-fe": "^1.2.1",
