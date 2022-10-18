@@ -309,7 +309,7 @@ const SearchSelect = forwardRef(
             />
           </PopperContainer>
         )}
-        <StyledBox onClick={selectOnClick} tabIndex={tabIndex}>
+        <StyledBox onClick={selectOnClick} tabIndex={tabIndex} data-select={state.openSelect ? "open" : "close"}>
           <SelectElement
             {...props}
             ref={mergeRefs(setReferenceElement, selectRef)}
