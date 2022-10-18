@@ -171,7 +171,6 @@ const SearchSelect = forwardRef(
       onChange,
       maxHeight,
       tabIndex,
-      showOptions,
       ...props
     },
     ref,
@@ -281,12 +280,7 @@ const SearchSelect = forwardRef(
       }
     }, [autoCompleteInput]);
     //console.log(state);
-    useEffect(() => {
-      if (state.openSelect && !showOptions) {
-        setState({ openSelect: false });
 
-      }
-    }, [showOptions])
     return (
       <React.Fragment>
         {state.openSelect && (
@@ -344,7 +338,6 @@ SearchSelect.defaultProps = {
   variation: "fill",
   size: "sm",
   tabIndex: 0,
-  showOptions: false
 };
 SearchSelect.propTypes = {
   ...styledProps.space,
