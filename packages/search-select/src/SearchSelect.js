@@ -170,6 +170,7 @@ const SearchSelect = forwardRef(
       containerOffset,
       onChange,
       maxHeight,
+      tabIndex,
       ...props
     },
     ref,
