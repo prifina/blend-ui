@@ -308,7 +308,7 @@ const SearchSelect = forwardRef(
             />
           </PopperContainer>
         )}
-        <StyledBox onClick={selectOnClick}>
+        <StyledBox onClick={selectOnClick} tabIndex={tabIndex}>
           <SelectElement
             {...props}
             ref={mergeRefs(setReferenceElement, selectRef)}
@@ -336,6 +336,7 @@ const SearchSelect = forwardRef(
 SearchSelect.defaultProps = {
   variation: "fill",
   size: "sm",
+  tabIndex: 0
 };
 SearchSelect.propTypes = {
   ...styledProps.space,
